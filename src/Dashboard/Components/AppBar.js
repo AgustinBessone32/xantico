@@ -79,7 +79,7 @@ export const AppBar = () => {
                     <Grid
                         item
                         lg={2}
-                        style={{ textAlign: 'center' }}
+                        sx={{ textAlign: 'center' }}
                     >
 
                         <img src={logo} style={{ width: 110, textAlign: 'center', flexGrow: 1 }} alt={"logo"} />

@@ -14,6 +14,7 @@
 import CardHabitaciones from "./Habitaciones/CardHabitaciones";
 import { Footer } from "../../Dashboard/Components/Footer";
 import { ListadoServicios } from "./Servicios/ListadoServicios";
+import { CardReseñas } from "./Reseñas/CardReseñas";
  
  
  const Home = () => {
@@ -34,6 +35,8 @@ import { ListadoServicios } from "./Servicios/ListadoServicios";
              <CarruselServicios/>
 
              <CardHabitaciones />
+
+             <CardReseñas />
 
              <ListadoServicios />
 
