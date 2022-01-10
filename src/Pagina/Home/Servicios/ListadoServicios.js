@@ -15,8 +15,8 @@ export const ListadoServicios = () => {
         <Grid
             container
             direction="row"
-            justifyContent="space-between"
-            alignItems="flex-start"
+            justifyContent="center"
+            alignItems="center"
             sx={{ px: 20, boxShadow: 0, py: 10 }}
 
         >
@@ -26,14 +26,18 @@ export const ListadoServicios = () => {
                 direction='row'
                 justifyContent="center"
                 alignItems='center'
-                
+
             >
                 {
                     services.map(servi => {
                         return (
-                            <Grid item sx={{mx:5}}>
-                                <img src={servi.url} alt={servi.name} width='60px' />
-                                <Typography sx={{ml:2}}>{servi.name}</Typography>
+                            <Grid item sx={{ mx: 5 }}
+                                container
+                                alignItems='center'
+                                direction='column'
+                                lg={2} >
+                                <img src={servi.url} alt={servi.name} width='100px' />
+                                <Typography  >{servi.name}</Typography>
                             </Grid>
                         )
                     })

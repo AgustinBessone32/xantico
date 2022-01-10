@@ -34,16 +34,16 @@ export const CardReseñas = () => {
 
                     reseñas.map(res => {
                         return (
-                            <Grid item 
-                                sx={{ mx: 1 , my:2}} 
-                                lg={3} 
+                            <Grid item
+                                sx={{ mx: 1, my: 2 }}
+                                lg={3}
                                 container
                                 alignItems='center'
                                 direction='column'
                             >
                                 <Avatar src={res.img} alt={res.name} />
-                                <Typography sx={{ color: '#000000', fontSize: 30}}> {res.titulo} </Typography>
-                                <Typography sx={{ color: '#000000', fontSize: 16 }}> {res.desc} </Typography>
+                                <Typography sx={{ color: '#000000', fontSize: 30, mt: 3 }}> {res.titulo} </Typography>
+                                <Typography sx={{ color: '#000000', fontSize: 16, mt: 1 }}> {res.desc} </Typography>
 
                                 <Typography sx={{ color: PRIMARIO, fontSize: 16, mt: 2 }}> {res.name} </Typography>
 
