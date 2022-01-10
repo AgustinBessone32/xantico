@@ -121,7 +121,7 @@ export const Footer = () => {
                     container
                     direction="row"
                     justifyContent="flex-start"
-                    alignItems="center"
+                    alignItems="flex-start"
                     sx={{mt:1}}
                 >
                     <Grid item sx={{ marginRight: 1 }}>

@@ -7,10 +7,9 @@
  * Tiempo :        10 min
  ********************************************************/
  import {React, useRef, useState} from 'react';
- import {Button, ButtonBase, Grid, Typography, useMediaQuery} from '@mui/material';
+ import {ButtonBase, Grid, Typography, useMediaQuery} from '@mui/material';
  import Carousel from 'react-elastic-carousel';
  import {
-     IconArrowLeft,
      IconChevronLeft,
      IconChevronRight,
  } from '@tabler/icons';
@@ -101,9 +100,9 @@ import { ACENTO, PRIMARIO } from '../../../Colores';
                                  pagination={false}
                                  showArrows={false}
                              >
-                                 {servi.map((servicio) => {
+                                 {rese.map((reseña) => {
                                      return (
-                                         <Reseña servicio={servicio}/>
+                                         <Reseña reseña={reseña}/>
                                      )
                                  })}
  
@@ -174,7 +173,7 @@ import { ACENTO, PRIMARIO } from '../../../Colores';
  
  export default CarruselReseñas;
  
- const servi = [
+ const rese = [
      {
          title: 'Branding',
          contenido:

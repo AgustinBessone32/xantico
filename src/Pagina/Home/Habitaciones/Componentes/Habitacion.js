@@ -13,7 +13,6 @@ import React from 'react'
 export const Habitacion = (props) => {
     const { habitacion } = props
 
-    console.log(habitacion)
 
     return (
         <Grid

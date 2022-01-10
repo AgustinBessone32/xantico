@@ -16,7 +16,7 @@ import { PRIMARIO } from '../../../../Colores';
 
 
 const Reseña = (props) => {
-    const { servicio } = props;
+    const { reseña } = props;
     const masSM = useMediaQuery(theme.breakpoints.up("md"));
     return (
         <Grid
@@ -32,7 +32,7 @@ const Reseña = (props) => {
             <Grid item container sx={{ alignItems: "center", minHeight: 100 }}>
                 <Typography
                     sx={{ fontSize: masSM ? 45 : 24, fontWeight: 600, marginTop: 2, color: "#000000", lineHeight: 1 }}>
-                    {servicio.title}
+                    {reseña.title}
                 </Typography>
             </Grid>
 
@@ -44,7 +44,7 @@ const Reseña = (props) => {
                     fontWeight: 400,
                     textAlign: "justify"
                 }}>
-                    {servicio.contenido}
+                    {reseña.contenido}
                 </Typography>
             </Grid>
 
@@ -57,7 +57,7 @@ const Reseña = (props) => {
                     sx={{ marginTop: 2 }}
                 >
                     <Typography sx={{ fontSize: 16, color: PRIMARIO}}>
-                        {servicio.name}
+                        {reseña.name}
                     </Typography>
                 </Grid>
             </Grid>
