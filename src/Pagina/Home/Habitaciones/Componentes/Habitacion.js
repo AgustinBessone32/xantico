@@ -18,9 +18,9 @@ export const Habitacion = (props) => {
     return (
         <Grid
             item
+            container
+            justifyContent='center'
             lg={6}
-            md={12}
-            sm={12}
             sx={{ my: 4 }}
         >
 
@@ -32,7 +32,7 @@ export const Habitacion = (props) => {
                     style={{ marginLeft: '50px' }}
                 />
                 <Typography sx={{ fontSize: 26, color: '#000000', mt: 1 }}>{habitacion.nombre}</Typography>
-                <Typography sx={{ fontSize: 15, color: '#000000', textAlign: 'right' }}>Noche : {habitacion.precio}</Typography>
+                <Typography sx={{ fontSize: 15, color: '#000000', textAlign: 'right' }}>Noche   $  {habitacion.precio}</Typography>
                 <Typography sx={{ fontSize: 18, color: '#000000', mt: 1 }}>
                     {habitacion.contenido}
                 </Typography>

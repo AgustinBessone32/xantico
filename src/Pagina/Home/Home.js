@@ -12,6 +12,8 @@
  import {SALUDOS} from "../../Constantes";
  import CarruselServicios from "../Home/Servicios/CarruselServicios";
 import CardHabitaciones from "./Habitaciones/CardHabitaciones";
+import { Footer } from "../../Dashboard/Components/Footer";
+import { ListadoServicios } from "./Servicios/ListadoServicios";
  
  
  const Home = () => {
@@ -32,6 +34,10 @@ import CardHabitaciones from "./Habitaciones/CardHabitaciones";
              <CarruselServicios/>
 
              <CardHabitaciones />
+
+             <ListadoServicios />
+
+             <Footer />
  
  
          </Grid>
