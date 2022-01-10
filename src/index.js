@@ -3,10 +3,17 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { ThemeProvider } from "@mui/system";
+import { theme } from "./Tema";
+import { AppBar } from './Dashboard/Components/AppBar';
+import Home from './Pagina/Home/Home';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ThemeProvider theme={theme}>
+      <AppBar />
+      <Home />
+    </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
