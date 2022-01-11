@@ -33,7 +33,7 @@ export const ParaHacerCard = () => {
                             direction='column'
                         >
                             <img src={ph.img} width='300px'/>
-                            <Typography sx={{ color: '#000000',backgroundColor: ACENTO, fontSize: 30, mt: -10, ml:-15 }}>
+                            <Typography sx={{ color: '#000000',backgroundColor: ACENTO, fontSize: 30, mt: -10, ml:-15, py: 1 }}>
                                 {ph.titulo}
                             </Typography>
 
