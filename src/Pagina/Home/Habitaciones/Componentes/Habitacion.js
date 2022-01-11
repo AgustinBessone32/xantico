@@ -19,15 +19,17 @@ export const Habitacion = (props) => {
             item
             container
             justifyContent='center'
+            alignItems='center'
             lg={6}
-            sx={{ my: 4 }}
+            sm={12}
+            sx={{ my: 4}}
         >
 
-            <div style={{ backgroundColor: '#FAF9F5', width: '260px', padding: '0px 20px 25px 20px', minHeight: '400px', 
-                          display:'flex', flexDirection:'column', justifyContent:'space-around' }}>
+            <div style={{ backgroundColor: '#FAF9F5', width: '270px', padding: '0px 20px 25px 20px', minHeight: '400px', 
+                          display:'flex', flexDirection:'column', justifyContent:'space-around'}}>
                 <img
                     src={habitacion.img}
-                    width='340px'
+                    width='300px'
                     style={{ marginLeft: '50px' }}
                 />
                 <Typography sx={{ fontSize: 26, color: '#000000', mt: 1 }}>{habitacion.nombre}</Typography>

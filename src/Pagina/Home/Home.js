@@ -16,6 +16,7 @@ import { Footer } from "../../Dashboard/Components/Footer";
 import { ListadoServicios } from "./Servicios/ListadoServicios";
 import { CardReseñas } from "./Reseñas/CardReseñas";
 import CarruselReseñas from "./Reseñas/CarruselReseñas";
+import { ParaHacerCard } from "./ParaHacer/ParaHacerCard";
  
  
  const Home = () => {
@@ -40,6 +41,8 @@ import CarruselReseñas from "./Reseñas/CarruselReseñas";
              <CardReseñas />
 
              <ListadoServicios />
+
+             <ParaHacerCard />
 
              <CarruselReseñas />
 
