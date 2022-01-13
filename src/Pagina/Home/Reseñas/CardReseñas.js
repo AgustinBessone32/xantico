@@ -18,7 +18,7 @@ export const CardReseñas = () => {
             direction="row"
             justifyContent="center"
             alignItems="center"
-            sx={{ px: 20, boxShadow: 0, py: 10 }}
+            sx={{ px: 3, boxShadow: 0, py: 10 }}
 
         >
             <Grid

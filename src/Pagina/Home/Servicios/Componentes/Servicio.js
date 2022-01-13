@@ -18,14 +18,12 @@ const Servicio = (props) => {
     const { servicio } = props;
     const masSM = useMediaQuery(theme.breakpoints.up("md"));
     return (
-        <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <img src={servicio.img} style={{ width: '100%' }} />
             <Grid
                 container
                 direction="row"
                 justifyContent="center"
                 alignItems="flex-start"
-                sx={{ marginTop: '-300px', padding: masSM ? 4 : 0 }}
+                sx={{ padding: masSM ? 4 : 0 , width:'100%', mt:30}}
             >
 
 
@@ -75,7 +73,6 @@ const Servicio = (props) => {
                     </Button>
                 </Grid>
             </Grid>
-        </div>
     );
 };
 

@@ -30,7 +30,7 @@ export const Habitacion = (props) => {
                 <img
                     src={habitacion.img}
                     width='300px'
-                    style={{ marginLeft: '50px' }}
+                    style={{ marginLeft: '30px' }}
                 />
                 <Typography sx={{ fontSize: 26, color: '#000000', mt: 1 }}>{habitacion.nombre}</Typography>
                 <Typography sx={{ fontSize: 15, color: '#000000', textAlign: 'right' }}>Noche   $  {habitacion.precio}</Typography>

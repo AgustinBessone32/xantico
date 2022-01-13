@@ -18,9 +18,9 @@ export const Footer = () => {
         <Grid
             container
             direction="row"
-            justifyContent="space-between"
+            justifyContent="center"
             alignItems="flex-start"
-            sx={{ paddingX: 20, boxShadow: 0, height: '100%', backgroundColor: ACENTO, py: 10 }}
+            sx={{ paddingX: 3, boxShadow: 0, height: '100%', backgroundColor: ACENTO, py: 10, }}
         >
 
             <Grid
@@ -54,9 +54,9 @@ export const Footer = () => {
                 </Typography>
 
                 <Typography>
-                    Direccion : &nbsp;&nbsp;&nbsp;&nbsp; Carrera 6 N 45 - 12 <br />
-                    Telefono : &nbsp;&nbsp;&nbsp;&nbsp;  + (57) 350 454 45 45 <br />
-                    Correo:    &nbsp;&nbsp;&nbsp;&nbsp;   Xantico@gmail.com
+                    Direccion : Carrera 6 N 45 - 12 <br />
+                    Telefono : + (57) 350 454 45 45 <br />
+                    Correo:      Xantico@gmail.com
                 </Typography>
 
                 <Grid
@@ -88,6 +88,7 @@ export const Footer = () => {
                 container
                 direction="column"
                 lg={3}
+                sm={12}
                 xs={12}
                 sx={{ px: 5 }}
             >
@@ -105,6 +106,8 @@ export const Footer = () => {
                 item
                 container
                 direction="column"
+                justifyContent="flex-start"
+                alignItems="flex-start"
                 lg={3}
                 xs={12}
                 sx={{ px: 5 }}

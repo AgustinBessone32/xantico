@@ -18,7 +18,7 @@ export const ParaHacerCard = () => {
             direction="row"
             justifyContent="center"
             alignItems="flex-start"
-            sx={{ px: 20, boxShadow: 0, py: 10 }}
+            sx={{  boxShadow: 0, py: 10 }}
 
         >
             {
