@@ -14,6 +14,7 @@ import React from 'react'
 import logo from '../../Recursos/logo.svg'
 import nube from '../../Recursos/nube.svg'
 import { ACENTO, PRIMARIO } from "../../Colores";
+import { Link } from 'react-router-dom';
 
 export const AppBar = () => {
     return (
@@ -64,16 +65,18 @@ export const AppBar = () => {
                     </Grid>
 
                     <Grid item>
-                        <Typography sx={{ color: PRIMARIO }}>HOME</Typography>
+                        <Typography>
+                            <Link to="/" style={{color: PRIMARIO, cursor: 'pointer', textDecoration: 'none'}}>HOME</Link>
+                        </Typography>
                     </Grid>
 
 
                     <Grid item>
-                        <Typography sx={{ color: PRIMARIO }}>HABITACIONES</Typography>
+                        <Typography sx={{ color: PRIMARIO, cursor: 'pointer' }}>CAMAS</Typography>
                     </Grid>
 
                     <Grid item>
-                        <Typography sx={{ color: PRIMARIO }}>PAGINAS</Typography>
+                        <Typography sx={{ color: PRIMARIO, cursor: 'pointer' }}>QUE HACER</Typography>
                     </Grid>
 
                     <Grid
@@ -87,16 +90,18 @@ export const AppBar = () => {
 
 
                     <Grid item>
-                        <Typography sx={{ color: PRIMARIO }}>MOMENTOS</Typography>
+                        <Typography sx={{ color: PRIMARIO, cursor: 'pointer' }}>REGLAS</Typography>
                     </Grid>
 
 
                     <Grid item>
-                        <Typography sx={{ color: PRIMARIO }}>BLOG</Typography>
+                        <Typography>
+                            <Link to="/nosotros" style={{color: PRIMARIO, cursor: 'pointer', textDecoration: 'none'}}>NOSOTROS</Link>
+                        </Typography>
                     </Grid>
 
                     <Grid item>
-                        <Typography sx={{ color: PRIMARIO }}>CONTACTO</Typography>
+                        <Typography sx={{ color: PRIMARIO, cursor: 'pointer' }}>CONTACTO</Typography>
                     </Grid>
 
                     <Grid
