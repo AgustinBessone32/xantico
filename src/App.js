@@ -49,6 +49,7 @@
 import {createContext,  useEffect, useState} from 'react';
 import {Grid} from "@mui/material";
 import {Helmet} from "react-helmet"; 
+import Dashboard from './Dashboard/Dashboard';
 export const CRoot = createContext();
 
 function App() {
@@ -57,7 +58,7 @@ function App() {
   return (
     <>
       <Helmet>
-        <title>{"Estandarizacion"} </title>
+        <title>{"Xanticó"} </title>
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
@@ -76,6 +77,8 @@ function App() {
         <CRoot.Provider value={{ usuario: usuario, setUsuario: setUsuario }}>
 
           {/* {usuario !== '' ? <Dashboard /> : <Pagina />} */}
+
+          <Dashboard />
 
         </CRoot.Provider>
 

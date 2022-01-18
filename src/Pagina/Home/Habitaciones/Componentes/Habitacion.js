@@ -25,11 +25,11 @@ export const Habitacion = (props) => {
             sx={{ my: 4}}
         >
 
-            <div style={{ backgroundColor: '#FAF9F5', width: '270px', padding: '0px 20px 25px 20px', minHeight: '400px', 
+            <div style={{ backgroundColor: '#FAF9F5', width: '320px', padding: '0px 20px 25px 20px', minHeight: '400px', 
                           display:'flex', flexDirection:'column', justifyContent:'space-around'}}>
                 <img
                     src={habitacion.img}
-                    width='300px'
+                    width='400px'
                     style={{ marginLeft: '30px' }}
                 />
                 <Typography sx={{ fontSize: 26, color: '#000000', mt: 1 }}>{habitacion.nombre}</Typography>
