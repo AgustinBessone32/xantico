@@ -5,11 +5,11 @@ export const theme = createTheme({
     palette: {
         primary: {
 
-            main: '#981331',
+            main: '#894622',
 
         },
         secondary: {
-            main: "#894622",
+            main: "#F4EFE2",
         },
 
     },

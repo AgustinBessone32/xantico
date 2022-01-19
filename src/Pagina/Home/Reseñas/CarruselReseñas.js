@@ -17,6 +17,7 @@
  import Reseña from "./Componentes/Reseña";
  import {theme} from "../../../Tema";
 import { ACENTO, PRIMARIO } from '../../../Colores';
+import letras from '../../../Recursos/letras.svg'
  
  
  const CarruselReseñas = () => {
@@ -42,7 +43,7 @@ import { ACENTO, PRIMARIO } from '../../../Colores';
              alignItems="flex-start"
              sx={{
                  paddingX: masSM ? 6 : 0,
-                 paddingY: masSM ? 10 : 4,
+                 paddingY: 4,
                  backgroundSize: 'cover',
                  backgroundColor: ACENTO,
                  my:10
@@ -58,23 +59,13 @@ import { ACENTO, PRIMARIO } from '../../../Colores';
                  sx={{maxWidth: "1300px"}}
              >
  
-                 <Grid item container lg={12} sx={{paddingX: masSM ? 20 : 2, justifyContent: "flex-end", mb:-50}}>
- 
-                         <Typography
-                             sx={{
-                                 fontSize: masSM ? 200 : 20,
-                                 fontWeight: 100,
-                                 lineHeight: masSM ? 1.2 : 1.5,
-                                 color: "#fff",
-                                 textAlign: "end",
-                             }}
-                         >
-                             XANTICO
-                         </Typography>
- 
+                 <Grid item container lg={12} sx={{paddingX: masSM ? 16 : 2, justifyContent: "flex-end", mb:-50}}>
+
+                        <img src={letras} width={"100%"} />
+
                  </Grid>
  
-                 <Grid item container sx={{marginTop: 0}}>
+                 <Grid item container >
  
                      <Grid
                          container
@@ -177,7 +168,7 @@ import { ACENTO, PRIMARIO } from '../../../Colores';
      {
          title: 'Branding',
          contenido:
-             'Más que un logo, contamos tu historia, tus valores, tu filosofía. Creamos una marca fuerte que hable por sí misma.',
+             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
          name: "Xantico Hostal"
      },
      {

@@ -46,7 +46,7 @@ import { ACENTO, PRIMARIO } from '../../../Colores';
                  paddingX: masSM ? 6 : 0,
                  paddingY: masSM ? 10 : 4,
                  backgroundSize: 'cover',
-                 my:10
+
  
              }}
          >

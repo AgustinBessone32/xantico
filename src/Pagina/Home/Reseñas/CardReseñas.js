@@ -7,56 +7,46 @@
  * Tiempo :        10 min
  ********************************************************/
 
-import { Avatar, Grid, Typography } from '@mui/material'
+import {Avatar, Grid, Typography} from '@mui/material'
 import React from 'react'
-import { PRIMARIO } from '../../../Colores'
+import {PRIMARIO} from '../../../Colores'
 
 export const CardReseñas = () => {
     return (
+
         <Grid
+            item
             container
-            direction="row"
+            direction='row'
             justifyContent="center"
-            alignItems="center"
-            sx={{ px: 3, boxShadow: 0, py: 10 }}
+            alignItems='center'
 
         >
-            <Grid
-                item
-                container
-                direction='row'
-                justifyContent="center"
-                alignItems='center'
 
-            >
+            {
 
-                {
+                reseñas.map(res => {
+                    return (
+                        <Grid item
+                              sx={{mx: 1, my: 2}}
+                              lg={3}
+                              container
+                              alignItems='center'
+                              direction='column'
+                        >
+                            <Avatar src={res.img} alt={res.name}/>
+                            <Typography sx={{color: '#000000', fontSize: 26, mt: 3, fontFamily: "Cormorant"}}> {res.titulo} </Typography>
+                            <Typography sx={{color: '#000000', fontSize: 14, mt: 1, textAlign: "center", fontWeight: 300}}> {res.desc} </Typography>
 
-                    reseñas.map(res => {
-                        return (
-                            <Grid item
-                                sx={{ mx: 1, my: 2 }}
-                                lg={3}
-                                container
-                                alignItems='center'
-                                direction='column'
-                            >
-                                <Avatar src={res.img} alt={res.name} />
-                                <Typography sx={{ color: '#000000', fontSize: 30, mt: 3 }}> {res.titulo} </Typography>
-                                <Typography sx={{ color: '#000000', fontSize: 16, mt: 1 }}> {res.desc} </Typography>
+                            <Typography sx={{color: PRIMARIO, fontSize: 16, mt: 2, fontWeight: 600}}> {res.name} </Typography>
 
-                                <Typography sx={{ color: PRIMARIO, fontSize: 16, mt: 2 }}> {res.name} </Typography>
+                        </Grid>
+                    )
+                })
 
-                            </Grid>
-                        )
-                    })
-
-                }
+            }
 
 
-
-
-            </Grid>
         </Grid>
     )
 }

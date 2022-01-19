@@ -9,35 +9,41 @@
 
 import { Grid, Typography } from '@mui/material'
 import React from 'react'
+import wifi from '../../../Recursos/wifi.svg'
+import agua from '../../../Recursos/agua.svg'
+import desayuno from '../../../Recursos/desa.svg'
+import caja from '../../../Recursos/caja.svg'
+import pet from '../../../Recursos/pet.svg'
+import servi from '../../../Recursos/servi.svg'
+
 
 export const ListadoServicios = () => {
     return (
-        <Grid
-            container
-            direction="row"
-            justifyContent="center"
-            alignItems="center"
-            sx={{ px: 20, boxShadow: 0, py: 10 }}
 
-        >
             <Grid
                 item
                 container
                 direction='row'
                 justifyContent="center"
                 alignItems='center'
-
+                sx={{maxWidth: "1000px"}}
             >
                 {
                     services.map(servi => {
                         return (
-                            <Grid item sx={{ mx: 5 }}
+                            <Grid item
                                 container
                                 alignItems='center'
                                 direction='column'
                                 lg={2} >
-                                <img src={servi.url} alt={servi.name} width='100px' />
-                                <Typography  >{servi.name}</Typography>
+                                <Grid item container sx={{justifyContent: "center"}} >
+                                    <img src={servi.url} alt={servi.name} width={"40%"} height={50} />
+                                </Grid>
+
+                                <Grid item container sx={{justifyContent: "center", marginTop: 2}} >
+                                    <Typography sx={{fontWeight: 500, fontSize: 12}}  >{servi.name}</Typography>
+                                </Grid>
+
                             </Grid>
                         )
                     })
@@ -47,7 +53,6 @@ export const ListadoServicios = () => {
             </Grid>
 
 
-        </Grid >
     )
 }
 
@@ -55,19 +60,28 @@ export const ListadoServicios = () => {
 const services = [
     {
         name: 'WIFI',
-        url: 'https://images.pexels.com/photos/10158736/pexels-photo-10158736.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+        url: wifi
     },
     {
-        name: 'WIFI',
-        url: 'https://images.pexels.com/photos/10158736/pexels-photo-10158736.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+        name: 'AGUA CALIENTE',
+        url: agua
     },
     {
-        name: 'WIFI',
-        url: 'https://images.pexels.com/photos/10158736/pexels-photo-10158736.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+        name: 'DESAYUNO',
+        url: desayuno
     },
     {
-        name: 'WIFI',
-        url: 'https://images.pexels.com/photos/10158736/pexels-photo-10158736.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
-    }
+        name: 'CAJA DE SEGURIDAD',
+        url: caja
+    },
+    {
+        name: 'PET FRIENDLY',
+        url: pet
+    },
+    {
+        name: 'SERVICIO',
+        url: servi
+    },
+
 
 ]

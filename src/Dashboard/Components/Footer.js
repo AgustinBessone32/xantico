@@ -12,6 +12,7 @@ import { Grid, Typography } from '@mui/material'
 import { IconBrandFacebook, IconBrandInstagram, IconBrandWhatsapp, IconLocation } from '@tabler/icons';
 import React from 'react'
 import { ACENTO, PRIMARIO } from '../../Colores'
+import {Facebook, Instagram, Map, Whatsapp} from "iconsax-react";
 
 export const Footer = () => {
     return (
@@ -31,10 +32,11 @@ export const Footer = () => {
                 xs={12}
                 sx={{ px: 5 }}
             >
-                <Typography sx={{ color: '#000000', fontSize: 30, mt:1 }}>
+                <Typography sx={{fontSize: 28, mt:1, fontFamily: "Cormorant" }}>
                     Nosotros
                 </Typography>
-                <Typography>
+
+                <Typography sx={{marginTop: 2, fontWeight: 300, fontSize: 14}} >
                     Lorem Ipsum es un texto de marcador de posición comúnmente utilizado en las industrias gráficas,
                 </Typography>
 
@@ -49,11 +51,12 @@ export const Footer = () => {
                 xs={12}
                 sx={{ px: 5 }}
             >
-                <Typography sx={{ color: '#000000', fontSize: 30, mt:1 }}>
+                <Typography sx={{fontSize: 28, mt:1, fontFamily: "Cormorant" }}>
                     Contacto
                 </Typography>
 
-                <Typography>
+
+                <Typography sx={{marginTop: 2, fontWeight: 300, fontSize: 14}} >
                     Direccion : Carrera 6 N 45 - 12 <br />
                     Telefono : + (57) 350 454 45 45 <br />
                     Correo:      Xantico@gmail.com
@@ -64,15 +67,16 @@ export const Footer = () => {
                     direction="row"
                     justifyContent="flex-start"
                     alignItems="center"
+                    sx={{marginTop: 2}}
                 >
 
                     <Grid item>
-                        <IconLocation color={PRIMARIO} size={"1.5rem"} stroke={1} />
+                        <Map color={PRIMARIO} size={"1.5rem"} stroke={1} />
                     </Grid>
 
 
                     <Grid item>
-                        <Typography sx={{ ml: 1, color: PRIMARIO, mt:1 }}>
+                        <Typography sx={{ ml: 1, color: PRIMARIO, }}>
                             Vernos en el mapa
                         </Typography>
                     </Grid>
@@ -92,11 +96,12 @@ export const Footer = () => {
                 xs={12}
                 sx={{ px: 5 }}
             >
-                <Typography sx={{ color: '#000000', fontSize: 30, mt:1 }}>
+                <Typography sx={{fontSize: 28, mt:1, fontFamily: "Cormorant" }}>
                     Metodo de Pago
                 </Typography>
 
-                <Typography>
+
+                <Typography sx={{marginTop: 2, fontWeight: 300, fontSize: 14}} >
                     Lorem Ipsum es un texto de marcador de posición comúnmente utilizado en las industrias gráficas,
                 </Typography>
 
@@ -112,11 +117,11 @@ export const Footer = () => {
                 xs={12}
                 sx={{ px: 5 }}
             >
-                <Typography sx={{ color: '#000000', fontSize: 30, mt:1 }}>
+                <Typography sx={{fontSize: 28, mt:1, fontFamily: "Cormorant" }}>
                     Nuestras Redes
                 </Typography>
 
-                <Typography>
+                <Typography sx={{marginTop: 2, fontWeight: 300, fontSize: 14}} >
                     Lorem Ipsum es un texto de marcador de posición comúnmente utilizado en las industrias gráficas,
                 </Typography>
 
@@ -125,18 +130,18 @@ export const Footer = () => {
                     direction="row"
                     justifyContent="flex-start"
                     alignItems="flex-start"
-                    sx={{mt:1}}
+                    sx={{mt:2}}
                 >
                     <Grid item sx={{ marginRight: 1 }}>
-                        <IconBrandWhatsapp color={PRIMARIO} size={"1.5rem"} stroke={1} />
+                        <Whatsapp color={PRIMARIO} size={"1.5rem"} stroke={0.5} />
                     </Grid>
 
                     <Grid item sx={{ marginRight: 1 }}>
-                        <IconBrandInstagram color={PRIMARIO} size={"1.5rem"} stroke={1} />
+                        <Instagram color={PRIMARIO} size={"1.5rem"} stroke={0.5} />
                     </Grid>
 
                     <Grid item sx={{ marginRight: 1 }}>
-                        <IconBrandFacebook color={PRIMARIO} size={"1.5rem"} stroke={1} />
+                        <Facebook color={PRIMARIO} size={"1.5rem"} stroke={0.5} />
                     </Grid>
 
 

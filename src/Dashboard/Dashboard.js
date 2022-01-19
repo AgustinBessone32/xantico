@@ -11,20 +11,11 @@
  * Autor:    Luis Rosero
  * Tiempo :  4 hora
  ********************************************************/
-import { createContext, React, useContext, useState } from 'react';
-import { Grid, useMediaQuery } from '@mui/material';
-import { CRoot } from '../App';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { theme } from "../Tema";
-import { ACENTO } from "../Colores";
-import Home from '../Pagina/Home/Home';
-import Nosotros from '../Pagina/Nosotros/Nosotros'
-import { AppBar } from './Components/AppBar'
-import { Footer } from './Components/Footer';
-import Camas from '../Pagina/Camas/Camas';
-
-
-
+import {createContext, React, useContext, useState} from 'react';
+import {useMediaQuery} from '@mui/material';
+import {CRoot} from '../App';
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import {theme} from "../Tema";
 
 
 export const CDashboard = createContext();
@@ -59,64 +50,33 @@ const Dashboard = () => {
 
                     }}
                 >
-                    {<Grid
-                        container
-                        direction="row"
-                        justifyContent="flex-start"
-                        alignItems="flex-start"
-                    >
-                        <Grid item container>
 
-                            <AppBar />
-
-
-                        </Grid>
-
-                    </Grid>}
                     <main
-                     style={{
-                         width: "100%",
-                        //  paddingTop: matchUpMd ? 0 : 0,
-                        //  paddingBottom: matchUpMd ? 0 : 0,
-                        //  paddingLeft: matchUpMd ? 20 : 10,
-                        //  paddingRight: matchUpMd ? 20 : 10,
-                        //  marginLeft: openDrawer && matchUpMd ? anchoDrawer : '0px',
-                         transition: theme.transitions.create('margin', {
-                             easing: theme.transitions.easing.easeOut,
-                             duration: theme.transitions.duration.enteringScreen,
-                         }),
-                     }}
+                        style={{
+                            width: "100%",
+                            //  paddingTop: matchUpMd ? 0 : 0,
+                            //  paddingBottom: matchUpMd ? 0 : 0,
+                            //  paddingLeft: matchUpMd ? 20 : 10,
+                            //  paddingRight: matchUpMd ? 20 : 10,
+                            //  marginLeft: openDrawer && matchUpMd ? anchoDrawer : '0px',
+                            transition: theme.transitions.create('margin', {
+                                easing: theme.transitions.easing.easeOut,
+                                duration: theme.transitions.duration.enteringScreen,
+                            }),
+                        }}
                     >
 
                         <Routes>
 
 
-
-                            <Route exact path="/" element={<Home />}></Route>
-
-                            <Route exact path="/nosotros" element={<Nosotros />}></Route>
-
-                            <Route exact path="/camas" element={<Camas />}></Route>
+                            <Route exact path="/" element={<h1> Dashboard </h1>}></Route>
 
 
                         </Routes>
 
 
                     </main>
-                    {<Grid
-                        container
-                        direction="row"
-                        justifyContent="flex-start"
-                        alignItems="flex-start"
-                    >
-                        <Grid item container>
 
-                            <Footer />
-
-
-                        </Grid>
-
-                    </Grid>}
                 </CDashboard.Provider>
             </Router>
         </>

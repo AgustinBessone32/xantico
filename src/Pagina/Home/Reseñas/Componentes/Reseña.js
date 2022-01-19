@@ -6,17 +6,14 @@
  * Librerias:
  * Tiempo :        10 min
  ********************************************************/
-import { React } from 'react';
-import { Button, Grid, Typography, useMediaQuery } from '@mui/material';
-import { IconArrowRight } from '@tabler/icons';
-
-import { Link } from "react-router-dom";
-import { theme } from "../../../../Tema";
-import { PRIMARIO } from '../../../../Colores';
+import {React} from 'react';
+import {Grid, Typography, useMediaQuery} from '@mui/material';
+import {theme} from "../../../../Tema";
+import {PRIMARIO} from '../../../../Colores';
 
 
 const Reseña = (props) => {
-    const { reseña } = props;
+    const {reseña} = props;
     const masSM = useMediaQuery(theme.breakpoints.up("md"));
     return (
         <Grid
@@ -24,42 +21,34 @@ const Reseña = (props) => {
             direction="row"
             justifyContent="center"
             alignItems="flex-start"
-            sx={{ marginTop: masSM ? 6 : 0, padding: masSM ? 4 : 0 }}
+            sx={{marginTop: masSM ? 4 : 0, padding: masSM ? 4 : 0}}
 
         >
 
 
-            <Grid item container sx={{ alignItems: "center", minHeight: 100 }}>
+            <Grid item container sx={{justifyContent: "center", minHeight: 100}}>
                 <Typography
-                    sx={{ fontSize: masSM ? 45 : 24, fontWeight: 600, marginTop: 2, color: "#000000", lineHeight: 1 }}>
+                    sx={{fontSize: masSM ? 45 : 24, fontFamily: "Cormorant", fontWeight: 700,}}>
                     {reseña.title}
                 </Typography>
             </Grid>
 
-            <Grid item container sx={{ alignItems: "center", minHeight: masSM ? 160 : 120 }}>
+            <Grid item container sx={{alignItems: "center"}}>
                 <Typography sx={{
-                    fontSize: masSM ? 20 : 18,
-                    marginTop: masSM ? 2 : 0,
-
-                    fontWeight: 400,
-                    textAlign: "justify"
+                    fontSize: 18,
+                    fontWeight: 300,
+                    textAlign: "center"
                 }}>
                     {reseña.contenido}
                 </Typography>
             </Grid>
 
-            <Grid item container sx={{ marginTop: 2 }}>
-                <Grid
-                    container
-                    direction="row"
-                    justifyContent="flex-start"
-                    alignItems="center"
-                    sx={{ marginTop: 2 }}
-                >
-                    <Typography sx={{ fontSize: 16, color: PRIMARIO}}>
-                        {reseña.name}
-                    </Typography>
-                </Grid>
+            <Grid item container sx={{marginTop: 4, justifyContent: "center"}}>
+
+                <Typography sx={{fontSize: 16, color: PRIMARIO, fontWeight: 600}}>
+                    {reseña.name}
+                </Typography>
+
             </Grid>
         </Grid>
     );

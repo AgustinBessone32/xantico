@@ -109,6 +109,7 @@ const CarruselServicios = () => {
 
                         {masSM && <Grid item>
                             <ButtonBase
+
                                 sx={{ padding: 1, borderRadius: 8 }}
                                 onClick={() => siguiente()}
                             >

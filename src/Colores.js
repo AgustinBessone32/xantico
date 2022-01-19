@@ -7,5 +7,5 @@
  * Tiempo :      10 min
  ********************************************************/
  export const PRIMARIO = "#663419"
- export const ACENTO = "#FAF9F5"
+ export const ACENTO = "#F4EFE2"
  export const FONDO = "#FFFFFF"

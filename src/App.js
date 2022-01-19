@@ -5,7 +5,8 @@
  * librerias:  mui.com, tabler icons, firebase,
  *             react router dom, react-helmet,
  * react-intersection-observer, framer-motion,
- * (react-elastic-carousel, styled-components)
+ * (react-elastic-carousel, styled-components),
+ * iconsax-react
  * props:
  * tiempo        10 min
  *************************************************/
@@ -50,6 +51,7 @@ import {createContext,  useEffect, useState} from 'react';
 import {Grid} from "@mui/material";
 import {Helmet} from "react-helmet"; 
 import Dashboard from './Dashboard/Dashboard';
+import Pagina from "./Pagina/Pagina";
 export const CRoot = createContext();
 
 function App() {
@@ -78,7 +80,7 @@ function App() {
 
           {/* {usuario !== '' ? <Dashboard /> : <Pagina />} */}
 
-          <Dashboard />
+          <Pagina />
 
         </CRoot.Provider>
 

@@ -4,17 +4,17 @@
  * sistema
  * Props:
  * Librerias:
- * Autor:     
+ * Autor:
  * Tiempo :   45 min
  ********************************************************/
 
-import { Grid, Typography } from '@mui/material'
-import { IconBrandFacebook, IconBrandInstagram, IconBrandWhatsapp, IconCloud } from '@tabler/icons';
+import {Grid, Typography} from '@mui/material'
 import React from 'react'
 import logo from '../../Recursos/logo.svg'
 import nube from '../../Recursos/nube.svg'
-import { ACENTO, PRIMARIO } from "../../Colores";
-import { Link } from 'react-router-dom';
+import {ACENTO, PRIMARIO} from "../../Colores";
+import {Link} from 'react-router-dom';
+import {Facebook, Instagram, Whatsapp} from "iconsax-react";
 
 export const AppBar = () => {
     return (
@@ -23,7 +23,7 @@ export const AppBar = () => {
             direction="row"
             justifyContent="center"
             alignItems="center"
-            sx={{ paddingX: 2, boxShadow: 0, height: '80px', backgroundColor: ACENTO }}
+            sx={{paddingX: 2, paddingY: 2, boxShadow: 0, backgroundColor: ACENTO}}
         >
 
             <Grid
@@ -31,7 +31,7 @@ export const AppBar = () => {
                 direction="row"
                 justifyContent="flex-start"
                 alignItems="flex-start"
-                sx={{ maxWidth: '1400px' }}
+                sx={{maxWidth: '1400px'}}
             >
 
                 <Grid
@@ -48,15 +48,15 @@ export const AppBar = () => {
                             justifyContent="flex-start"
                             alignItems="center"
                         >
-                            <Grid item sx={{ marginRight: 1 }}>
-                                <Typography >Itali </Typography>
+                            <Grid item sx={{marginRight: 1}}>
+                                <Typography sx={{fontWeight: 500}} >Ipiales </Typography>
                             </Grid>
 
-                            <Grid item sx={{ marginRight: 1 }}>
-                                <img src={nube} width='20' />
+                            <Grid item sx={{marginRight: 1}}>
+                                <img src={nube} width={"70%"}/>
                             </Grid>
 
-                            <Grid item sx={{ marginRight: 1 }}>
+                            <Grid item sx={{marginRight: 1}}>
                                 <Typography>11 C </Typography>
                             </Grid>
 
@@ -64,54 +64,68 @@ export const AppBar = () => {
 
                     </Grid>
 
-                    <Grid item>
-                        <Typography>
-                            <Link to="/" style={{color: PRIMARIO, cursor: 'pointer', textDecoration: 'none'}}>HOME</Link>
-                        </Typography>
+                    <Grid container item lg={1} sx={{justifyContent: "center"}}>
+
+                        <Link to="/"
+                              style={{textDecoration: 'none'}}>
+                            <Typography sx={{fontSize: 14, color: PRIMARIO, fontWeight: 500}}> HOME
+                            </Typography>
+
+                        </Link>
                     </Grid>
 
 
-                    <Grid item>
-                        <Typography>
-                            <Link to="/camas" style={{color: PRIMARIO, cursor: 'pointer', textDecoration: 'none'}}>CAMAS</Link>
-                        </Typography>
+                    <Grid container item lg={1} sx={{justifyContent: "center"}}>
+
+                        <Link to="/camas"
+                              style={{color: PRIMARIO, cursor: 'pointer', textDecoration: 'none'}}> <Typography
+                            sx={{fontSize: 14, color: PRIMARIO, fontWeight: 500}}> CAMAS
+                        </Typography></Link>
+
                     </Grid>
 
 
-                    <Grid item>
-                        <Typography sx={{ color: PRIMARIO, cursor: 'pointer' }}>QUE HACER</Typography>
+                    <Grid container item lg={1} sx={{justifyContent: "flex-end"}}>
+                        <Typography sx={{fontSize: 14, color: PRIMARIO, fontWeight: 500}}> QUE HACER
+                        </Typography>
                     </Grid>
 
                     <Grid
                         item
                         lg={2}
-                        sx={{ textAlign: 'center' }}
+                        sx={{textAlign: 'center'}}
                     >
 
-                        <img src={logo} style={{ width: 110, textAlign: 'center', flexGrow: 1 }} alt={"logo"} />
+                        <img src={logo} style={{width: "50%", textAlign: 'center', flexGrow: 1}} alt={"logo"}/>
                     </Grid>
 
 
-                    <Grid item>
-                        <Typography sx={{ color: PRIMARIO, cursor: 'pointer' }}>REGLAS</Typography>
-                    </Grid>
-
-
-                    <Grid item>
-                        <Typography>
-                            <Link to="/nosotros" style={{color: PRIMARIO, cursor: 'pointer', textDecoration: 'none'}}>NOSOTROS</Link>
+                    <Grid container item lg={1} sx={{justifyContent: "flex-start"}}>
+                        <Typography sx={{fontSize: 14, color: PRIMARIO, fontWeight: 500}}> REGLAS
                         </Typography>
                     </Grid>
 
-                    <Grid item>
-                        <Typography sx={{ color: PRIMARIO, cursor: 'pointer' }}>CONTACTO</Typography>
+
+                    <Grid container item lg={1} sx={{justifyContent: "flex-start"}}>
+
+                        <Link to="/nosotros"
+                              style={{color: PRIMARIO, cursor: 'pointer', textDecoration: 'none'}}> <Typography
+                            sx={{fontSize: 14, color: PRIMARIO, fontWeight: 500}}> NOSOTROS
+                        </Typography></Link>
+
+                    </Grid>
+
+
+                    <Grid container item lg={1} sx={{justifyContent: "flex-start"}}>
+                        <Typography sx={{fontSize: 14, color: PRIMARIO, fontWeight: 500}}> CONTACTOS
+                        </Typography>
                     </Grid>
 
                     <Grid
                         item
                         container
                         lg={2}
-                        sx={{ justifyContent: 'flex-end' }}
+                        sx={{justifyContent: 'flex-end'}}
                     >
 
                         <Grid
@@ -120,16 +134,16 @@ export const AppBar = () => {
                             justifyContent="flex-end"
                             alignItems="center"
                         >
-                            <Grid item sx={{ marginRight: 1 }}>
-                                <IconBrandWhatsapp color={PRIMARIO} size={"1.5rem"} stroke={1} />
+                            <Grid item sx={{marginRight: 1}}>
+                                <Whatsapp color={PRIMARIO} size={"2rem"} stroke={1} variant={"Bold"}/>
                             </Grid>
 
-                            <Grid item sx={{ marginRight: 1 }}>
-                                <IconBrandInstagram color={PRIMARIO} size={"1.5rem"} stroke={1} />
+                            <Grid item sx={{marginRight: 1}}>
+                                <Instagram color={PRIMARIO} size={"2rem"} stroke={1} variant={"Bold"}/>
                             </Grid>
 
-                            <Grid item sx={{ marginRight: 1 }}>
-                                <IconBrandFacebook color={PRIMARIO} size={"1.5rem"} stroke={1} />
+                            <Grid item sx={{marginRight: 1}}>
+                                <Facebook color={PRIMARIO} size={"2rem"} stroke={1} variant={"Bold"}/>
                             </Grid>
 
 
