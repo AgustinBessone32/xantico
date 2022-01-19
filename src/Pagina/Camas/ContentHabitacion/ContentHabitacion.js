@@ -11,7 +11,6 @@ const ContentHabitacion = (props) => {
             direction="row"
             justifyContent="flex-start"
             alignItems="flex-start"
-            sx={{ mt: 10 }}
         >
             <Grid
                 item
@@ -28,7 +27,7 @@ const ContentHabitacion = (props) => {
                         :
                         <>
                         <Typography sx={{ fontSize: 40, fontWeight: 'medium' }}>Urban Spirit of Helsinki</Typography>
-                        <Typography sx={{ fontSize: 20, mt: 2, px: 30, textAlign: 'center', mb: 10 }}>
+                        <Typography sx={{ fontSize: 20, mt: 2, px: 30, textAlign: 'center', mb: 10, fontWeight: 'light' }}>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                         </Typography>
@@ -55,7 +54,7 @@ const ContentHabitacion = (props) => {
                         ?
                         <>
                         <Typography sx={{ fontSize: 40, fontWeight: 'medium' }}>Urban Spirit of Helsinki</Typography>
-                        <Typography sx={{ fontSize: 20, mt: 2, px: 30, textAlign: 'center', mb: 10 }}>
+                        <Typography sx={{ fontSize: 20, mt: 2, px: 30, textAlign: 'center', mb: 10 ,fontWeight: 'light'}}>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                         </Typography>

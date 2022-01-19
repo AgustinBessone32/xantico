@@ -35,8 +35,8 @@ export const CardReseñas = () => {
                               direction='column'
                         >
                             <Avatar src={res.img} alt={res.name}/>
-                            <Typography sx={{color: '#000000', fontSize: 26, mt: 3, fontFamily: "Cormorant"}}> {res.titulo} </Typography>
-                            <Typography sx={{color: '#000000', fontSize: 14, mt: 1, textAlign: "center", fontWeight: 300}}> {res.desc} </Typography>
+                            <Typography sx={{fontWeight:'bold', fontSize: 30, mt: 3, fontFamily: "Cormorant"}}> {res.titulo} </Typography>
+                            <Typography sx={{fontSize: 16, mt: 1, textAlign: "center", fontWeight: 300}}> {res.desc} </Typography>
 
                             <Typography sx={{color: PRIMARIO, fontSize: 16, mt: 2, fontWeight: 600}}> {res.name} </Typography>
 

@@ -11,19 +11,36 @@ import ContentHabitacion from './ContentHabitacion/ContentHabitacion'
 import ListadoServicios from './ListadoServicios/ListadoServicios'
 import CardReseñas from './CardReseñas/CardReseñas'
 import ButtonReservar from './ContentHabitacion/Components/ButtonReservar'
+import { Grid } from '@mui/material'
 
 const Camas = () => {
     return (
 
         <>
-            <ContentHabitacion inverse={true} />
-            <ContentHabitacion inverse={false} />
 
-            <ListadoServicios />
+            <Grid item container sx={{ marginTop: 10, justifyContent: "center" }}>
+                <ContentHabitacion inverse={true} />
+            </Grid>
 
-            <CardReseñas />
+            <Grid item container sx={{ marginTop: 10, justifyContent: "center" }}>
+                <ContentHabitacion inverse={false} />
+            </Grid>
 
-            <ButtonReservar />
+            <Grid item container sx={{ marginTop: 10, justifyContent: "center" }}>
+                <ListadoServicios />
+            </Grid>
+
+            <Grid item container sx={{ marginTop: 10, justifyContent: "center" }}>
+                <CardReseñas />
+            </Grid>
+
+
+
+            <Grid item container sx={{ my: 10, justifyContent: "center" }}>
+                <ButtonReservar />
+            </Grid>
+
+
 
         </>
 

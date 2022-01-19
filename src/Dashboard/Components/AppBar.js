@@ -86,8 +86,10 @@ export const AppBar = () => {
 
 
                     <Grid container item lg={1} sx={{justifyContent: "flex-end"}}>
-                        <Typography sx={{fontSize: 14, color: PRIMARIO, fontWeight: 500}}> QUE HACER
-                        </Typography>
+                    <Link to="/quehacer"
+                              style={{color: PRIMARIO, cursor: 'pointer', textDecoration: 'none'}}> <Typography
+                            sx={{fontSize: 14, color: PRIMARIO, fontWeight: 500}}> QUE HACER
+                        </Typography></Link>
                     </Grid>
 
                     <Grid
@@ -101,8 +103,10 @@ export const AppBar = () => {
 
 
                     <Grid container item lg={1} sx={{justifyContent: "flex-start"}}>
-                        <Typography sx={{fontSize: 14, color: PRIMARIO, fontWeight: 500}}> REGLAS
-                        </Typography>
+                    <Link to="/reglas"
+                              style={{color: PRIMARIO, cursor: 'pointer', textDecoration: 'none'}}> <Typography
+                            sx={{fontSize: 14, color: PRIMARIO, fontWeight: 500}}> REGLAS
+                        </Typography></Link>
                     </Grid>
 
 
@@ -117,8 +121,10 @@ export const AppBar = () => {
 
 
                     <Grid container item lg={1} sx={{justifyContent: "flex-start"}}>
-                        <Typography sx={{fontSize: 14, color: PRIMARIO, fontWeight: 500}}> CONTACTOS
-                        </Typography>
+                    <Link to="/contacto"
+                              style={{color: PRIMARIO, cursor: 'pointer', textDecoration: 'none'}}> <Typography
+                            sx={{fontSize: 14, color: PRIMARIO, fontWeight: 500}}> CONTACTO
+                        </Typography></Link>
                     </Grid>
 
                     <Grid

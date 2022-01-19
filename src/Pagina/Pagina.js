@@ -16,6 +16,9 @@ import Home from "./Home/Home";
 import Nosotros from "./Nosotros/Nosotros";
 import Camas from "./Camas/Camas";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import QueHacer from "./QueHacer/QueHacer";
+import Reglas from "./Reglas/Reglas";
+import Contacto from "./Contacto/Contacto";
 
 const Pagina = () => {
     return (
@@ -52,6 +55,12 @@ const Pagina = () => {
                     <Route exact path="/nosotros" element={<Nosotros/>}></Route>
 
                     <Route exact path="/camas" element={<Camas/>}></Route>
+
+                    <Route exact path="/quehacer" element={<QueHacer />}></Route>
+
+                    <Route exact path="/reglas" element={<Reglas />}></Route>
+
+                    <Route exact path="/contacto" element={<Contacto />}></Route>
 
 
                 </Routes>
