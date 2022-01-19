@@ -21,6 +21,7 @@ import Home from '../Pagina/Home/Home';
 import Nosotros from '../Pagina/Nosotros/Nosotros'
 import { AppBar } from './Components/AppBar'
 import { Footer } from './Components/Footer';
+import Camas from '../Pagina/Camas/Camas';
 
 
 
@@ -94,6 +95,8 @@ const Dashboard = () => {
                             <Route exact path="/" element={<Home />}></Route>
 
                             <Route exact path="/nosotros" element={<Nosotros />}></Route>
+
+                            <Route exact path="/camas" element={<Camas />}></Route>
 
 
                         </Routes>

@@ -72,8 +72,11 @@ export const AppBar = () => {
 
 
                     <Grid item>
-                        <Typography sx={{ color: PRIMARIO, cursor: 'pointer' }}>CAMAS</Typography>
+                        <Typography>
+                            <Link to="/camas" style={{color: PRIMARIO, cursor: 'pointer', textDecoration: 'none'}}>CAMAS</Link>
+                        </Typography>
                     </Grid>
+
 
                     <Grid item>
                         <Typography sx={{ color: PRIMARIO, cursor: 'pointer' }}>QUE HACER</Typography>
