@@ -62,6 +62,9 @@ const Pagina = () => {
 
                     <Route exact path="/contacto" element={<Contacto />}></Route>
 
+                    {/* aqui aumente esto */}
+                    <Route exact path="/admin" element={<h1>Espacio par login que debe ser un Dialog</h1> }></Route>
+
 
                 </Routes>
 

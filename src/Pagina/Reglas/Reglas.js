@@ -24,11 +24,11 @@ const Reglas = () => {
             justifyContent="center"
             alignItems="center"
         >
-            <Grid item container sx={{ justifyContent: "center" }}>
+               <Grid item container sx={{ justifyContent: "center" }}>
                 <CardReglas />
             </Grid>
 
-            <Grid item container sx={{mt: 12, justifyContent: "center" }}>
+              <Grid item container sx={{mt: 12, justifyContent: "center" }}>
                 <ContentReglas />
             </Grid>
 
