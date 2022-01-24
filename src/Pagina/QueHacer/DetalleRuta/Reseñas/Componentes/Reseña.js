@@ -29,7 +29,7 @@ const Reseña = (props) => {
             <Grid item container sx={{justifyContent: "center", minHeight: 100}}>
                 <Typography
                     sx={{fontSize: masSM ? 45 : 24, fontFamily: "Cormorant", fontWeight: 700,}}>
-                    {reseña.title}
+                    {reseña.tituloReseña}
                 </Typography>
             </Grid>
 
@@ -39,14 +39,14 @@ const Reseña = (props) => {
                     fontWeight: 300,
                     textAlign: "center"
                 }}>
-                    {reseña.contenido}
+                    {reseña.descripcionReseña}
                 </Typography>
             </Grid>
 
             <Grid item container sx={{marginTop: 4, justifyContent: "center"}}>
 
                 <Typography sx={{fontSize: 16, color: PRIMARIO, fontWeight: 600}}>
-                    {reseña.name}
+                    {reseña.autorReseña}
                 </Typography>
 
             </Grid>

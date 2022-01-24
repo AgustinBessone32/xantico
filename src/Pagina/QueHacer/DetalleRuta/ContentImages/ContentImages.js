@@ -12,22 +12,23 @@
  import { ACENTO, PRIMARIO } from '../../../../Colores'
  
  
- const ContentImages = () => {
+ const ContentImages = (props) => {
+     const {item} = props;
      return (
  
          <Grid
              container
              direction="row"
-             justifyContent="center"
+             justifyContent="star"
              alignItems="center"
              lg={12}
              spacing={2}
          >
-             {
-                 cImages.map(img =>{
+             { item !== undefined &&
+                 item.imagenes.map(img =>{
                      return(
                         <Grid item containter lg={2} >
-                            <img src={img.img} alt={img.alt} width='90%' />
+                            <img src={img} alt={img.alt} width='90%' />
                         </Grid>
                      )
                  })
