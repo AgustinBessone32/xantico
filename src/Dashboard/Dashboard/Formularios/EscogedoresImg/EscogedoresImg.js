@@ -8,7 +8,7 @@
  *************************************************/
 import {createRef, useState} from "react";
 import {Box, Button, ButtonBase, Dialog, Grid, LinearProgress} from "@mui/material";
-import imgdefoult from '../../../Recursos/imgVacia.svg';
+import imgdefoult from '../../../../Recursos/imgVacia.svg';
 import Cropper from "react-cropper";
 import "cropperjs/dist/cropper.css";
 import imageCompression from "browser-image-compression";

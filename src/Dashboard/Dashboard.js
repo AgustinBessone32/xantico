@@ -11,11 +11,17 @@
  * Autor:    Luis Rosero
  * Tiempo :  4 hora
  ********************************************************/
-import {createContext, React, useContext, useState} from 'react';
-import {useMediaQuery} from '@mui/material';
-import {CRoot} from '../App';
-import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
-import {theme} from "../Tema";
+import { createContext, React, useContext, useState } from 'react';
+import { Drawer, Grid, useMediaQuery } from '@mui/material';
+import { CRoot } from '../App';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { theme } from "../Tema";
+import AppBarCustom from './Dashboard/Components/AppBarCustom';
+import MenuLateral from './Dashboard/Components/MenuLateral'
+import { ACENTO } from '../Colores';
+import Rutas from './Dashboard/Rutas/Rutas';
+import Inicio from './Dashboard/Inicio/Inicio';
+import FRuta from './Dashboard/Formularios/FRuta';
 
 
 export const CDashboard = createContext();
@@ -37,6 +43,8 @@ const Dashboard = () => {
     };
 
 
+
+
     return (
         <>
             <Router>
@@ -50,15 +58,51 @@ const Dashboard = () => {
 
                     }}
                 >
+                    <Grid
+                        container
+                        direction="row"
+                        justifyContent="flex-start"
+                        alignItems="flex-start"
+
+                    >
+                         <Grid item container>
+
+                            <AppBarCustom alto={altoBarra} />
+
+
+                        </Grid> 
+
+                        <Drawer
+                            variant={matchUpMd ? 'persistent' : 'temporary'}
+                            anchor="left"
+                            open={openDrawer}
+                            onClose={cerrarDrawer}
+                            color="inherit"
+                            PaperProps={{
+                                style: {
+                                    width: anchoDrawer,
+                                    border: 'none',
+                                    paddingTop: matchUpMd ? altoBarra : '0px',
+                                    zIndex: 100,
+                                    backgroundColor: ACENTO
+                                },
+                            }}
+                        >
+
+                           <MenuLateral />
+
+
+                        </Drawer>
+                    </Grid>
 
                     <main
                         style={{
                             width: "100%",
-                            //  paddingTop: matchUpMd ? 0 : 0,
-                            //  paddingBottom: matchUpMd ? 0 : 0,
-                            //  paddingLeft: matchUpMd ? 20 : 10,
-                            //  paddingRight: matchUpMd ? 20 : 10,
-                            //  marginLeft: openDrawer && matchUpMd ? anchoDrawer : '0px',
+                            paddingTop: matchUpMd ? 0 : 0,
+                            paddingBottom: matchUpMd ? 0 : 0,
+                            paddingLeft: matchUpMd ? 20 : 10,
+                            paddingRight: matchUpMd ? 20 : 10,
+                            marginLeft: openDrawer && matchUpMd ? anchoDrawer : '0px',
                             transition: theme.transitions.create('margin', {
                                 easing: theme.transitions.easing.easeOut,
                                 duration: theme.transitions.duration.enteringScreen,
@@ -68,8 +112,9 @@ const Dashboard = () => {
 
                         <Routes>
 
-
-                            <Route exact path="/" element={<h1> Dashboard </h1>}></Route>
+                            <Route exact path="/admin" element={<Inicio />}></Route>
+                            <Route exact path="/admin/rutas" element={<Rutas />}></Route>
+                            <Route path="/admin/detalleruta/:id" element={<FRuta />}></Route>
 
 
                         </Routes>

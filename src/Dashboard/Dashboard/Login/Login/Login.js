@@ -6,31 +6,33 @@
  * props:
  * tiempo:       1 hora
  *************************************************/
-import {React, useState} from "react";
+import {React, useState, useContext} from "react";
 import {Button, ButtonBase, Dialog, Grid, TextField, Typography} from "@mui/material";
 import {Link} from "react-router-dom";
-import logo from '../../Recursos/logolargo.svg'
-import fire from "../../../fire";
-import {obtenerID} from "../../../FuncionesGlobales";
-import {UsuarioDoc} from "../../Entidades/Usuario";
-// import {USUARIOS} from "../../../Constantes";
+import {CDashboard} from '../../../Dashboard';
+import logo from '../../../../Recursos/logo.svg'
+import {fire} from "../../../../fire"
+import {obtenerID} from "../../../../FuncionesGlobales";
+import {UsuarioDoc} from "../../../../Entidades/Usuario";
+import {USUARIOS} from "../../../../Constantes";
 
 
 const Login = () => {
     const [email, setEmail] = useState('');
     const [pass, setPass] = useState('')
+    const cData = useContext(CDashboard);
 
     const loguear = () => {
         fire.auth().signInWithEmailAndPassword(email, pass).then((doc) => {
             let id = obtenerID(doc.user.email)
             fire.firestore().collection(USUARIOS).doc(id).get().then((doc) => {
                 let usu = new UsuarioDoc(doc);
-                //setUsuario(usu)
+                cData.setUsuario(usu)
             }).catch((err) => {
-                alert(err)
+                console.log(err)
             })
         }).catch((err) =>{
-            alert(err)
+            console.log(err)
         })
     }
 
@@ -68,7 +70,7 @@ const Login = () => {
                     >
 
                         <Grid item container sx={{justifyContent: "flex-end"}}>
-                            <Link to={"/home"} style={{textDecoration: "none", color: "#000"}}
+                            <Link to={"/"} style={{textDecoration: "none", color: "#000"}}
 
                             >
                                 <Typography >Ir a home</Typography>

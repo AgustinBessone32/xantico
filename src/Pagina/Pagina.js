@@ -19,6 +19,9 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import QueHacer from "./QueHacer/QueHacer";
 import Reglas from "./Reglas/Reglas";
 import Contacto from "./Contacto/Contacto";
+import AppBarCustom from "../Dashboard/Dashboard/Components/AppBarCustom";
+import Dashboard from "../Dashboard/Dashboard";
+import Login from "../Dashboard/Dashboard/Login/Login/Login";
 
 const Pagina = () => {
     return (
@@ -63,7 +66,7 @@ const Pagina = () => {
                     <Route exact path="/contacto" element={<Contacto />}></Route>
 
                     {/* aqui aumente esto */}
-                    <Route exact path="/admin" element={<h1>Espacio par login que debe ser un Dialog</h1> }></Route>
+                    <Route exact path="/admin" element={<Login /> }></Route>
 
 
                 </Routes>

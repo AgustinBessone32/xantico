@@ -47,16 +47,40 @@
  ***************************************************/
 
 
-import {createContext,  useEffect, useState} from 'react';
-import {Grid} from "@mui/material";
-import {Helmet} from "react-helmet"; 
+import { createContext, useEffect, useState } from 'react';
+import { Grid } from "@mui/material";
+import { Helmet } from "react-helmet";
 import Dashboard from './Dashboard/Dashboard';
+import {fire} from "./fire";
+import {USUARIOS} from "./Constantes";
+import {obtenerID} from "./FuncionesGlobales";
+import {UsuarioDoc} from "./Entidades/Usuario";
 import Pagina from "./Pagina/Pagina";
 export const CRoot = createContext();
 
 function App() {
   const [usuario, setUsuario] = useState('');
-  
+
+  useEffect(() => {
+
+    console.log(fire.auth().onAuthStateChanged((doc) => {
+      if (doc !== null) {
+        let email = fire.auth().currentUser.email;
+        let id = obtenerID(email);
+        fire.firestore().collection(USUARIOS).doc(id).get().then((doc) => {
+          let usu = new UsuarioDoc(doc);
+          setUsuario(usu)
+          // cerrarSplash()
+        }).catch((err) => {
+          alert(err)
+        })
+      }
+    }))
+
+
+
+  }, [])
+
   return (
     <>
       <Helmet>
@@ -76,14 +100,14 @@ function App() {
 
 
       >
-        <CRoot.Provider value={{ usuario: usuario, setUsuario: setUsuario }}>
-
-          {/* {usuario !== '' ? <Dashboard /> : <Pagina />} */}
-
+        {usuario === '' ?
           <Pagina />
 
-        </CRoot.Provider>
+          :
 
+          <CRoot.Provider value={{ usuario: usuario, setUsuario: setUsuario }}>
+            <Dashboard />
+          </CRoot.Provider>}
 
 
       </Grid>

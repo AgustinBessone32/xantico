@@ -11,6 +11,7 @@
  export const COTIZACIONES = "cotizaciones";
  export const ABONOS = "abonos";
  /////////////////////////////
+ export const RUTAS = "rutas";
  export const USUARIOS = "usuarios";
  export const SALUDOS = "saludos";
  export const CONSECUTIVOS = "consecutivos";

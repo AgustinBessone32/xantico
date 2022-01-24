@@ -23,7 +23,7 @@ export const AppBar = () => {
             direction="row"
             justifyContent="center"
             alignItems="center"
-            sx={{paddingX: 2, paddingY: 2, boxShadow: 0, backgroundColor: ACENTO}}
+            sx={{paddingX: 2, paddingY: 2, boxShadow: 0, backgroundColor: ACENTO, zIndex: 900}}
         >
 
             <Grid
