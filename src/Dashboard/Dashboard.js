@@ -21,6 +21,8 @@ import MenuLateral from './Dashboard/Components/MenuLateral'
 import {ACENTO} from '../Colores';
 import Rutas from './Dashboard/Rutas/Rutas';
 import FRuta from './Dashboard/Formularios/FRuta';
+import FAnuncio from './Dashboard/Formularios/FAnuncio';
+import Anuncios from './Dashboard/Anuncios/Anuncios';
 
 
 export const CDashboard = createContext();
@@ -109,11 +111,16 @@ const Dashboard = () => {
 
                         <Routes>
 
-                            <Route exact path="/" element={<Rutas/>}></Route>
+                            <Route exact path="/admin" element={<Rutas/>}></Route>
 
                             <Route exact path="/admin/rutas" element={<Rutas/>}></Route>
-
+                            
                             <Route path="/admin/detalleruta/:id" element={<FRuta/>}></Route>
+                            
+                            <Route exact path="/admin/anuncios" element={<Anuncios/>}></Route>
+
+                            <Route exact path="/admin/detalleanuncio/:id" element={<FAnuncio/>}></Route>
+
 
 
                         </Routes>

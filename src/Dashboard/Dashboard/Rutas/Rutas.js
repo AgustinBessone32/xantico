@@ -64,11 +64,12 @@ const Rutas = () => {
                   justifyContent="flex-start"
                   alignItems="flex-start"
                   spacing={2}
+                  
                  >
 
                   {rutas.map((item, index) =>{
                     return(
-                        <Grid item container key={item}>
+                        <Grid item container key={item} lg={6} >
                           <CardRuta item={item}/>
                         </Grid>
                     )

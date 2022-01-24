@@ -6,7 +6,7 @@
  * Librerias:
  * Tiempo :        10 min
  ********************************************************/
-import { React, useRef, useState } from 'react';
+import { React, useEffect, useRef, useState } from 'react';
 import { Button, ButtonBase, Grid, Typography, useMediaQuery } from '@mui/material';
 import Carousel from 'react-elastic-carousel';
 import {
@@ -17,6 +17,9 @@ import {
 
 import Servicio from "./Componentes/Servicio";
 import { theme } from "../../../Tema";
+import { AnuncioDoc } from '../../../Entidades/Anuncio';
+import { ANUNCIOS } from '../../../Constantes';
+import {fire} from '../../../fire'
 
 
 const CarruselServicios = () => {
@@ -24,14 +27,14 @@ const CarruselServicios = () => {
     const ref = useRef();
     const masSM = useMediaQuery(theme.breakpoints.up("md"));
     const [bg, setBg] = useState(0)
+    const [anuncios,setAnuncios] = useState([]);
 
 
     const siguiente = () => {
         
-        if(bg + 1 <= servi.length - 1){
+        if(bg + 1 <= anuncios.length - 1){
             ref.current.slideNext();
             setBg(bg + 1)
-            console.log(bg)
         }
         
     };
@@ -39,9 +42,20 @@ const CarruselServicios = () => {
         if(bg - 1 >= 0){
             ref.current.slidePrev();
             setBg(bg - 1)
-            console.log(bg)
         }
     };
+
+ 
+ 
+    useEffect(() =>{
+       fire.firestore().collection(ANUNCIOS).onSnapshot((snap) =>{
+           setAnuncios([]);
+           snap.forEach((doc) =>{
+               let oba = new AnuncioDoc(doc);
+               setAnuncios((array) => array.concat(oba));
+           })
+       })
+    },[])
 
 
     return (
@@ -57,7 +71,7 @@ const CarruselServicios = () => {
                 paddingY: masSM ? 10 : 4,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
-                backgroundImage: `url(${servi[bg].img})`,
+                backgroundImage: anuncios.length > 0 ? `url(${anuncios[bg].imagen})` :  `url(${servi[bg].img})`,
                 width: '100%'
             }}
         >
@@ -97,7 +111,7 @@ const CarruselServicios = () => {
                                 showArrows={false}
                                 enableAutoPlay={false}
                             >
-                                {servi.map((servicio) => {
+                                {anuncios.map((servicio) => {
                                     return (
                                         <Servicio servicio={servicio} />
                                     )

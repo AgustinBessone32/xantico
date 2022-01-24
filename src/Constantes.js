@@ -20,8 +20,9 @@
  export const CONFIGURACIONES = "configuraciones"
  export const PLANES = "planes";
  export const LISTAPAGOS = "listaPagos";
+ export const ANUNCIOS = "anuncios";
  
  
- export const CBarrios = ["Alfonzo Lopez", "Camilo Torres", "Charco Chico","Crustala","Jaime Bateman","Mercado","Laguna","Voladero"]
+ export const CDirige = ["camas", "quehacer", "reglas","nostros","contacto"]
  
  export const CCredenciales = ["Clientes", "Cobros", "Planes", "Usuarios", "Recibos"]

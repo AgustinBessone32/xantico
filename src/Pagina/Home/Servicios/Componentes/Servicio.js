@@ -8,6 +8,7 @@
  ********************************************************/
 import {React} from 'react';
 import {Button, Grid, Typography, useMediaQuery} from '@mui/material';
+import { Link } from "react-router-dom";
 import {theme} from "../../../../Tema";
 
 
@@ -30,7 +31,7 @@ const Servicio = (props) => {
                         fontSize: masSM ? 70 : 24, marginTop: 2, color: "#FFFFFF", lineHeight: 1,
                         fontFamily: "Cormorant"
                     }}>
-                    {servicio.nombre}
+                    {servicio.titulo}
                 </Typography>
             </Grid>
 
@@ -42,36 +43,16 @@ const Servicio = (props) => {
                     textAlign: "justify",
 
                 }}>
-                    {servicio.contenido}
+                    {servicio.subtitulo}
                 </Typography>
             </Grid>
 
-            {/* <Grid item container sx={{ marginTop: 2 }}>
-                    <Grid
-                        container
-                        direction="row"
-                        justifyContent="flex-start"
-                        alignItems="center"
-                        sx={{ marginTop: 2 }}
-                    >
-                        <Typography sx={{ fontSize: 16, fontWeight: 700 }}>
-                            Caso {servicio.caso}
-                        </Typography>
-                        <IconArrowRight
-                        />
-                    </Grid>
-                </Grid> */}
-
             <Grid item container sx={{marginTop: 4, justifyContent: 'center'}}>
-                {/* <Link to={"/servicio/"} style={{textDecoration: "none"}}>
+                 <Link to={servicio.dirige} style={{textDecoration: "none"}}>
  
  
-                     <Button variant={"contained"} color={"secondary"} size={"small"}>ver mas</Button>
-                 </Link> */}
-
-                <Button variant={"contained"} sx={{paddingX: 8}}>
-                    ver mas
-                </Button>
+                     <Button variant={"contained"} sx={{paddingX: 8}} color={"secondary"} size={"small"}>ver mas</Button>
+                 </Link> 
             </Grid>
         </Grid>
     );
