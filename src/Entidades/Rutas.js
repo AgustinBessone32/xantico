@@ -8,21 +8,23 @@ export function RutaDoc(doc){
     rut.imagen = doc.data().imagen
     rut.imagenes = doc.data().imagenes
     rut.reseñas = doc.data().reseñas
+    rut.destacada = doc.data().destacada
 
     return rut;
 
 }
 
-export function RutaCrea(id, nombre, desc, nroC, imagen, imagenes , reseñas){
+export function RutaCrea(id, nombre, desc, nroC, imagen, imagenes , reseñas, destacada){
 
     let rut = {};
-    rut.id = id; //string
+    rut.id = id ? id : new Date().getTime() + "RUT"; //string
     rut.nombre = nombre; //string
     rut.descripcion = desc
     rut.nroContacto = nroC
     rut.imagen = imagen
     rut.imagenes = imagenes
     rut.reseñas = reseñas
+    rut.destacada = destacada;
 
     return rut;
 

@@ -56,10 +56,12 @@ import {USUARIOS} from "./Constantes";
 import {obtenerID} from "./FuncionesGlobales";
 import {UsuarioDoc} from "./Entidades/Usuario";
 import Pagina from "./Pagina/Pagina";
+
 export const CRoot = createContext();
 
 function App() {
   const [usuario, setUsuario] = useState('');
+
 
   useEffect(() => {
 
@@ -70,6 +72,7 @@ function App() {
         fire.firestore().collection(USUARIOS).doc(id).get().then((doc) => {
           let usu = new UsuarioDoc(doc);
           setUsuario(usu)
+          //navigate("/")
           // cerrarSplash()
         }).catch((err) => {
           alert(err)

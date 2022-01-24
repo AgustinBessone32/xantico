@@ -21,6 +21,7 @@ const Login = () => {
     const [email, setEmail] = useState('');
     const [pass, setPass] = useState('')
     const cData = useContext(CDashboard);
+    const [open,setOpen] = useState(true)
 
     const loguear = () => {
         fire.auth().signInWithEmailAndPassword(email, pass).then((doc) => {
@@ -45,7 +46,7 @@ const Login = () => {
     >
 
 
-        <Dialog open={true} maxWidth={"lg"} fullWidth >
+        <Dialog open={open} maxWidth={"lg"} fullWidth  onClose={() => setOpen(false)} >
             <Grid
                 container
                 direction="row"

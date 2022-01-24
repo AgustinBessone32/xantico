@@ -1,6 +1,6 @@
 /*******************************************************
- * Nombre:        ParaHacerCard
- * Descripcion:   ParaHacerCard
+ * Nombre:        CardCosasParaHacer
+ * Descripcion:   CardCosasParaHacer
  *
  * Props:
  * Librerias:
@@ -10,44 +10,27 @@
 import {Grid, Typography} from '@mui/material'
 import React from 'react'
 import {ACENTO} from '../../../Colores'
+import {CardCosasParaHacer} from "../../Cards/CardCosasParaHacer";
 
-export const ParaHacerCard = () => {
+export const ParaHacerCard = (props) => {
+    const {rutas} = props;
     return (
         <Grid
             container
             direction="row"
             justifyContent="center"
             alignItems="flex-start"
-
+            spacing={8}
 
         >
             {
-
-                paraHacer.map(ph => {
+                rutas.map(item => {
                     return (
-                        <Grid item
-                              sx={{mx: 1, my: 2}}
-                              lg={3}
-                              container
-                              alignItems='center'
-                              direction='column'
-                        >
-                            <img src={ph.img} width='300px'/>
-                            <Typography
-                                sx={{
-                                    backgroundColor: ACENTO, fontSize: 30, mt: -14, ml: -15,
-                                    padding: 2,
-                                    fontFamily: "Cormorant",
-                                    fontWeight: 700
-                                }}>
-                                {ph.titulo}
-                            </Typography>
-
-
+                        <Grid item lg={3} sm={12} xs={12}>
+                            <CardCosasParaHacer item={item}/>
                         </Grid>
                     )
                 })
-
             }
 
 
@@ -55,19 +38,4 @@ export const ParaHacerCard = () => {
     )
 }
 
-const paraHacer = [
-    {
-        img: 'https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-        titulo: 'Andrea Caprio',
-    },
-    {
-        img: 'https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-        titulo: 'Andrea Caprio',
-    },
-    {
-        img: 'https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-        titulo: 'Andrea Caprio',
-    },
 
-
-]

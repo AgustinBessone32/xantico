@@ -11,16 +11,15 @@
  * Autor:    Luis Rosero
  * Tiempo :  4 hora
  ********************************************************/
-import { createContext, React, useContext, useState } from 'react';
-import { Drawer, Grid, useMediaQuery } from '@mui/material';
-import { CRoot } from '../App';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { theme } from "../Tema";
+import {createContext, React, useContext, useState} from 'react';
+import {Drawer, Grid, useMediaQuery} from '@mui/material';
+import {CRoot} from '../App';
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import {theme} from "../Tema";
 import AppBarCustom from './Dashboard/Components/AppBarCustom';
 import MenuLateral from './Dashboard/Components/MenuLateral'
-import { ACENTO } from '../Colores';
+import {ACENTO} from '../Colores';
 import Rutas from './Dashboard/Rutas/Rutas';
-import Inicio from './Dashboard/Inicio/Inicio';
 import FRuta from './Dashboard/Formularios/FRuta';
 
 
@@ -43,8 +42,6 @@ const Dashboard = () => {
     };
 
 
-
-
     return (
         <>
             <Router>
@@ -65,12 +62,12 @@ const Dashboard = () => {
                         alignItems="flex-start"
 
                     >
-                         <Grid item container>
+                        <Grid item container>
 
-                            <AppBarCustom alto={altoBarra} />
+                            <AppBarCustom alto={altoBarra}/>
 
 
-                        </Grid> 
+                        </Grid>
 
                         <Drawer
                             variant={matchUpMd ? 'persistent' : 'temporary'}
@@ -89,7 +86,7 @@ const Dashboard = () => {
                             }}
                         >
 
-                           <MenuLateral />
+                            <MenuLateral/>
 
 
                         </Drawer>
@@ -112,9 +109,11 @@ const Dashboard = () => {
 
                         <Routes>
 
-                            <Route exact path="/" element={<Inicio />}></Route>
-                            <Route exact path="/admin/rutas" element={<Rutas />}></Route>
-                            <Route path="/admin/detalleruta/:id" element={<FRuta />}></Route>
+                            <Route exact path="/" element={<Rutas/>}></Route>
+
+                            <Route exact path="/admin/rutas" element={<Rutas/>}></Route>
+
+                            <Route path="/admin/detalleruta/:id" element={<FRuta/>}></Route>
 
 
                         </Routes>

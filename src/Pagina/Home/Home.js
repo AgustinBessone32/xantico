@@ -6,7 +6,7 @@
  * props:
  * tiempo:       10 min
  *************************************************/
-import {useState} from "react";
+import {useState, useEffect} from "react";
 import {Grid} from "@mui/material";
 import CarruselServicios from "../Home/Servicios/CarruselServicios";
 import CardHabitaciones from "./Habitaciones/CardHabitaciones";
@@ -17,12 +17,25 @@ import {ParaHacerCard} from "./ParaHacer/ParaHacerCard";
 import Encabezado from "./Encabezado/Encabezado";
 import {ReglasCasa} from "./ReglasCasa/ReglasCasa";
 import CarruselZonasComunes from "./ZonasComunes/CarruselZonasComunes";
+import {fire} from "../../fire";
+import {RUTAS} from "../../Constantes";
+import {RutaDoc} from "../../Entidades/Rutas";
 
 
 const Home = () => {
-    const [saludos, setSaludos] = useState([])
+    const [rutas, setRutas] = useState([])
 
 
+    useEffect(() => {
+        fire.firestore().collection(RUTAS).where("destacada", "==", true).get().then((snap) => {
+            setRutas([]);
+            console.log(snap.size)
+            snap.forEach((doc) => {
+                let rut = new RutaDoc(doc);
+                setRutas((array) => array.concat(rut))
+            })
+        })
+    }, [])
     return (
         <Grid
             container
@@ -72,18 +85,17 @@ const Home = () => {
             </Grid>
 
 
-            <Grid item container sx={{marginTop: 14, justifyContent: "center"}} >
+            <Grid item container sx={{marginTop: 14, justifyContent: "center"}}>
                 <ListadoServicios/>
             </Grid>
 
 
-            <Grid item container sx={{marginTop: 4}} >
+            <Grid item container sx={{marginTop: 4}}>
                 <CarruselZonasComunes/>
             </Grid>
 
 
-
-            <Grid item container sx={{marginTop: 4, justifyContent: "center"}} >
+            <Grid item container sx={{marginTop: 4, justifyContent: "center"}}>
                 <Encabezado titulo='Urban Spirit of Helsinki'
                             descripcion='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
@@ -91,8 +103,8 @@ const Home = () => {
             </Grid>
 
 
-            <Grid item container sx={{marginTop: 14}} >
-                <ParaHacerCard/>
+            <Grid item container sx={{marginTop: 14}}>
+                <ParaHacerCard rutas={rutas}/>
             </Grid>
 
 
