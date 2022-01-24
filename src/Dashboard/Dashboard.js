@@ -112,7 +112,7 @@ const Dashboard = () => {
 
                         <Routes>
 
-                            <Route exact path="/admin" element={<Inicio />}></Route>
+                            <Route exact path="/" element={<Inicio />}></Route>
                             <Route exact path="/admin/rutas" element={<Rutas />}></Route>
                             <Route path="/admin/detalleruta/:id" element={<FRuta />}></Route>
 

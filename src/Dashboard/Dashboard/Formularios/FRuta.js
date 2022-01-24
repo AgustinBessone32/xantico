@@ -113,7 +113,6 @@ const FRuta = () => {
 
             let ruta = new RutaCrea(idRuta, nombre, descripcion, nroContacto, imgPrincipal, aar, res);
 
-            console.log(ruta)
             fire.firestore().collection(RUTAS)
                 .doc(ruta.id).set(ruta).then((dox) => {
                     alert("Cambios guardados con exito")
@@ -135,7 +134,6 @@ const FRuta = () => {
 
                 if (doc.data() !== undefined) {
                     let oba = new RutaDoc(doc);
-                    console.log(oba)
                     setTitulo("Detalle Ruta " + oba.nombre);
                     llenarCampos(oba)
                 }
@@ -205,7 +203,7 @@ const FRuta = () => {
                     <Grid item lg={3} sm={12} xs={12}>
                         <EscogedorImg
                             x={250} y={300} yc={4} xc={3}
-                            carpeta={"rutas"} valor={imgPrincipal} setValor={setImgPrincipal} />
+                            carpeta={"imagenesRutas"} valor={imgPrincipal} setValor={setImgPrincipal} />
                     </Grid>
 
                     <Grid item lg={9} sm={12} xs={12}>
@@ -249,31 +247,31 @@ const FRuta = () => {
                             <Grid item lg={2} sm={12} xs={12}>
                                 <EscogedorImg
                                     x={150} y={200} yc={4} xc={3}
-                                    carpeta={"rutas"} valor={imgUno} setValor={setImgUno} />
+                                    carpeta={"imagenesRutas"} valor={imgUno} setValor={setImgUno} />
                             </Grid>
 
                             <Grid item lg={2} sm={12} xs={12}>
                                 <EscogedorImg
                                     x={150} y={200} yc={4} xc={3}
-                                    carpeta={"rutas"} valor={imgDos} setValor={setImgDos} />
+                                    carpeta={"imagenesRutas"} valor={imgDos} setValor={setImgDos} />
                             </Grid>
 
                             <Grid item lg={2} sm={12} xs={12}>
                                 <EscogedorImg
                                     x={150} y={200} yc={4} xc={3}
-                                    carpeta={"rutas"} valor={imgTres} setValor={setImgTres} />
+                                    carpeta={"imagenesRutas"} valor={imgTres} setValor={setImgTres} />
                             </Grid>
 
                             <Grid item lg={2} sm={12} xs={12}>
                                 <EscogedorImg
                                     x={150} y={200} yc={4} xc={3}
-                                    carpeta={"rutas"} valor={imgCuatro} setValor={setImgCuatro} />
+                                    carpeta={"imagenesRutas"} valor={imgCuatro} setValor={setImgCuatro} />
                             </Grid>
 
                             <Grid item lg={2} sm={12} xs={12}>
                                 <EscogedorImg
                                     x={150} y={200} yc={4} xc={3}
-                                    carpeta={"rutas"} valor={imgCinco} setValor={setImgCinco} />
+                                    carpeta={"imagenesRutas"} valor={imgCinco} setValor={setImgCinco} />
                             </Grid>
 
 
