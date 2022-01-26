@@ -6,7 +6,7 @@
  * props:
  * tiempo:       10 min
  *************************************************/
-import {useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 import {
     Button,
     Checkbox,
@@ -18,16 +18,17 @@ import {
     TextField,
     Typography
 } from "@mui/material";
-import {useParams} from "react-router-dom";
-import {RUTAS} from "../../../Constantes";
-import {EscogedorImg} from "./EscogedoresImg/EscogedoresImg";
-import {Trash} from "iconsax-react";
-import {fire} from "../../../fire";
-import {RutaDoc, RutaCrea} from '../../../Entidades/Rutas'
+import { useParams, useNavigate } from "react-router-dom";
+import { RUTAS } from "../../../Constantes";
+import { EscogedorImg } from "./EscogedoresImg/EscogedoresImg";
+import { Trash } from "iconsax-react";
+import { fire } from "../../../fire";
+import { RutaDoc, RutaCrea } from '../../../Entidades/Rutas'
 
 
 const FRuta = () => {
-    const {id} = useParams();
+    let navigate = useNavigate()
+    const { id } = useParams();
     const [idRuta, setIdRuta] = useState(null)
     const [titulo, setTitulo] = useState("Ingreso de Ruta")
     const [imgPrincipal, setImgPrincipal] = useState('');
@@ -115,11 +116,12 @@ const FRuta = () => {
 
             fire.firestore().collection(RUTAS)
                 .doc(ruta.id).set(ruta).then((dox) => {
-                alert("Cambios guardados con exito")
-                setIdRuta(ruta.id)
-            }).catch((err) => {
-                alert(err)
-            })
+                    alert("Cambios guardados con exito")
+                    setIdRuta(ruta.id)
+                    navigate('/admin/Rutas')
+                }).catch((err) => {
+                    alert(err)
+                })
 
         }
 
@@ -166,19 +168,30 @@ const FRuta = () => {
 
     }
 
+
+    const borrar = (id) => {
+        fire.firestore().collection(RUTAS)
+            .doc(id).delete().then((dox) => {
+                alert("Ruta borrada con exito")
+                navigate('/admin/Rutas')
+            }).catch((err) => {
+                alert(err)
+            })
+    }
+
     return (
         <Grid
             container
             direction="row"
             justifyContent="flex-start"
             alignItems="flex-start"
-            sx={{padding: 4}}
+            sx={{ padding: 4 }}
         >
-            <Grid item container sx={{justifyContent: "space-between", marginBottom: 8}}>
+            <Grid item container sx={{ justifyContent: "space-between", marginBottom: 8 }}>
 
                 <Grid item>
                     <Typography
-                        sx={{fontSize: 20, fontWeight: 700, color: "#232323"}}>
+                        sx={{ fontSize: 20, fontWeight: 700, color: "#232323" }}>
                         {titulo}
                     </Typography>
                 </Grid>
@@ -186,8 +199,13 @@ const FRuta = () => {
                 <Grid item>
 
                     <Button variant={"contained"} color={"secondary"} size={"small"}
-                            onClick={() => guardar()}
+                        onClick={() => guardar()}
                     >Guardar Cambios</Button>
+
+
+                    <IconButton onClick={() => borrar(id)}>
+                        <Trash color={"#000"} variant={"Bold"} size={20} />
+                    </IconButton>
 
                 </Grid>
 
@@ -203,7 +221,7 @@ const FRuta = () => {
                     <Grid item lg={3} sm={12} xs={12}>
                         <EscogedorImg
                             x={250} y={300} yc={4} xc={3}
-                            carpeta={"imagenesRutas"} valor={imgPrincipal} setValor={setImgPrincipal}/>
+                            carpeta={"imagenesRutas"} valor={imgPrincipal} setValor={setImgPrincipal} />
                     </Grid>
 
                     <Grid item lg={9} sm={12} xs={12}>
@@ -218,32 +236,32 @@ const FRuta = () => {
 
                             <Grid item lg={4} sm={12} xs={12}>
                                 <FormControlLabel
-                                    control={<Checkbox checked={destacada} onChange={() => setDestacada(!destacada)}/>}
-                                    label={"Destacada"}/>
+                                    control={<Checkbox checked={destacada} onChange={() => setDestacada(!destacada)} />}
+                                    label={"Destacada"} />
                             </Grid>
                             <Grid item lg={4} sm={12} xs={12}>
                                 <TextField label={"Nombre"}
-                                           value={nombre}
-                                           onChange={(e) => setNombre(e.target.value)}
+                                    value={nombre}
+                                    onChange={(e) => setNombre(e.target.value)}
                                 />
                             </Grid>
                             <Grid item lg={4} sm={12} xs={12}>
                                 <TextField label={"Numero Contacto"}
-                                           value={nroContacto}
-                                           onChange={(e) => setNroContacto(e.target.value)}
+                                    value={nroContacto}
+                                    onChange={(e) => setNroContacto(e.target.value)}
                                 />
                             </Grid>
                             <Grid item lg={12} sm={12} xs={12}>
                                 <TextField label={"Descripcion"} rows={9} multiline
-                                           value={descripcion}
-                                           onChange={(e) => setDescripcion(e.target.value)}
+                                    value={descripcion}
+                                    onChange={(e) => setDescripcion(e.target.value)}
                                 />
                             </Grid>
                         </Grid>
 
                     </Grid>
 
-                    <Grid item container sx={{marginTop: 8}}>
+                    <Grid item container sx={{ marginTop: 8 }}>
                         <Grid
                             container
                             direction="row"
@@ -254,69 +272,69 @@ const FRuta = () => {
                             <Grid item lg={2} sm={12} xs={12}>
                                 <EscogedorImg
                                     x={150} y={200} yc={4} xc={3}
-                                    carpeta={"imagenesRutas"} valor={imgUno} setValor={setImgUno}/>
+                                    carpeta={"imagenesRutas"} valor={imgUno} setValor={setImgUno} />
                             </Grid>
 
                             <Grid item lg={2} sm={12} xs={12}>
                                 <EscogedorImg
                                     x={150} y={200} yc={4} xc={3}
-                                    carpeta={"imagenesRutas"} valor={imgDos} setValor={setImgDos}/>
+                                    carpeta={"imagenesRutas"} valor={imgDos} setValor={setImgDos} />
                             </Grid>
 
                             <Grid item lg={2} sm={12} xs={12}>
                                 <EscogedorImg
                                     x={150} y={200} yc={4} xc={3}
-                                    carpeta={"imagenesRutas"} valor={imgTres} setValor={setImgTres}/>
+                                    carpeta={"imagenesRutas"} valor={imgTres} setValor={setImgTres} />
                             </Grid>
 
                             <Grid item lg={2} sm={12} xs={12}>
                                 <EscogedorImg
                                     x={150} y={200} yc={4} xc={3}
-                                    carpeta={"imagenesRutas"} valor={imgCuatro} setValor={setImgCuatro}/>
+                                    carpeta={"imagenesRutas"} valor={imgCuatro} setValor={setImgCuatro} />
                             </Grid>
 
                             <Grid item lg={2} sm={12} xs={12}>
                                 <EscogedorImg
                                     x={150} y={200} yc={4} xc={3}
-                                    carpeta={"imagenesRutas"} valor={imgCinco} setValor={setImgCinco}/>
+                                    carpeta={"imagenesRutas"} valor={imgCinco} setValor={setImgCinco} />
                             </Grid>
 
 
                         </Grid>
                     </Grid>
 
-                    <Grid item container sx={{borderTop: 1, marginTop: 4, paddingX: 2}}>
+                    <Grid item container sx={{ borderTop: 1, marginTop: 4, paddingX: 2 }}>
                         <Grid
                             container
                             direction="row"
                             justifyContent="flex-start"
                             alignItems="flex-start"
                             spacing={2}
-                            sx={{my: 4}}
+                            sx={{ my: 4 }}
                         >
 
 
                             <Grid item lg={4} sm={12} xs={12}>
                                 <TextField label={"Titulo"}
-                                           value={tituloReseña}
-                                           onChange={(e) => setTituloReseña(e.target.value)}
+                                    value={tituloReseña}
+                                    onChange={(e) => setTituloReseña(e.target.value)}
                                 />
                             </Grid>
 
                             <Grid item lg={4} sm={12} xs={12}>
                                 <TextField label={"Autor"}
-                                           value={autorReseña}
-                                           onChange={(e) => setAutorReseña(e.target.value)}
+                                    value={autorReseña}
+                                    onChange={(e) => setAutorReseña(e.target.value)}
                                 />
                             </Grid>
 
                             <Grid item lg={8} sm={12} xs={12}>
                                 <TextField label={"Descripcion"} rows={6} multiline
-                                           value={descripcionReseña}
-                                           onChange={(e) => setDescripcionReseña(e.target.value)}
+                                    value={descripcionReseña}
+                                    onChange={(e) => setDescripcionReseña(e.target.value)}
                                 />
                             </Grid>
-                            <Grid item container sx={{alignItems: 'flex-end'}} lg={2} sx={{mt: 15}}>
+                            <Grid item container sx={{ alignItems: 'flex-end' }} lg={2} sx={{ mt: 15 }}>
                                 <Button onClick={() => addRes()}>Adiciar testimonio</Button>
                             </Grid>
                         </Grid>
@@ -324,15 +342,15 @@ const FRuta = () => {
 
                     </Grid>
 
-                    <Grid item container sx={{borderTop: 1, marginTop: 4, paddingX: 2}}>
-                        <Grid item container sx={{marginTop: 6}}>
+                    <Grid item container sx={{ borderTop: 1, marginTop: 4, paddingX: 2 }}>
+                        <Grid item container sx={{ marginTop: 6 }}>
                             {res.map((item, index) => {
                                 return (
                                     <Grid key={index} item container sx={{
                                         paddingY: 1,
                                         paddingX: 2,
                                     }}
-                                          lg={6}
+                                        lg={6}
                                     >
                                         <Grid
                                             container
@@ -343,10 +361,10 @@ const FRuta = () => {
                                         >
 
                                             <Grid item container lg={12} sm={12} xs={12}
-                                                  sx={{justifyContent: 'space-between'}}>
-                                                <Typography sx={{fontWeight: 600}}>{item.tituloReseña}</Typography>
+                                                sx={{ justifyContent: 'space-between' }}>
+                                                <Typography sx={{ fontWeight: 600 }}>{item.tituloReseña}</Typography>
                                                 <IconButton onClick={() => deleteRes(item.tituloReseña)}>
-                                                    <Trash color={"#000"} variant={"Bold"} size={20}/>
+                                                    <Trash color={"#000"} variant={"Bold"} size={20} />
                                                 </IconButton>
                                             </Grid>
                                             <Grid item lg={12} sm={12} xs={12}>

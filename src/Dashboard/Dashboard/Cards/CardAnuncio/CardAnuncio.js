@@ -10,23 +10,13 @@ import { React } from "react";
 import { Grid, IconButton, Typography } from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
 import { ACENTO } from '../../../../Colores'
-import { ANUNCIOS } from "../../../../Constantes";
-import { fire } from '../../../../fire'
-import { Trash } from "iconsax-react";
+
 
 const CardAnuncio = (props) => {
     const { item } = props;
-    let navigate = useNavigate();
 
-    const borrar = (id) => {
-        fire.firestore().collection(ANUNCIOS)
-            .doc(id).delete().then((dox) => {
-                alert("Anuncio borrado con exito")
-                navigate('/admin/Anuncios')
-            }).catch((err) => {
-                alert(err)
-            })
-    }
+
+
 
     return (
         <Link to={"/admin/detalleanuncio/" + item.id} style={{ textDecoration: "none", color: "#000" }}>
@@ -71,13 +61,6 @@ const CardAnuncio = (props) => {
                                             {item.subtitulo}
                                         </Typography>
                                     </Grid>
-                                </Grid>
-
-                                <Grid item container lg={12} justifyContent='flex-end'>
-
-                                    <IconButton onClick={() => borrar(item.id)}>
-                                        <Trash color={"#000"} variant={"Bold"} size={20} />
-                                    </IconButton>
                                 </Grid>
 
                             </Grid>

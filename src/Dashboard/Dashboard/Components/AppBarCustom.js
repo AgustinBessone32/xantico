@@ -39,8 +39,7 @@ const AppBarCustom = (props) => {
             .auth().signOut()
             .then((dox) => {
                 cData.setUsuario('')
-                navigate("/")
-            });
+            })
     };
     return (
         <Grid

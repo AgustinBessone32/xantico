@@ -18,7 +18,7 @@ import {
     TextField,
     Typography
 } from "@mui/material";
-import { useParams } from "react-router-dom";
+import { useParams , useNavigate} from "react-router-dom";
 import { ANUNCIOS, CDirige } from "../../../Constantes";
 import { EscogedorImg } from "./EscogedoresImg/EscogedoresImg";
 import { Trash } from "iconsax-react";
@@ -28,6 +28,7 @@ import { AnuncioCrea, AnuncioDoc } from '../../../Entidades/Anuncio'
 
 const FAnuncio = () => {
     const { id } = useParams();
+    let navigate = useNavigate()
     const [idAnuncio, setIdAnuncio] = useState(null)
     const [tituloPub, setTituloPub] = useState("Ingreso de Anuncio")
     const [titulo, setTitulo] = useState("")
@@ -64,6 +65,7 @@ const FAnuncio = () => {
                 .doc(anuncio.id).set(anuncio).then((dox) => {
                     alert("Cambios guardados con exito")
                     setIdAnuncio(anuncio.id)
+                    navigate('/admin/Anuncios')
                 }).catch((err) => {
                     alert(err)
                 })
@@ -89,6 +91,16 @@ const FAnuncio = () => {
         }
     }, [id])
 
+    const borrar = (id) => {
+        fire.firestore().collection(ANUNCIOS)
+            .doc(id).delete().then((dox) => {
+                alert("Anuncio borrado con exito")
+                navigate('/admin/Anuncios')
+            }).catch((err) => {
+                alert(err)
+            })
+    }
+
 
     return (
         <Grid
@@ -112,6 +124,10 @@ const FAnuncio = () => {
                     <Button variant={"contained"} color={"secondary"} size={"small"}
                         onClick={() => guardar()}
                     >Guardar Cambios</Button>
+
+                    <IconButton onClick={() => borrar(id)}>
+                        <Trash color={"#000"} variant={"Bold"} size={20} />
+                    </IconButton>
 
                 </Grid>
 

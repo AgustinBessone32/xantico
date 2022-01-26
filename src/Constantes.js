@@ -23,6 +23,6 @@
  export const ANUNCIOS = "anuncios";
  
  
- export const CDirige = ["camas", "quehacer", "reglas","nostros","contacto"]
+ export const CDirige = ["camas", "quehacer", "reglas","nosotros","contacto"]
  
  export const CCredenciales = ["Clientes", "Cobros", "Planes", "Usuarios", "Recibos"]

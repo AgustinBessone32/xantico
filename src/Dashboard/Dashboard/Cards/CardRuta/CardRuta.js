@@ -7,14 +7,18 @@
  * tiempo:       10 min
  *************************************************/
 import { React } from "react";
-import { Grid, Typography } from "@mui/material";
-import { Link } from "react-router-dom";
-import {ACENTO} from '../../../../Colores'
+import { Grid, IconButton, Typography } from "@mui/material";
+import { Link , useNavigate} from "react-router-dom";
+import { ACENTO } from '../../../../Colores'
+import { Trash } from "iconsax-react";
+import { RUTAS } from "../../../../Constantes";
+import { fire } from "../../../../fire";
 
 const CardRuta = (props) => {
     const { item } = props;
+
     return (
-        <Link to={"/admin/detalleruta/" + item.id} style={{ textDecoration: "none", color: "#000"  }}>
+        <Link to={"/admin/detalleruta/" + item.id} style={{ textDecoration: "none", color: "#000" }}>
             <Grid
                 container
                 direction="row"
@@ -42,7 +46,7 @@ const CardRuta = (props) => {
                             >
 
                                 <Grid item container lg={4}>
-                                    <img src={item.imagen} width={"100%"} />
+                                    <img src={item.imagen} width={"100%"}  />
                                 </Grid>
 
 
