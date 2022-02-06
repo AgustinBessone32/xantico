@@ -7,11 +7,10 @@
  * props:
  * tiempo:       10 min
  *************************************************/
-import {React} from "react";
-import {Grid} from "@mui/material";
-import {AppBar} from "../Dashboard/Components/AppBar";
-import {Footer} from "../Dashboard/Components/Footer";
-
+import { React } from "react";
+import { Grid } from "@mui/material";
+import { AppBar } from "../Dashboard/Components/AppBar";
+import { Footer } from "../Dashboard/Components/Footer";
 import Home from "./Home/Home";
 import Nosotros from "./Nosotros/Nosotros";
 import Camas from "./Camas/Camas";
@@ -19,11 +18,10 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import QueHacer from "./QueHacer/QueHacer";
 import Reglas from "./Reglas/Reglas";
 import Contacto from "./Contacto/Contacto";
-import AppBarCustom from "../Dashboard/Dashboard/Components/AppBarCustom";
-import Dashboard from "../Dashboard/Dashboard";
 import Login from "../Dashboard/Dashboard/Login/Login/Login";
 
 const Pagina = () => {
+
     return (
         <Grid
             container
@@ -42,7 +40,7 @@ const Pagina = () => {
                 >
                     <Grid item container>
 
-                        <AppBar/>
+                        <AppBar />
 
 
                     </Grid>
@@ -53,11 +51,11 @@ const Pagina = () => {
                 <Routes>
 
 
-                    <Route exact path="/" element={<Home/>}></Route>
+                    <Route exact path="/" element={<Home />}></Route>
 
-                    <Route exact path="/nosotros" element={<Nosotros/>}></Route>
+                    <Route exact path="/nosotros" element={<Nosotros />}></Route>
 
-                    <Route exact path="/camas" element={<Camas/>}></Route>
+                    <Route exact path="/camas" element={<Camas />}></Route>
 
                     <Route exact path="/quehacer" element={<QueHacer />}></Route>
 
@@ -66,7 +64,7 @@ const Pagina = () => {
                     <Route exact path="/contacto" element={<Contacto />}></Route>
 
                     {/* aqui aumente esto */}
-                    <Route exact path="/admin" element={<Login /> }></Route>
+                    <Route exact path="/admin" element={<Login />}></Route>
 
 
 
@@ -81,7 +79,7 @@ const Pagina = () => {
                 >
                     <Grid item container>
 
-                        <Footer/>
+                        <Footer />
 
 
                     </Grid>

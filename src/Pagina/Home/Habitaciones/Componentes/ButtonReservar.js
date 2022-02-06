@@ -1,6 +1,5 @@
 import {useState} from 'react';
 import {Button, Dialog, Grid, Typography} from "@mui/material";
-import {PRIMARIO} from "../../../../Colores"
 
 
 const ButtonReservar = () => {
@@ -20,14 +19,13 @@ const ButtonReservar = () => {
        <Grid
            container
            direction="row"
-           justifyContent="center"
-           alignItems="center"
-           
+           justifyContent="flex-start"
+           alignItems="flex-start"
        >
 
-           <Button sx={{ px: 12, py: 1, backgroundColor: PRIMARIO }} 
-                    onClick={() => abrir()} >RESERVAR
-            </Button>
+           <Typography sx={{fontSize: 18, fontWeight: 600, color: '#663419', mt: 4, cursor: 'pointer'}} 
+                    onClick={() => abrir()} >Reservar Ahora
+            </Typography>
 
        </Grid>
 

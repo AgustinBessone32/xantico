@@ -51,10 +51,10 @@ import { createContext, useEffect, useState } from 'react';
 import { Grid } from "@mui/material";
 import { Helmet } from "react-helmet";
 import Dashboard from './Dashboard/Dashboard';
-import {fire} from "./fire";
-import {USUARIOS} from "./Constantes";
-import {obtenerID} from "./FuncionesGlobales";
-import {UsuarioDoc} from "./Entidades/Usuario";
+import { fire } from "./fire";
+import { USUARIOS } from "./Constantes";
+import { obtenerID } from "./FuncionesGlobales";
+import { UsuarioDoc } from "./Entidades/Usuario";
 import Pagina from "./Pagina/Pagina";
 
 export const CRoot = createContext();
@@ -83,6 +83,8 @@ function App() {
 
 
   }, [])
+
+
 
   return (
     <>

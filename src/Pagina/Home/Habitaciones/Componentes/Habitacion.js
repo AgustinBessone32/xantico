@@ -10,6 +10,7 @@
 import {Grid, Typography} from '@mui/material'
 import React from 'react'
 import {PRIMARIO} from "../../../../Colores";
+import ButtonReservar from "./ButtonReservar"
 
 export const Habitacion = (props) => {
     const {item} = props
@@ -43,9 +44,8 @@ export const Habitacion = (props) => {
                     {item.contenido}
                 </Typography>
 
-                <Typography sx={{fontSize: 18, fontWeight: 600, color: '#663419', mt: 4, cursor: 'pointer'}}>
-                    Reservar Ahora
-                </Typography>
+                <ButtonReservar />
+            
             </div>
 
         </Grid>
