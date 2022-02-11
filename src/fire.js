@@ -1,7 +1,5 @@
-// Import the functions you need from the SDKs you need
-// hotelxantico@  hotelxantico32
-import firebase  from "firebase/compat";
-
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
 
 const firebaseConfig = {
     apiKey: "AIzaSyADDAG9RO7anoSIFmuPUyLkEQKG11lY6sE",
@@ -14,4 +12,4 @@ const firebaseConfig = {
 };
 
 
-export const fire = firebase.initializeApp(firebaseConfig);
+export const app = initializeApp(firebaseConfig);

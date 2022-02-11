@@ -25,7 +25,7 @@ export const ReglasCasa = () => {
                 lg={12}
                 sx={{
                     width: '100%', height: 671, backgroundSize: 'cover',
-                    backgroundImage: 'url("https://images.pexels.com/photos/3962293/pexels-photo-3962293.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")'
+                    backgroundImage: 'url("https://firebasestorage.googleapis.com/v0/b/xantico-990ea.appspot.com/o/habitaciones%2Freglas.png?alt=media&token=6cce6bfd-60ee-44e1-a73a-6dc9d162c0cc")'
                 }}
             >
 
@@ -34,7 +34,7 @@ export const ReglasCasa = () => {
             <Grid
                 item
                 lg={6}
-                sx={{ backgroundColor: ACENTO, p: 4, mt: -80, }}
+                sx={{ backgroundColor: ACENTO, p: 4, mt: -80, boxShadow: 8 }}
             >
 
                 <Typography sx={{ fontSize: 35, fontFamily: "Cormorant", fontWeight: 700 }}>

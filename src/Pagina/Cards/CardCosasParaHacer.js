@@ -35,6 +35,7 @@ export const CardCosasParaHacer = (props) => {
                       container
                       alignItems='flex-start'
                       direction='flex-start'
+                      sx={{boxShadow: 6}}
                 >
                     <img src={item.imagen} width='100%'/>
                     <Typography
@@ -42,7 +43,8 @@ export const CardCosasParaHacer = (props) => {
                             backgroundColor: ACENTO, fontSize: 30, mt: -14, ml: -5,
                             padding: 2,
                             fontFamily: "Cormorant",
-                            fontWeight: 700
+                            fontWeight: 700,
+                            boxShadow: 8
                         }}>
                         {item.nombre}
                     </Typography>
@@ -53,7 +55,7 @@ export const CardCosasParaHacer = (props) => {
 
             </ButtonBase>
 
-            <Dialog open={open} fullWidth maxWidth={"lg"} onClose={cerrar}>
+            <Dialog open={open} fullWidth maxWidth={"md"} onClose={cerrar}>
                 <DetalleRuta item={item} />
 
             </Dialog>

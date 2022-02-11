@@ -46,7 +46,8 @@ import letras from '../../../Recursos/letras.svg'
                  paddingY: 4,
                  backgroundSize: 'cover',
                  backgroundColor: ACENTO,
-                 my:10
+                 boxShadow: 4
+
  
              }}
          >
@@ -166,10 +167,10 @@ import letras from '../../../Recursos/letras.svg'
  
  const rese = [
      {
-         title: 'Branding',
+         title: 'Las Lajas',
          contenido:
-             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-         name: "Xantico Hostal"
+             'Fue increible ver un santuraio catolico en medio de dos montañas!, la experiencia de ver arquitectura gotica con el ambiente nariñense y su comida tipica fue inigualable',
+         name: "Mario Hernesto Lopera"
      },
      {
         title: 'Branding',

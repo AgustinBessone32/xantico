@@ -6,8 +6,14 @@
  * Librerias:
  * Tiempo :      10 min
  ********************************************************/
- import {fire} from "./fire";
- import {OBRAS, CONSECUTIVOS, RECIBOS} from "./Constantes";
+
+export const noEspacios = (nom) =>{
+    return(nom.replaceAll(" ", "%20"))
+}
+
+export const irURL = (url) =>{
+    window.open(url)
+}
  
  export const obtenerID = (email) => {
      let sinpunto = email.replaceAll(".", "-");
@@ -29,16 +35,7 @@
      return formatter.format(number).replace(/^(\D+)/, '$ ')
  }
  
- export const sumarConsecutivo = (num) => {
- 
-     fire.firestore().collection(CONSECUTIVOS).doc(OBRAS).update({num: num});
- }
- 
- export const sumarConsecutivoRecibo = (num) => {
- 
-     fire.firestore().collection(CONSECUTIVOS).doc(RECIBOS).update({num: num});
- }
- 
+
  
  
  export const getFecha = (date) => {

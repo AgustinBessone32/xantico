@@ -23,7 +23,7 @@ const ButtonReservar = () => {
            alignItems="flex-start"
        >
 
-           <Typography sx={{fontSize: 18, fontWeight: 600, color: '#663419', mt: 4, cursor: 'pointer'}} 
+           <Typography sx={{fontSize: 16, fontWeight: 500, color: '#663419', mt: 4, cursor: 'pointer'}}
                     onClick={() => abrir()} >Reservar Ahora
             </Typography>
 

@@ -21,7 +21,7 @@ const Servicio = (props) => {
             direction="row"
             justifyContent="center"
             alignItems="flex-start"
-            sx={{padding: masSM ? 4 : 0, width: '100%', mt: 30}}
+            sx={{padding: 0, width: '100%', mt: 40}}
         >
 
 
@@ -37,21 +37,22 @@ const Servicio = (props) => {
 
             <Grid item container sx={{justifyContent: "center"}}>
                 <Typography sx={{
-                    fontSize: masSM ? 20 : 18,
+                    fontSize: 22,
                     marginTop: masSM ? -2 : 0,
-                    fontWeight: 400,
-                    textAlign: "justify",
+                    fontWeight: 300,
+                    textAlign: "center",
+                    color: "#fff",
 
                 }}>
                     {servicio.subtitulo}
                 </Typography>
             </Grid>
 
-            <Grid item container sx={{marginTop: 4, justifyContent: 'center'}}>
+            <Grid item container sx={{marginTop: 6, justifyContent: 'center'}}>
                  <Link to={servicio.dirige} style={{textDecoration: "none"}}>
  
  
-                     <Button variant={"contained"} sx={{paddingX: 8}} color={"secondary"} size={"small"}>ver mas</Button>
+                     <Button variant={"contained"} sx={{paddingX: 8, py: 1, borderRadius: 0, boxShadow: 4}} color={"secondary"} size={"small"}>ver mas</Button>
                  </Link> 
             </Grid>
         </Grid>

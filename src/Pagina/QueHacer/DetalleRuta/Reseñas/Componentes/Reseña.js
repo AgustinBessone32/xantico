@@ -28,14 +28,14 @@ const Reseña = (props) => {
 
             <Grid item container sx={{justifyContent: "center", minHeight: 100}}>
                 <Typography
-                    sx={{fontSize: masSM ? 45 : 24, fontFamily: "Cormorant", fontWeight: 700,}}>
+                    sx={{fontSize: masSM ? 30 : 24, fontFamily: "Cormorant", fontWeight: 700,}}>
                     {reseña.tituloReseña}
                 </Typography>
             </Grid>
 
             <Grid item container sx={{alignItems: "center"}}>
                 <Typography sx={{
-                    fontSize: 18,
+                    fontSize: 14,
                     fontWeight: 300,
                     textAlign: "center"
                 }}>

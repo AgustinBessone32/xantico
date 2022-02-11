@@ -18,12 +18,11 @@ const CardHabitaciones = () => {
             direction="row"
             justifyContent="flex-start"
             alignItems="flex-start"
-            sx={{marginRight: 8}}
         >
             {
                 habit.map((item) => {
                     return (
-                        <Grid item lg={6} sm={12} xs={12}>
+                        <Grid item lg={6} sm={12} xs={12} sx={{p: 8}} >
                             <Habitacion item={item}/>
                         </Grid>
 
@@ -42,20 +41,18 @@ export default CardHabitaciones
 
 const habit = [
     {
-        nombre: 'Branding',
+        nombre: 'Habitación Privada,',
         contenido:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et',
         precio: 22,
-        caso: "Xantico Hostal",
-        img: 'https://images.pexels.com/photos/5732505/pexels-photo-5732505.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+        img: 'https://firebasestorage.googleapis.com/v0/b/xantico-990ea.appspot.com/o/habitaciones%2Fprivada.png?alt=media&token=86b1b6b2-ac59-45be-ace8-f700f7566ccb'
     },
     {
-        nombre: 'Contenido',
+        nombre: 'Habitación Con Acomodación Multiple',
         contenido:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et',
-        caso: "Quesuditas",
         precio: 57,
-        img: 'https://images.pexels.com/photos/10588300/pexels-photo-10588300.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+        img: 'https://firebasestorage.googleapis.com/v0/b/xantico-990ea.appspot.com/o/habitaciones%2Fmultiple.png?alt=media&token=b1d0f49d-3a54-4888-84e5-816bec5662c0'
     },
 
 ];

@@ -17,16 +17,12 @@ const DetalleRuta = (props) => {
     return (
 
         <>
-            <Grid item container sx={{marginTop: 10, justifyContent: "center"}}>
-                <CardInicio item={item} />
+            <Grid item container sx={{marginTop: 0, justifyContent: "center"}}>
+                <CardInicio item={item}/>
             </Grid>
 
-            <Grid item container sx={{marginTop: 10, justifyContent: "center", px: 8}}>
-                <ContentImages  item={item} />
-            </Grid>
-
-            <Grid item container sx={{marginTop: 10, justifyContent: "center"}}>
-                <CarruselReseñas  item={item} />
+            <Grid item container sx={{marginTop: 6, justifyContent: "center", px: 8, marginBottom: 4}}>
+                <ContentImages item={item}/>
             </Grid>
 
 
