@@ -43,9 +43,10 @@ const QueHacer = () => {
             </Grid>
 
             <Grid item container sx={{marginTop: 12, justifyContent: "center"}}>
-                <Encabezado titulo='Que hacer'
-                            descripcion='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+                <Encabezado titulo='Cosas Para Hacer'
+                            descripcion='Nuestro hostal está ubicado en Ipiales, dentro del departamento de Nariño, un lugar con paisajes de postal, tenemos uno de los santuarios más bellos del mundo y una experiencia gastronómica que de seguro te atrapará. 
+                            ¡Encuentra esto y mucho más en tu visita al sur, no querrás irte de aquí! 
+                             '
                 />
             </Grid>
 
@@ -80,19 +81,19 @@ export default QueHacer
 
 const paraHacer = [
     {
-        img: 'https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+        img: 'https://images.pexels.com/photos/10885300/pexels-photo-10885300.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
         titulo: 'Andrea Caprio',
     },
     {
-        img: 'https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+        img: 'https://images.pexels.com/photos/10885300/pexels-photo-10885300.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
         titulo: 'Andrea Caprio',
     },
     {
-        img: 'https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+        img: 'https://images.pexels.com/photos/10885300/pexels-photo-10885300.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
         titulo: 'Andrea Caprio',
     },
     {
-        img: 'https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+        img: 'https://images.pexels.com/photos/10885300/pexels-photo-10885300.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
         titulo: 'Andrea Caprio',
     },
 

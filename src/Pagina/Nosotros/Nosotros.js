@@ -14,6 +14,7 @@ import Encabezado from '../Home/Encabezado/Encabezado'
 import CardReseñas from './Reseñas/CardReseñas'
 import ButtonReservar from './ButtonReservar/ButtonReservar'
 import ContentNosotros from './ContentNosotros/ContentNosotros'
+import CarruselZonasComunes from '../Nosotros/ZonasComunes/CarruselZonasComunes'
 
 
 const Nosotros = () => {
@@ -42,10 +43,13 @@ const Nosotros = () => {
             </Grid>
 
             <Grid item container sx={{ marginTop: 12, justifyContent: "center" }}>
-                <Encabezado titulo='Urban Spirit of Helsinki'
-                    descripcion='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+                <Encabezado titulo='Hemos preparado esto para ti '
+                    descripcion='En la entrada encontrarás imágenes que cuentan historias e ilustran experiencias vivas de la cultura del sur, cuando camines por nuestros pasillos vas a experimentar el despertar de la creatividad y en cada rincón crearás nuevas anécdotas y grandes recuerdos que viajarán contigo por siempre.'
                 />
+            </Grid>
+
+            <Grid item container sx={{ my: 12 }}>
+                <CarruselZonasComunes />
             </Grid>
 
 

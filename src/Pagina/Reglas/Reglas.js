@@ -33,9 +33,8 @@ const Reglas = () => {
             </Grid>
 
             <Grid item container sx={{marginTop: 7, justifyContent: "center"}} >
-                <Encabezado titulo='Urban Spirit of Helsinki'
-                            descripcion='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+                <Encabezado titulo='Recuerda que tu estadía incluye lo mejor de Xanticó '
+                            descripcion='Para hacer tu estancia más acogedora, ponemos a disposición los servicios que puedes disfrutar en nuestro hostal.'
                 />
             </Grid>
 

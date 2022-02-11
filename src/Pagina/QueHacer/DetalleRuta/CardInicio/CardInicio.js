@@ -10,6 +10,7 @@
 import {Button, Grid, Typography} from '@mui/material';
 import React from 'react';
 import {ACENTO, PRIMARIO} from '../../../../Colores'
+import ButtonReservar from '../../../Camas/ContentHabitacion/Components/ButtonReservar';
 
 
 const CardInicio = (props) => {
@@ -29,10 +30,10 @@ const CardInicio = (props) => {
                 justifyContent="center"
                 alignItems="center"
             >
-                <Grid item sx={{zIndex: 900, ml: '10%'}}>
+                <Grid item sx={{zIndex: 900, ml: '5%', mr:'30%'}}>
                     <img
                         src={item.imagen}
-                        width='35%'/>
+                        width='40%'/>
                 </Grid>
 
                 <Grid item lg={8} sx={{backgroundColor: ACENTO, mt: '-15%', p: '2% 2% 2% 13%'}}>
@@ -56,7 +57,7 @@ const CardInicio = (props) => {
                         justifyContent="center"
                         sx={{marginLeft: "11%"}}
                     >
-                        <Button sx={{px: 12, py: 1, backgroundColor: PRIMARIO, my: '5%'}}> RESERVAR</Button>
+                        <ButtonReservar />
                     </Grid>
 
 

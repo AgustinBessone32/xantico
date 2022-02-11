@@ -30,10 +30,10 @@ const ContentReglas = () => {
                             item
                             container
                             sx={{ backgroundColor: ACENTO, m: '1%', p:'2%' }}
-                            lg={4}
+                            lg={8}
                         >
                             <Typography sx={{fontFamily:'Cormorant', fontSize: 35, fontWeight: 'bold'}}>{regla.titulo}</Typography>
-                            <Typography sx={{fontSize: 18, fontWeight: 300, mt:2}}>{regla.desc}</Typography>
+                            {/* <Typography sx={{fontSize: 18, fontWeight: 300, mt:2}}>{regla.desc}</Typography> */}
                         </Grid>
                     )
                 })
@@ -51,27 +51,31 @@ export default ContentReglas
 
 const reglas = [
     {
-        titulo: 'Reglas de la casa',
+        titulo: '1.	El hostal solo está autorizado para alojar huéspedes debidamente registrados. Para este propósito, los huéspedes deben presentar su tarjeta de identificación o pasaporte nacional válido, o cualquier otra prueba de identidad válida al empleado del hotel correspondiente a su llegada.',
         desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
     },
     {
-        titulo: 'Reglas de la casa',
+        titulo: '2.	Está prohibido fumar en todo el alojamiento',
         desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
     },
     {
-        titulo: 'Reglas de la casa',
+        titulo: '3.	El hostal no se hace responsable de los objetos de valor de los huéspedes.',
         desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
     },
     {
-        titulo: 'Reglas de la casa',
+        titulo: '4.	El huésped puede solicitar Menú para dietas especiales bajo petición.',
         desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
     },
     {
-        titulo: 'Reglas de la casa',
+        titulo: '5.	El uso del servicio de lavandería tiene cobro adicional.',
         desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
     },
     {
-        titulo: 'Reglas de la casa',
+        titulo: '6. Los huéspedes no pueden mover muebles o interferir con la red eléctrica o cualquier otra instalación en las habitaciones del hostal o en las instalaciones del hostal sin el consentimiento de la administración.',
+        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+    },
+    {
+        titulo: '7. Los huéspedes están obligados a pagar los daños causados por ellos, si no pueden demostrar que no son responsables de los daños.',
         desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
     },
 ]

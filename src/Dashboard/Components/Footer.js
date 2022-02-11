@@ -57,8 +57,8 @@ export const Footer = () => {
 
 
                 <Typography sx={{marginTop: 2, fontWeight: 300, fontSize: 14}} >
-                    Direccion : Carrera 6 N 45 - 12 <br />
-                    Telefono : + (57) 350 454 45 45 <br />
+                    Direccion : Cra 6 # 10-59 <br />
+                    Telefono : 60 2 7753461 <br />
                     Correo:      Xantico@gmail.com
                 </Typography>
 
