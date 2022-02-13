@@ -8,8 +8,9 @@
  ********************************************************/
 import {React} from 'react';
 import {Button, Grid, Typography, useMediaQuery} from '@mui/material';
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
 import {theme} from "../../../../Tema";
+import {AnimApareceAbajo} from "../../../../Animadores/Animadores";
 
 
 const Servicio = (props) => {
@@ -21,40 +22,47 @@ const Servicio = (props) => {
             direction="row"
             justifyContent="center"
             alignItems="flex-start"
-            sx={{padding: 0, width: '100%', mt: 40}}
+            sx={{padding: 0, width: '100%', mt: masSM ? 40 : 20}}
         >
 
 
-            <Grid item container sx={{justifyContent: "center", minHeight: 100, marginTop: '-90px'}}>
-                <Typography
-                    sx={{
-                        fontSize: masSM ? 70 : 24, marginTop: 2, color: "#FFFFFF", lineHeight: 1,
-                        fontFamily: "Cormorant"
+            <AnimApareceAbajo>
+                <Grid item container sx={{justifyContent: "center", minHeight: 100, marginTop: '-90px'}}>
+                    <Typography
+                        sx={{
+                            fontSize: masSM ? 70 : 40, marginTop: 2, color: "#FFFFFF", lineHeight: 1,
+                            fontFamily: "Cormorant", textAlign: "center"
+                        }}>
+                        {servicio.titulo}
+                    </Typography>
+                </Grid>
+            </AnimApareceAbajo>
+
+            <AnimApareceAbajo delay={0.7}>
+                <Grid item container sx={{justifyContent: "center"}}>
+                    <Typography sx={{
+                        fontSize: masSM ? 22 : 18,
+                        marginTop: masSM ? -2 : 2,
+                        fontWeight: 300,
+                        textAlign: "center",
+                        color: "#fff",
+
                     }}>
-                    {servicio.titulo}
-                </Typography>
-            </Grid>
+                        {servicio.subtitulo}
+                    </Typography>
+                </Grid>
+            </AnimApareceAbajo>
 
-            <Grid item container sx={{justifyContent: "center"}}>
-                <Typography sx={{
-                    fontSize: 22,
-                    marginTop: masSM ? -2 : 0,
-                    fontWeight: 300,
-                    textAlign: "center",
-                    color: "#fff",
+            <AnimApareceAbajo delay={1}>
+                <Grid item container sx={{marginTop: 6, justifyContent: 'center'}}>
+                    <Link to={servicio.dirige} style={{textDecoration: "none"}}>
 
-                }}>
-                    {servicio.subtitulo}
-                </Typography>
-            </Grid>
 
-            <Grid item container sx={{marginTop: 6, justifyContent: 'center'}}>
-                 <Link to={servicio.dirige} style={{textDecoration: "none"}}>
- 
- 
-                     <Button variant={"contained"} sx={{paddingX: 8, py: 1, borderRadius: 0, boxShadow: 4}} color={"secondary"} size={"small"}>ver mas</Button>
-                 </Link> 
-            </Grid>
+                        <Button variant={"contained"} sx={{paddingX: 8, py: 1, borderRadius: 0, boxShadow: 4}}
+                                color={"secondary"} size={"small"}>ver mas</Button>
+                    </Link>
+                </Grid>
+            </AnimApareceAbajo>
         </Grid>
     );
 };

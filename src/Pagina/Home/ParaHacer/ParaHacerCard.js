@@ -26,7 +26,7 @@ export const ParaHacerCard = (props) => {
             {
                 rutas.map(item => {
                     return (
-                        <Grid item lg={3} sm={12} xs={12}>
+                        <Grid item lg={3} sm={6} xs={12}>
                             <CardCosasParaHacer item={item}/>
                         </Grid>
                     )

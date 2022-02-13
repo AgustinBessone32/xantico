@@ -13,6 +13,7 @@ import {ACENTO} from "../../Colores";
 import DetalleRuta from "../QueHacer/DetalleRuta/DetalleRuta";
 
 
+
 export const CardCosasParaHacer = (props) => {
     const {item} = props;
     const [open, setOpen] = useState(false)
@@ -37,6 +38,7 @@ export const CardCosasParaHacer = (props) => {
                       direction='flex-start'
                       sx={{boxShadow: 6}}
                 >
+
                     <img src={item.imagen} width='100%'/>
                     <Typography
                         sx={{

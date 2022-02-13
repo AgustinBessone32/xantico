@@ -4,24 +4,28 @@
  * sistema
  * Props:
  * Librerias:
- * Autor:     
+ * Autor:
  * Tiempo :   45 min
  ********************************************************/
 
-import { Grid, Typography } from '@mui/material'
-import { IconBrandFacebook, IconBrandInstagram, IconBrandWhatsapp, IconLocation } from '@tabler/icons';
+import {ButtonBase, Grid, Typography, useMediaQuery} from '@mui/material'
+import {IconBrandFacebook, IconBrandInstagram, IconBrandWhatsapp, IconLocation} from '@tabler/icons';
 import React from 'react'
-import { ACENTO, PRIMARIO } from '../../Colores'
+import {ACENTO, PRIMARIO} from '../../Colores'
 import {Facebook, Instagram, Map, Whatsapp} from "iconsax-react";
+import {theme} from "../../Tema";
+import {irURL} from "../../FuncionesGlobales";
 
 export const Footer = () => {
+    const masSM = useMediaQuery(theme.breakpoints.up("md"));
+
     return (
         <Grid
             container
             direction="row"
             justifyContent="center"
             alignItems="flex-start"
-            sx={{ paddingX: 3, boxShadow: 0, height: '100%', backgroundColor: ACENTO, py: 10, }}
+            sx={{paddingX: 3, boxShadow: 0, height: '100%', backgroundColor: ACENTO, py: masSM ? 10 : 6,}}
         >
 
             <Grid
@@ -29,14 +33,14 @@ export const Footer = () => {
                 container
                 direction="column"
                 lg={3}
-                xs={12}
-                sx={{ px: 5 }}
+                xs={6}
+                sx={{px: 5}}
             >
-                <Typography sx={{fontSize: 28, mt:1, fontFamily: "Cormorant" }}>
+                <Typography sx={{fontSize: 28, mt: 1, fontFamily: "Cormorant"}}>
                     Nosotros
                 </Typography>
 
-                <Typography sx={{marginTop: 2, fontWeight: 300, fontSize: 14}} >
+                <Typography sx={{marginTop: 2, fontWeight: 300, fontSize: 14}}>
                     Lorem Ipsum es un texto de marcador de posición comúnmente utilizado en las industrias gráficas,
                 </Typography>
 
@@ -48,41 +52,42 @@ export const Footer = () => {
                 container
                 direction="column"
                 lg={3}
-                xs={12}
-                sx={{ px: 5 }}
+                xs={6}
+                sx={{px: 5, mt: masSM ? 0 : 2}}
             >
-                <Typography sx={{fontSize: 28, mt:1, fontFamily: "Cormorant" }}>
+                <Typography sx={{fontSize: 28, mt: 1, fontFamily: "Cormorant"}}>
                     Contacto
                 </Typography>
 
 
-                <Typography sx={{marginTop: 2, fontWeight: 300, fontSize: 14}} >
-                    Direccion : Cra 6 # 10-59 <br />
-                    Telefono : 60 2 7753461 <br />
-                    Correo:      Xantico@gmail.com
+                <Typography sx={{marginTop: 2, fontWeight: 300, fontSize: 14}}>
+                    Direccion : Cra 6 # 10-59 <br/>
+                    Telefono : 60 2 7753461 <br/>
+                    Correo: Xantico@gmail.com
                 </Typography>
 
-                <Grid
-                    container
-                    direction="row"
-                    justifyContent="flex-start"
-                    alignItems="center"
-                    sx={{marginTop: 2}}
-                >
+                <ButtonBase sx={{marginTop: 2, borderRadius: 2}} onClick={() => irURL("https://")}>
+                    <Grid
+                        container
+                        direction="row"
+                        justifyContent="flex-start"
+                        alignItems="center"
 
-                    <Grid item>
-                        <Map color={PRIMARIO} size={"1.5rem"} stroke={1} />
+                    >
+
+                        <Grid item>
+                            <Map color={PRIMARIO} size={"1.5rem"} stroke={1}/>
+                        </Grid>
+
+
+                        <Grid item>
+                            <Typography sx={{ml: 1, color: PRIMARIO,}}>
+                                Vernos en el mapa
+                            </Typography>
+                        </Grid>
+
                     </Grid>
-
-
-                    <Grid item>
-                        <Typography sx={{ ml: 1, color: PRIMARIO, }}>
-                            Vernos en el mapa
-                        </Typography>
-                    </Grid>
-
-                </Grid>
-
+                </ButtonBase>
 
 
             </Grid>
@@ -92,16 +97,16 @@ export const Footer = () => {
                 container
                 direction="column"
                 lg={3}
-                sm={12}
+                sm={6}
                 xs={12}
-                sx={{ px: 5 }}
+                sx={{px: 5, mt: masSM ? 0 : 3}}
             >
-                <Typography sx={{fontSize: 28, mt:1, fontFamily: "Cormorant" }}>
+                <Typography sx={{fontSize: 28, mt: 1, fontFamily: "Cormorant"}}>
                     Metodo de Pago
                 </Typography>
 
 
-                <Typography sx={{marginTop: 2, fontWeight: 300, fontSize: 14}} >
+                <Typography sx={{marginTop: 2, fontWeight: 300, fontSize: 14}}>
                     Lorem Ipsum es un texto de marcador de posición comúnmente utilizado en las industrias gráficas,
                 </Typography>
 
@@ -114,14 +119,14 @@ export const Footer = () => {
                 justifyContent="flex-start"
                 alignItems="flex-start"
                 lg={3}
-                xs={12}
-                sx={{ px: 5 }}
+                xs={6}
+                sx={{px: 5, mt: masSM ? 0 : 3}}
             >
-                <Typography sx={{fontSize: 28, mt:1, fontFamily: "Cormorant" }}>
+                <Typography sx={{fontSize: 28, mt: 1, fontFamily: "Cormorant"}}>
                     Nuestras Redes
                 </Typography>
 
-                <Typography sx={{marginTop: 2, fontWeight: 300, fontSize: 14}} >
+                <Typography sx={{marginTop: 2, fontWeight: 300, fontSize: 14}}>
                     Lorem Ipsum es un texto de marcador de posición comúnmente utilizado en las industrias gráficas,
                 </Typography>
 
@@ -130,18 +135,24 @@ export const Footer = () => {
                     direction="row"
                     justifyContent="flex-start"
                     alignItems="flex-start"
-                    sx={{mt:2}}
+                    sx={{mt: 2}}
                 >
-                    <Grid item sx={{ marginRight: 1 }}>
-                        <Whatsapp color={PRIMARIO} size={"1.5rem"} stroke={0.5} />
+                    <Grid item sx={{marginRight: 1}}>
+                        <ButtonBase sx={{p: 0.5}} onClick={() => irURL("https://")}>
+                            <Whatsapp color={PRIMARIO} size={"2rem"} stroke={0.5} variant={"Bulk"}/>
+                        </ButtonBase>
                     </Grid>
 
-                    <Grid item sx={{ marginRight: 1 }}>
-                        <Instagram color={PRIMARIO} size={"1.5rem"} stroke={0.5} />
+                    <Grid item sx={{marginRight: 1}}>
+                        <ButtonBase sx={{p: 0.5}} onClick={() => irURL("https://")}>
+                            <Instagram color={PRIMARIO} size={"2rem"} stroke={0.5} variant={"Bulk"}/>
+                        </ButtonBase>
                     </Grid>
 
-                    <Grid item sx={{ marginRight: 1 }}>
-                        <Facebook color={PRIMARIO} size={"1.5rem"} stroke={0.5} />
+                    <Grid item sx={{marginRight: 1}}>
+                        <ButtonBase sx={{p: 0.5}} onClick={() => irURL("https://")}>
+                            <Facebook color={PRIMARIO} size={"2rem"} stroke={0.5} variant={"Bulk"}/>
+                        </ButtonBase>
                     </Grid>
 
 

@@ -7,7 +7,7 @@
  * tiempo:       10 min
  *************************************************/
 import React, {useEffect, useState} from "react";
-import {Grid, Typography} from "@mui/material";
+import {Grid, Typography, useMediaQuery} from "@mui/material";
 import CarruselServicios from "../Home/Servicios/CarruselServicios";
 import {ListadoServicios} from "./Servicios/ListadoServicios";
 import {CardReseñas} from "./Reseñas/CardReseñas";
@@ -21,10 +21,12 @@ import {RutaDoc} from "../../Entidades/Rutas";
 import CardHabitaciones from "./Habitaciones/CardHabitaciones";
 import {ReglasCasa} from "./ReglasCasa/ReglasCasa";
 import {app} from "../../fire";
+import {theme} from "../../Tema";
 
 
 const Home = () => {
     const [rutas, setRutas] = useState([])
+    const masSM = useMediaQuery(theme.breakpoints.up("md"));
 
 
     useEffect(() => {
@@ -56,45 +58,45 @@ const Home = () => {
             <CarruselServicios/>
 
 
-            <Grid item container sx={{marginTop: 16, justifyContent: "center"}}>
+            <Grid item container sx={{marginTop: masSM ? 16 : 8, justifyContent: "center"}}>
                 <Encabezado titulo='Hospédate con nosotros'
                             descripcion={"Nuestros espacios de descanso te garantizan una recarga de energía, para que continues disfrutando la aventura de viajar. Puedes elegir una cómoda habitación compartida y tener maravillosos encuentros, o una habitación privada llena de calidez y tranquilidad."}
                 />
             </Grid>
 
 
-            <Grid item container sx={{marginTop: 12}}>
+            <Grid item container sx={{marginTop: masSM ? 12 : 4}}>
                 <CardHabitaciones/>
             </Grid>
 
 
-            <Grid item container sx={{marginTop: 18}}>
+            <Grid item container sx={{marginTop: masSM ? 18 : 8}}>
                 <ReglasCasa/>
             </Grid>
 
 
-            <Grid item container sx={{marginTop: 20, justifyContent: "center"}}>
+            <Grid item container sx={{marginTop: masSM ? 20 : 8, justifyContent: "center"}}>
                 <Encabezado titulo='¿Qué incluye? Lo mejor de Xanticó '
                             descripcion='Para hacer tu estancia más acogedora, ponemos a disposición los servicios que puedes disfrutar en nuestro hostal.'
                 />
             </Grid>
 
 
-            <Grid item container sx={{marginTop: 14, justifyContent: "center"}}>
+            <Grid item container sx={{marginTop: masSM ? 14 : 8, justifyContent: "center"}}>
                 <ListadoServicios/>
             </Grid>
 
 
-            <Grid item container sx={{mt: 18}}>
+            <Grid item container sx={{mt: masSM ? 18 : 8}}>
                 <CarruselZonasComunes/>
             </Grid>
 
-            <Grid item container sx={{marginTop: 16}}>
+            <Grid item container sx={{marginTop: masSM ? 16 : 4, px: masSM ? 0 : 2}}>
                 <CardReseñas/>
             </Grid>
 
 
-            <Grid item container sx={{mt: 16, justifyContent: "center"}}>
+            <Grid item container sx={{mt: masSM ? 16 : 8, justifyContent: "center"}}>
                 <Encabezado titulo='Cosas Para Hacer'
                             descripcion={'Nuestro hostal está ubicado en Ipiales, dentro del departamento de Nariño, un lugar con paisajes de postal, tenemos uno de los santuarios más bellos del mundo y una experiencia gastronómica que de seguro te atrapará.'}
 
@@ -112,7 +114,7 @@ const Home = () => {
             </Grid>
 
 
-            <Grid item container sx={{marginTop: 16}}>
+            <Grid item container sx={{marginTop: 16, px: masSM ? 0 : 6}}>
                 <ParaHacerCard rutas={rutas}/>
             </Grid>
 

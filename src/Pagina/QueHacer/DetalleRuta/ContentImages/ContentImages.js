@@ -11,6 +11,8 @@ import {Grid} from '@mui/material';
 import React from 'react';
 import Zoom from 'react-medium-image-zoom'
 import 'react-medium-image-zoom/dist/styles.css'
+import {LazyLoadImage} from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 
 const ContentImages = (props) => {
@@ -29,7 +31,8 @@ const ContentImages = (props) => {
                 return (
                     <Grid item container lg={3} sm={12} xs={12} sx={{justifyContent: "center"}}>
                         <Zoom>
-                            <img src={img} alt={img.alt} width='90%'/>
+                            <LazyLoadImage src={img} alt={img.alt} width='90%' effect="blur"/>
+
                         </Zoom>
                     </Grid>
                 )

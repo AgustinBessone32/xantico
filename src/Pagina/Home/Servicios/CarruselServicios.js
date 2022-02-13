@@ -18,9 +18,9 @@ import {app, fire} from '../../../fire'
 import logo from '../../../Recursos/logo.svg'
 import {collection, getDocs, getFirestore, query, where} from "firebase/firestore";
 import {RutaDoc} from "../../../Entidades/Rutas";
+import {AnimPalpita} from "../../../Animadores/Animadores";
 
 const CarruselServicios = () => {
-
     const ref = useRef();
     const masSM = useMediaQuery(theme.breakpoints.up("md"));
     const [bg, setBg] = useState(0)
@@ -197,7 +197,12 @@ const CarruselServicios = () => {
                 >
 
 
-                    <img src={logo} width={"80%"} height={100}/>
+                    <AnimPalpita>
+                        <Grid item container lg={12} sm={12} xs={12} sx={{justifyContent: "center"}} >
+                            <img src={logo} width={"80%"} height={masSM ? 100 : 100}/>
+                        </Grid>
+
+                    </AnimPalpita>
                 </Grid>
 
             }

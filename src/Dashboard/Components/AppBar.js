@@ -7,19 +7,29 @@
  * Autor:
  * Tiempo :   45 min
  ********************************************************/
-import {ButtonBase, Grid, Typography} from '@mui/material'
+import {ButtonBase, Drawer, Grid, Typography, useMediaQuery} from '@mui/material'
 import {useEffect, useState} from 'react'
 import logo from '../../Recursos/logo.svg'
 import nube from '../../Recursos/nube.svg'
 import {ACENTO, PRIMARIO} from "../../Colores";
 import {Link} from 'react-router-dom';
-import {Facebook, Instagram, Whatsapp} from "iconsax-react";
+import {Facebook, HambergerMenu, Instagram, Whatsapp} from "iconsax-react";
 import {irURL} from "../../FuncionesGlobales";
+import {theme} from "../../Tema";
 
 export const AppBar = () => {
     const kay = "http://api.openweathermap.org/data/2.5/weather?q=Ipiales&appid=51ef9fd08a0df70ab1db95eb317a2217";
     const [temp, setTemp] = useState(11);
+    const masSM = useMediaQuery(theme.breakpoints.up("md"));
+    const [open, setOpen] = useState(false);
 
+    const abrir = () => {
+        setOpen(true)
+    }
+
+    const cerrar = () => {
+        setOpen(false);
+    }
 
     useEffect(() => {
         fetch(kay)
@@ -31,6 +41,7 @@ export const AppBar = () => {
     }, []);
 
     return (
+
         <Grid
             container
             direction="row"
@@ -54,7 +65,8 @@ export const AppBar = () => {
                     alignItems="center"
                 >
 
-                    <Grid item lg={2}>
+                    <Grid item lg={2} sm={6} xs={6}>
+
                         <Grid
                             container
                             direction="row"
@@ -77,78 +89,81 @@ export const AppBar = () => {
 
                     </Grid>
 
-                    <Grid container item lg={1} sx={{justifyContent: "center"}}>
 
-                        <Link to="/"
-                              style={{textDecoration: 'none'}}>
-                            <Typography sx={{fontSize: 14, color: PRIMARIO, fontWeight: 500}}
-                            > HOME
-                            </Typography>
+                    {masSM &&
+                    <>
+                        <Grid container item lg={1} sx={{justifyContent: "center"}}>
 
-                        </Link>
-                    </Grid>
+                            <Link to="/"
+                                  style={{textDecoration: 'none'}}>
+                                <Typography sx={{fontSize: 14, color: PRIMARIO, fontWeight: 500}}
+                                > HOME
+                                </Typography>
 
-
-                    <Grid container item lg={1} sx={{justifyContent: "center"}}>
-
-                        <Link to="/camas"
-                              style={{color: PRIMARIO, cursor: 'pointer', textDecoration: 'none'}}> <Typography
-                            sx={{fontSize: 14, color: PRIMARIO, fontWeight: 500}}> CAMAS
-                        </Typography></Link>
-
-                    </Grid>
+                            </Link>
+                        </Grid>
 
 
-                    <Grid container item lg={1} sx={{justifyContent: "flex-end"}}>
-                        <Link to="/quehacer"
-                              style={{color: PRIMARIO, cursor: 'pointer', textDecoration: 'none'}}> <Typography
-                            sx={{fontSize: 14, color: PRIMARIO, fontWeight: 500}}> QUE HACER
-                        </Typography></Link>
-                    </Grid>
+                        <Grid container item lg={1} sx={{justifyContent: "center"}}>
 
-                    <Grid
-                        item
-                        lg={2}
-                        sx={{textAlign: 'center'}}
-                    >
-                        <Link to="/"
-                              style={{color: PRIMARIO, cursor: 'pointer', textDecoration: 'none'}}>
-                        <img src={logo} style={{width: "50%", textAlign: 'center', flexGrow: 1}} alt={"logo"}/>
-                        </Link>
-                    </Grid>
+                            <Link to="/camas"
+                                  style={{color: PRIMARIO, cursor: 'pointer', textDecoration: 'none'}}> <Typography
+                                sx={{fontSize: 14, color: PRIMARIO, fontWeight: 500}}> CAMAS
+                            </Typography></Link>
+
+                        </Grid>
 
 
-                    <Grid container item lg={1} sx={{justifyContent: "flex-start"}}>
-                        <Link to="/reglas"
-                              style={{color: PRIMARIO, cursor: 'pointer', textDecoration: 'none'}}> <Typography
-                            sx={{fontSize: 14, color: PRIMARIO, fontWeight: 500}}> REGLAS
-                        </Typography></Link>
-                    </Grid>
+                        <Grid container item lg={1} sx={{justifyContent: "flex-end"}}>
+                            <Link to="/quehacer"
+                                  style={{color: PRIMARIO, cursor: 'pointer', textDecoration: 'none'}}> <Typography
+                                sx={{fontSize: 14, color: PRIMARIO, fontWeight: 500}}> QUE HACER
+                            </Typography></Link>
+                        </Grid>
+
+                        <Grid
+                            item
+                            lg={2}
+                            sx={{textAlign: 'center'}}
+                        >
+                            <Link to="/"
+                                  style={{color: PRIMARIO, cursor: 'pointer', textDecoration: 'none'}}>
+                                <img src={logo} style={{width: "50%", textAlign: 'center', flexGrow: 1}}
+                                     alt={"logo"}/>
+                            </Link>
+                        </Grid>
 
 
-                    <Grid container item lg={1} sx={{justifyContent: "flex-start"}}>
-
-                        <Link to="/nosotros"
-                              style={{color: PRIMARIO, cursor: 'pointer', textDecoration: 'none'}}> <Typography
-                            sx={{fontSize: 14, color: PRIMARIO, fontWeight: 500}}> NOSOTROS
-                        </Typography></Link>
-
-                    </Grid>
+                        <Grid container item lg={1} sx={{justifyContent: "flex-start"}}>
+                            <Link to="/reglas"
+                                  style={{color: PRIMARIO, cursor: 'pointer', textDecoration: 'none'}}> <Typography
+                                sx={{fontSize: 14, color: PRIMARIO, fontWeight: 500}}> REGLAS
+                            </Typography></Link>
+                        </Grid>
 
 
-                    <Grid container item lg={1} sx={{justifyContent: "flex-start"}}>
-                        <Link to="/contacto"
-                              style={{color: PRIMARIO, cursor: 'pointer', textDecoration: 'none'}}> <Typography
-                            sx={{fontSize: 14, color: PRIMARIO, fontWeight: 500}}> CONTACTO
-                        </Typography></Link>
-                    </Grid>
+                        <Grid container item lg={1} sx={{justifyContent: "flex-start"}}>
 
-                    <Grid
-                        item
-                        container
-                        lg={2}
-                        sx={{justifyContent: 'flex-end'}}
-                    >
+                            <Link to="/nosotros"
+                                  style={{color: PRIMARIO, cursor: 'pointer', textDecoration: 'none'}}> <Typography
+                                sx={{fontSize: 14, color: PRIMARIO, fontWeight: 500}}> NOSOTROS
+                            </Typography></Link>
+
+                        </Grid>
+
+
+                        <Grid container item lg={1} sx={{justifyContent: "flex-start"}}>
+                            <Link to="/contacto"
+                                  style={{color: PRIMARIO, cursor: 'pointer', textDecoration: 'none'}}> <Typography
+                                sx={{fontSize: 14, color: PRIMARIO, fontWeight: 500}}> CONTACTO
+                            </Typography></Link>
+                        </Grid>
+
+                    </>
+                    }
+
+                    <Grid item container lg={2} sm={6} xs={6} sx={{justifyContent: "flex-end"}}>
+
 
                         <Grid
                             container
@@ -157,7 +172,7 @@ export const AppBar = () => {
                             alignItems="center"
                         >
                             <Grid item sx={{marginRight: 1, opacity: 0.7}}>
-                                <ButtonBase sx={{p: 1, borderRadius: 2}}
+                                <ButtonBase sx={{p: masSM ? 1 : 0, borderRadius: 2}}
                                             onClick={() => irURL("https://api.whatsapp.com/send?phone=573004627579&text=Hola%20Xantico")}>
                                     <Whatsapp color={PRIMARIO} size={"1.7rem"} stroke={1} variant={"Bold"}/>
                                 </ButtonBase>
@@ -165,14 +180,14 @@ export const AppBar = () => {
 
                             <Grid item sx={{marginRight: 1, opacity: 0.7}}
                                   onClick={() => irURL("https://api.whatsapp.com/send?phone=573004627579&text=Hola%20Xantico")}>
-                                <ButtonBase sx={{p: 1, borderRadius: 2}}>
+                                <ButtonBase sx={{p: masSM ? 1 : 0, borderRadius: 2}}>
                                     <Instagram color={PRIMARIO} size={"1.7rem"} stroke={1} variant={"Bold"}/>
                                 </ButtonBase>
                             </Grid>
 
-                            <Grid item sx={{marginRight: 1, opacity: 0.7}}
+                            <Grid item sx={{marginRight: 0, opacity: 0.7}}
                                   onClick={() => irURL("https://api.whatsapp.com/send?phone=573004627579&text=Hola%20Xantico")}>
-                                <ButtonBase sx={{p: 1, borderRadius: 2}}>
+                                <ButtonBase sx={{p: masSM ? 1 : 0, borderRadius: 2}}>
                                     <Facebook color={PRIMARIO} size={"1.7rem"} stroke={1} variant={"Bold"}/>
                                 </ButtonBase>
                             </Grid>
@@ -183,6 +198,136 @@ export const AppBar = () => {
                     </Grid>
 
                 </Grid>
+
+
+                {!masSM &&
+                <>
+
+                <Grid
+                    container
+                    direction="row"
+                    justifyContent="space-between"
+                    alignItems="center"
+                    sx={{marginTop: 2}}
+                >
+
+                    <Grid item lg={2} sm={1} xs={3}>
+                        <img src={logo} width={"100%"}/>
+                    </Grid>
+
+                    <Grid item container lg={12} sm={6} xs={6} sx={{justifyContent: "flex-end"}}>
+                        <ButtonBase onClick={() => abrir()}>
+                            <HambergerMenu color={PRIMARIO} size={"2rem"}/>
+                        </ButtonBase>
+                    </Grid>
+
+                </Grid>
+
+
+                <Drawer
+                    anchor={'right'}
+                    open={open}
+                    variant={"temporary"}
+                    onClose={cerrar}
+
+                >
+
+                    <Grid
+                        container
+                        direction="row"
+                        justifyContent="flex-start"
+                        alignItems="flex-start"
+                        sx={{width: 200, py: 4, px: 2, backgroundColor: ACENTO, minHeight: "100vh"}}
+                    >
+
+
+
+
+                        <Grid item container sx={{justifyContent: "center", marginTop: 4}}>
+                            <ButtonBase sx={{width: "100%"}} onClick={() => cerrar()}>
+                                <Link to={"/"} style={{textDecoration: "none"}}>
+                                    <Typography sx={{
+                                        fontSize: 22,
+                                        width: "100%",
+                                        color: PRIMARIO,
+                                        fontWeight: 600
+                                    }}>Home </Typography>
+                                </Link>
+                            </ButtonBase>
+                        </Grid>
+
+                        <Grid item container sx={{justifyContent: "center", marginTop: 4}}>
+                            <ButtonBase sx={{width: "100%"}} onClick={() => cerrar()}>
+                                <Link to={"/camas"} style={{textDecoration: "none"}}>
+                                    <Typography sx={{
+                                        fontSize: 22,
+                                        width: "100%",
+                                        color: PRIMARIO,
+                                        fontWeight: 600
+                                    }}>Camas </Typography>
+                                </Link>
+                            </ButtonBase>
+                        </Grid>
+
+
+                        <Grid item container sx={{justifyContent: "center", marginTop: 4}}>
+                            <ButtonBase sx={{width: "100%"}} onClick={() => cerrar()}>
+                                <Link to={"/quehacer"} style={{textDecoration: "none"}}>
+                                    <Typography sx={{
+                                        fontSize: 22,
+                                        width: "100%",
+                                        color: PRIMARIO,
+                                        fontWeight: 600
+                                    }}>¿Que Hacer? </Typography>
+                                </Link>
+                            </ButtonBase>
+                        </Grid>
+
+
+                        <Grid item container sx={{justifyContent: "center", marginTop: 4}}>
+                            <ButtonBase sx={{width: "100%"}} onClick={() => cerrar()}>
+                                <Link to={"/reglas"} style={{textDecoration: "none"}}>
+                                    <Typography sx={{
+                                        fontSize: 22,
+                                        width: "100%",
+                                        color: PRIMARIO,
+                                        fontWeight: 600
+                                    }}>Reglas </Typography>
+                                </Link>
+                            </ButtonBase>
+                        </Grid>
+
+                        <Grid item container sx={{justifyContent: "center", marginTop: 4}}>
+                            <ButtonBase sx={{width: "100%"}} onClick={() => cerrar()}>
+                                <Link to={"/contactos"} style={{textDecoration: "none"}}>
+                                    <Typography sx={{
+                                        fontSize: 22,
+                                        width: "100%",
+                                        color: PRIMARIO,
+                                        fontWeight: 600
+                                    }}>Contactos </Typography>
+                                </Link>
+                            </ButtonBase>
+                        </Grid>
+
+
+                        <Grid container  sx={{marginTop: "70vh"}} >
+
+                        </Grid>
+
+
+
+
+
+
+
+
+                    </Grid>
+
+                </Drawer>
+                    </>
+                }
+
 
             </Grid>
 

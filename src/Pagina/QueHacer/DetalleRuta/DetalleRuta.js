@@ -8,7 +8,6 @@
  *************************************************/
 import React from 'react'
 import {Grid} from '@mui/material'
-import CarruselReseñas from './Reseñas/CarruselReseñas'
 import CardInicio from './CardInicio/CardInicio'
 import ContentImages from './ContentImages/ContentImages'
 

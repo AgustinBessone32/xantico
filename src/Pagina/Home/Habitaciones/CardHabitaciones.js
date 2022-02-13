@@ -7,11 +7,13 @@
  * Tiempo :        10 min
  ********************************************************/
 
-import {Grid} from '@mui/material'
+import {Grid, useMediaQuery} from '@mui/material'
 import React from 'react'
 import {Habitacion} from './Componentes/Habitacion'
+import {theme} from "../../../Tema";
 
 const CardHabitaciones = () => {
+    const masSM = useMediaQuery(theme.breakpoints.up("md"));
     return (
         <Grid
             container
@@ -22,7 +24,7 @@ const CardHabitaciones = () => {
             {
                 habit.map((item) => {
                     return (
-                        <Grid item lg={6} sm={12} xs={12} sx={{p: 8}} >
+                        <Grid item lg={6} sm={6} xs={12} sx={{p: masSM ?  8 : 2}} >
                             <Habitacion item={item}/>
                         </Grid>
 

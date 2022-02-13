@@ -8,7 +8,7 @@
  * tiempo:       10 min
  *************************************************/
 import {React} from "react";
-import {Grid} from "@mui/material";
+import {Grid, useMediaQuery} from "@mui/material";
 import {AppBar} from "../Dashboard/Components/AppBar";
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import {Footer} from "../Dashboard/Components/Footer";
@@ -18,9 +18,11 @@ import Camas from "./Camas/Camas";
 import QueHacer from "./QueHacer/QueHacer";
 import Reglas from "./Reglas/Reglas";
 import Contacto from "./Contacto/Contacto";
+import {theme} from "../Tema";
 
 
 const Pagina = () => {
+    const masSM = useMediaQuery(theme.breakpoints.up("md"));
 
     return (
         <Grid
@@ -76,7 +78,7 @@ const Pagina = () => {
                     justifyContent="flex-start"
                     alignItems="flex-start"
                 >
-                    <Grid item container sx={{marginTop: 20}}>
+                    <Grid item container sx={{marginTop: masSM ? 20 : 14}}>
 
                         <Footer/>
 

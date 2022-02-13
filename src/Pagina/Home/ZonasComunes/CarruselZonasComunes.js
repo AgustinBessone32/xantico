@@ -59,7 +59,7 @@ const CarruselZonasComunes = () => {
                         itemPosition={index}
                         itemsToScroll={1}
                         itemsToShow={1}
-                        outerSpacing={400}
+                        outerSpacing={masSM ? 400 : 0}
                         pagination={false}
                         showArrows={false}
                     >
@@ -93,7 +93,7 @@ const CarruselZonasComunes = () => {
                             alignItems="center"
                         >
 
-                            <Grid item lg={2} sm={12} xs={12}>
+                            {masSM && <Grid item lg={2} sm={12} xs={12}>
                                 <ButtonBase
                                     sx={{padding: 1, borderRadius: 8}}
                                     onClick={() => atras()}
@@ -101,6 +101,7 @@ const CarruselZonasComunes = () => {
                                     <IconChevronLeft size={'3rem'} stroke={1}/>
                                 </ButtonBase>
                             </Grid>
+                            }
 
                             <Grid item lg={8} sm={12} xs={12}>
 
@@ -129,7 +130,7 @@ const CarruselZonasComunes = () => {
 
                             </Grid>
 
-                            <Grid item container lg={2} sm={12} xs={12} sx={{justifyContent: "flex-end"}}>
+                            {masSM && <Grid item container lg={2} sm={12} xs={12} sx={{justifyContent: "flex-end"}}>
 
                                 <ButtonBase
                                     sx={{padding: 1, borderRadius: 8}}
@@ -141,9 +142,52 @@ const CarruselZonasComunes = () => {
                                     />
                                 </ButtonBase>
                             </Grid>
+                            }
 
 
                         </Grid>
+
+
+                        {!masSM &&
+
+                            <>
+
+                                <Grid
+                                  container
+                                  direction="row"
+                                  justifyContent="space-between"
+                                  alignItems="flex-start"
+                                >
+
+                                    <Grid item lg={2} sm={6} xs={6}>
+                                        <ButtonBase
+                                            sx={{padding: 1, borderRadius: 8}}
+                                            onClick={() => atras()}
+                                        >
+                                            <IconChevronLeft size={'3rem'} stroke={1}/>
+                                        </ButtonBase>
+                                    </Grid>
+
+                                    <Grid item container lg={2} sm={6} xs={6} sx={{justifyContent: "flex-end"}}>
+
+                                        <ButtonBase
+                                            sx={{padding: 1, borderRadius: 8}}
+                                            onClick={() => siguiente()}
+                                        >
+                                            <IconChevronRight
+                                                size={'3rem'}
+                                                stroke={1}
+                                            />
+                                        </ButtonBase>
+                                    </Grid>
+
+                                </Grid>
+
+
+
+                            </>
+
+                        }
 
 
                     </Grid>

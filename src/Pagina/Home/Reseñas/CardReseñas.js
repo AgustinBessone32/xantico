@@ -10,6 +10,7 @@
 import {Avatar, Grid, Typography} from '@mui/material'
 import React from 'react'
 import {PRIMARIO} from '../../../Colores'
+import {AnimApareceArriba} from "../../../Animadores/Animadores";
 
 export const CardReseñas = () => {
     return (
@@ -25,22 +26,56 @@ export const CardReseñas = () => {
 
             {
 
-                reseñas.map(res => {
+                reseñas.map((res, index) => {
                     return (
+
                         <Grid item
                               sx={{mx: 1, my: 2}}
                               lg={3}
+                              sm={4}
+                              xs={12}
                               container
                               alignItems='center'
                               direction='column'
                         >
-                            <Avatar src={res.img} alt={res.name}/>
-                            <Typography sx={{fontWeight:'bold', fontSize: 30, mt: 3, fontFamily: "Cormorant"}}> {res.titulo} </Typography>
-                            <Typography sx={{fontSize: 16, mt: 1, textAlign: "center", fontWeight: 300}}> {res.desc} </Typography>
+                            <AnimApareceArriba delay={index * 0.5}>
+                                <Grid item container lg={12} sm={12} xs={12} sx={{justifyContent: "center"}}>
+                                    <Avatar src={res.img} alt={res.name}/>
+                                </Grid>
 
-                            <Typography sx={{color: PRIMARIO, fontSize: 16, mt: 2, fontWeight: 600}}> {res.name} </Typography>
+                                <Grid item container lg={12} sm={12} xs={12} sx={{justifyContent: "center"}}>
+                                    <Typography sx={{
+                                        fontWeight: 'bold',
+                                        fontSize: 30,
+                                        mt: 3,
+                                        fontFamily: "Cormorant"
+                                    }}> {res.titulo} </Typography>
+                                </Grid>
 
+                                <Grid item container lg={12} sm={12} xs={12} sx={{justifyContent: "center"}}>
+
+                                    <Typography sx={{
+                                        fontSize: 16,
+                                        mt: 1,
+                                        textAlign: "center",
+                                        fontWeight: 300
+                                    }}> {res.desc} </Typography>
+                                </Grid>
+
+                                <Grid item container lg={12} sm={12} xs={12} sx={{justifyContent: "center"}}>
+                                    <Typography sx={{
+                                        color: PRIMARIO,
+                                        fontSize: 16,
+                                        mt: 2,
+                                        fontWeight: 600
+                                    }}> {res.name} </Typography>
+                                </Grid>
+
+
+                            </AnimApareceArriba>
                         </Grid>
+
+
                     )
                 })
 
