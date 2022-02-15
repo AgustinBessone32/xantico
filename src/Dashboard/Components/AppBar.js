@@ -47,7 +47,7 @@ export const AppBar = () => {
             direction="row"
             justifyContent="center"
             alignItems="center"
-            sx={{paddingX: 2, paddingY: 2, boxShadow: 0, backgroundColor: ACENTO, zIndex: 900}}
+            sx={{paddingX: 2, paddingY: 2, boxShadow: 0, backgroundColor: ACENTO, zIndex: 1100}}
         >
 
             <Grid
@@ -118,7 +118,8 @@ export const AppBar = () => {
                             <Link to="/quehacer"
                                   style={{color: PRIMARIO, cursor: 'pointer', textDecoration: 'none'}}> <Typography
                                 sx={{fontSize: 14, color: PRIMARIO, fontWeight: 500}}> QUE HACER
-                            </Typography></Link>
+                            </Typography>
+                            </Link>
                         </Grid>
 
                         <Grid

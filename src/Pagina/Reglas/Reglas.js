@@ -21,10 +21,10 @@ const Reglas = () => {
         <Grid
             container
             direction="row"
-            justifyContent="center"
-            alignItems="center"
+            justifyContent="flex-start"
+            alignItems="flex-start"
         >
-               <Grid item container sx={{ justifyContent: "center" }}>
+               <Grid item container sx={{mt: 8, justifyContent: "center" }} >
                 <CardReglas />
             </Grid>
 

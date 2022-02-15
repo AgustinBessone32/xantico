@@ -21,7 +21,7 @@ const DetalleRuta = (props) => {
             </Grid>
 
             <Grid item container sx={{marginTop: 6, justifyContent: "center", px: 8, marginBottom: 4}}>
-                <ContentImages item={item}/>
+                {/* <ContentImages item={item}/> */}
             </Grid>
 
 

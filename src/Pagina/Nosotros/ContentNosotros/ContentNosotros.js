@@ -10,6 +10,7 @@ import { Grid, Typography } from '@mui/material';
 import React from 'react';
 import { ACENTO } from '../../../Colores';
 import valija from '../../../Recursos/valija.svg'
+import { AnimApareceIsquierda } from '../../../Animadores/Animadores'
 
 const ContentNosotros = () => {
     return (
@@ -20,20 +21,20 @@ const ContentNosotros = () => {
                 direction="row"
                 justifyContent="center"
                 alignItems="center"
-                
-                
+
+
             >
 
-                <img src='https://images.pexels.com/photos/6257033/pexels-photo-6257033.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260' 
-                    style={{maxWidth: '60%',  zIndex: 900}} />
+                <img src='https://firebasestorage.googleapis.com/v0/b/xantico-990ea.appspot.com/o/nosotros%2FESPACIOS%20(8).png?alt=media&token=efc9ed7e-0330-4a84-9d7f-a17d90eb89c2'
+                    style={{ height: 550, zIndex: 900 }} />
 
             </Grid>
             <Grid
                 container
                 direction="row"
                 justifyContent="flex-start"
-                alignItems="center"
-                sx={{ backgroundColor: ACENTO, mx: 20,  pt:50, mt:-50 }}
+                alignItems="flex-start"
+                sx={{ backgroundColor: ACENTO, mx: 20, pt: 50, mt: -50 }}
             >
                 {
                     cNosotros.map(nos => {
@@ -44,11 +45,16 @@ const ContentNosotros = () => {
                                 lg={4}
                                 sx={{ p: 6 }}
                             >
-                                <Grid item lg={12}><img src={valija} width='26px' /></Grid>
-                                <Typography sx={{ fontFamily: 'Cormorant', fontSize: 34, fontWeight: 'bold' }}>{nos.titulo}</Typography>
-                                <Typography sx={{ fontSize: 20, fontWeight: 'light' }}>
-                                    {nos.desc}
-                                </Typography>
+                                <AnimApareceIsquierda>
+
+                                    <Grid item lg={12}>
+                                        <img src={valija} width='26px' />
+                                    </Grid>
+                                    <Typography sx={{ fontFamily: 'Cormorant', fontSize: 34, fontWeight: 'bold' }}>{nos.titulo}</Typography>
+                                    <Typography sx={{ fontSize: 20, fontWeight: 'light' }}>
+                                        {nos.desc}
+                                    </Typography>
+                                </AnimApareceIsquierda>
 
                             </Grid>
                         )

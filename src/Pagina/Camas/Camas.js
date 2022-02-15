@@ -12,6 +12,7 @@ import ListadoServicios from './ListadoServicios/ListadoServicios'
 import CardReseñas from './CardReseñas/CardReseñas'
 import ButtonReservar from './ContentHabitacion/Components/ButtonReservar'
 import { Grid } from '@mui/material'
+import CarruselZonasComunes from './ZonasComunes/CarruselZonasComunes'
 
 const Camas = () => {
     return (
@@ -22,21 +23,25 @@ const Camas = () => {
                 <ContentHabitacion inverse={true} />
             </Grid>
 
-            <Grid item container sx={{ marginTop: 10, justifyContent: "center" }}>
+            <Grid item container sx={{ marginTop: 15, justifyContent: "center" }}>
                 <ContentHabitacion inverse={false} />
             </Grid>
 
-            <Grid item container sx={{ marginTop: 10, justifyContent: "center" }}>
+            <Grid item container sx={{ marginTop: 15, justifyContent: "center" }}>
                 <ListadoServicios />
             </Grid>
 
-            <Grid item container sx={{ marginTop: 10, justifyContent: "center" }}>
+            <Grid item container sx={{ marginTop: 15 }}>
+                <CarruselZonasComunes />
+            </Grid>
+
+            <Grid item container sx={{ marginTop: 15, justifyContent: "center" }}>
                 <CardReseñas />
             </Grid>
 
 
 
-            <Grid item container sx={{ my: 10, justifyContent: "center" }}>
+            <Grid item container sx={{ my: 20, justifyContent: "center" }}>
                 <ButtonReservar />
             </Grid>
 

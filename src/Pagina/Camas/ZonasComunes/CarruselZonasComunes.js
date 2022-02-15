@@ -6,7 +6,7 @@
  * Librerias:
  * Tiempo :        10 min
  ********************/
-import { useRef, useState, useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { ButtonBase, Grid, Typography, useMediaQuery } from '@mui/material';
 import Carousel from 'react-elastic-carousel';
 import { IconChevronLeft, IconChevronRight, } from '@tabler/icons';
@@ -18,7 +18,6 @@ import { theme } from "../../../Tema";
 const CarruselZonasComunes = () => {
     const ref = useRef();
     const masSM = useMediaQuery(theme.breakpoints.up("md"));
-
 
 
     const siguiente = () => {
@@ -60,7 +59,7 @@ const CarruselZonasComunes = () => {
                         itemPosition={index}
                         itemsToScroll={1}
                         itemsToShow={1}
-                        outerSpacing={400}
+                        outerSpacing={masSM ? 400 : 0}
                         pagination={false}
                         showArrows={false}
                     >
@@ -83,7 +82,7 @@ const CarruselZonasComunes = () => {
                         direction="row"
                         justifyContent="flex-start"
                         alignItems="flex-start"
-                        sx={{ backgroundColor: "#F4EFE2", p: 6, paddingTop: "200px", marginTop: "-160px" }}
+                        sx={{ backgroundColor: "#F4EFE2", p: 6, paddingTop: "200px", marginTop: "-160px", boxShadow: 4 }}
                     >
 
 
@@ -94,7 +93,7 @@ const CarruselZonasComunes = () => {
                             alignItems="center"
                         >
 
-                            <Grid item lg={2} sm={12} xs={12}>
+                            {masSM && <Grid item lg={2} sm={12} xs={12}>
                                 <ButtonBase
                                     sx={{ padding: 1, borderRadius: 8 }}
                                     onClick={() => atras()}
@@ -102,6 +101,7 @@ const CarruselZonasComunes = () => {
                                     <IconChevronLeft size={'3rem'} stroke={1} />
                                 </ButtonBase>
                             </Grid>
+                            }
 
                             <Grid item lg={8} sm={12} xs={12}>
 
@@ -116,10 +116,13 @@ const CarruselZonasComunes = () => {
                                         <Typography sx={{ fontSize: 28, fontWeight: 400 }}>Zonas Comunes</Typography>
                                     </Grid>
 
-                                    <Grid item container lg={12} sm={12} xs={12} sx={{ justifyContent: "center", marginTop: 2 }}>
-                                        <Typography sx={{ fontSize: 16, fontWeight: 300, color: "#663419", textAlign: "center" }}>
+                                    <Grid item container lg={12} sm={12} xs={12}
+                                        sx={{ justifyContent: "center", marginTop: 2 }}>
+                                        <Typography
+                                            sx={{ fontSize: 16, fontWeight: 300, color: "#663419", textAlign: "center" }}>
                                             Cierra los ojos e imagínate un lugar hermoso y colorido,
-                                            con diversos contrastes cargados de emociones y una muestra auténtica de la cultura local, así son los espacios de Xanticó.
+                                            con diversos contrastes cargados de emociones y una muestra auténtica de la
+                                            cultura local, así son los espacios de Xanticó.
                                         </Typography>
                                     </Grid>
 
@@ -127,7 +130,7 @@ const CarruselZonasComunes = () => {
 
                             </Grid>
 
-                            <Grid item container lg={2} sm={12} xs={12} sx={{ justifyContent: "flex-end" }}>
+                            {masSM && <Grid item container lg={2} sm={12} xs={12} sx={{ justifyContent: "flex-end" }}>
 
                                 <ButtonBase
                                     sx={{ padding: 1, borderRadius: 8 }}
@@ -139,9 +142,52 @@ const CarruselZonasComunes = () => {
                                     />
                                 </ButtonBase>
                             </Grid>
+                            }
 
 
                         </Grid>
+
+
+                        {!masSM &&
+
+                            <>
+
+                                <Grid
+                                    container
+                                    direction="row"
+                                    justifyContent="space-between"
+                                    alignItems="flex-start"
+                                >
+
+                                    <Grid item lg={2} sm={6} xs={6}>
+                                        <ButtonBase
+                                            sx={{ padding: 1, borderRadius: 8 }}
+                                            onClick={() => atras()}
+                                        >
+                                            <IconChevronLeft size={'3rem'} stroke={1} />
+                                        </ButtonBase>
+                                    </Grid>
+
+                                    <Grid item container lg={2} sm={6} xs={6} sx={{ justifyContent: "flex-end" }}>
+
+                                        <ButtonBase
+                                            sx={{ padding: 1, borderRadius: 8 }}
+                                            onClick={() => siguiente()}
+                                        >
+                                            <IconChevronRight
+                                                size={'3rem'}
+                                                stroke={1}
+                                            />
+                                        </ButtonBase>
+                                    </Grid>
+
+                                </Grid>
+
+
+
+                            </>
+
+                        }
 
 
                     </Grid>
@@ -169,6 +215,7 @@ const rese = [
 
         img: "https://firebasestorage.googleapis.com/v0/b/xantico-990ea.appspot.com/o/camas%2Fcentered-slider-img-05.png?alt=media&token=03b9960c-7347-46e9-b046-1ad8cdc57307"
     },
+
 
 
 ];

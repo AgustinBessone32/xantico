@@ -9,6 +9,7 @@
 
 import { Grid, Typography } from '@mui/material';
 import React from 'react';
+import { AnimApareceDerecha } from '../../../Animadores/Animadores';
 import { ACENTO } from '../../../Colores'
 
 
@@ -19,8 +20,8 @@ const ContentReglas = () => {
             container
             direction="row"
             justifyContent="center"
-            alignItems="center"
-            sx={{mx: '5%'}}
+            alignItems="flex-start"
+            sx={{ mx: '5%' }}
         >
 
             {
@@ -29,11 +30,13 @@ const ContentReglas = () => {
                         <Grid
                             item
                             container
-                            sx={{ backgroundColor: ACENTO, m: '1%', p:'2%' }}
-                            lg={8}
+                            justifyContent="flex-start"
+                            sx={{ backgroundColor: ACENTO, m: '1%', p: '2%' }}
+                            lg={4}
                         >
-                            <Typography sx={{fontFamily:'Cormorant', fontSize: 35, fontWeight: 'bold'}}>{regla.titulo}</Typography>
-                            {/* <Typography sx={{fontSize: 18, fontWeight: 300, mt:2}}>{regla.desc}</Typography> */}
+                            <AnimApareceDerecha>
+                                <Typography sx={{ fontFamily: 'Cormorant', fontSize: 35, fontWeight: 'bold' }}>{regla.titulo}</Typography>
+                            </AnimApareceDerecha>
                         </Grid>
                     )
                 })

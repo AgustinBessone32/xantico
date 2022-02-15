@@ -81,23 +81,23 @@ export const ParaHacerCard = () => {
 
 const paraHacer = [
     {
-        img: 'https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+        img: 'https://firebasestorage.googleapis.com/v0/b/xantico-990ea.appspot.com/o/quehacer%2Fblog-featured-img-5-1024x669.png?alt=media&token=0231ee69-90fd-482d-81d5-e61dd200a44d',
         titulo: 'Andrea Caprio',
     },
     {
-        img: 'https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+        img: 'https://firebasestorage.googleapis.com/v0/b/xantico-990ea.appspot.com/o/quehacer%2Fp3-img-01-600x600.png?alt=media&token=9a150b52-372e-4cd0-8568-eb20ad445b5f',
         titulo: 'Andrea Caprio',
     },
     {
-        img: 'https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+        img: 'https://firebasestorage.googleapis.com/v0/b/xantico-990ea.appspot.com/o/quehacer%2Fp5-img-02-600x439.png?alt=media&token=a52ac8a0-e0df-460d-8657-9a0ffaefdcf9',
         titulo: 'Andrea Caprio',
     },
     {
-        img: 'https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+        img: 'https://firebasestorage.googleapis.com/v0/b/xantico-990ea.appspot.com/o/quehacer%2Fp3-img-01-600x600.png?alt=media&token=9a150b52-372e-4cd0-8568-eb20ad445b5f',
         titulo: 'Andrea Caprio',
     },
     {
-        img: 'https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+        img: 'https://firebasestorage.googleapis.com/v0/b/xantico-990ea.appspot.com/o/quehacer%2Fp5-img-02-600x439.png?alt=media&token=a52ac8a0-e0df-460d-8657-9a0ffaefdcf9',
         titulo: 'Andrea Caprio',
     },
 
