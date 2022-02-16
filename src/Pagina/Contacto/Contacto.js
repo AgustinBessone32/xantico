@@ -22,7 +22,7 @@ const Contacto = () => {
             justifyContent="center"
             alignItems="center"
         >
-            <Grid item container sx={{ justifyContent: "center", mt: 20 }}>
+            <Grid item container sx={{ mt: 20 }}>
                 <ContentContacto />
             </Grid>
 
