@@ -76,17 +76,6 @@ export const Habitacion = (props) => {
                                 $ 22.000</Typography>
                         </Grid>
 
-                        <Grid item lg={12} sm={12} xs={12} sx={{ marginTop: 2 }}>
-                            <Typography sx={{ fontSize: 16, fontWeight: 300, textAlign: "left" }}>
-                                lalalalala
-                            </Typography>
-                        </Grid>
-
-                        <Grid item lg={12} sm={12} xs={12} sx={{mt:2}}>
-
-                            <ButtonReservar />
-                        </Grid>
-
                     </Grid>
 
                 </Grid>

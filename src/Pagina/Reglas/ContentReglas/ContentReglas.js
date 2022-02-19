@@ -35,7 +35,7 @@ const ContentReglas = () => {
                             lg={4}
                         >
                             <AnimApareceDerecha>
-                                <Typography sx={{ fontFamily: 'Cormorant', fontSize: 35, fontWeight: 'bold' }}>{regla.titulo}</Typography>
+                                <Typography sx={{ fontFamily: 'Cormorant', fontSize: 20, fontWeight: 'bold' }}>{regla.titulo}</Typography>
                             </AnimApareceDerecha>
                         </Grid>
                     )

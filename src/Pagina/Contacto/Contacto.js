@@ -36,7 +36,7 @@ const Contacto = () => {
             <Grid item container sx={{ justifyContent: "center", mt: 12}}>
                 <ListadoServicios />
             </Grid>
-            <Grid item container sx={{ justifyContent: "center", my: 12}}>
+            <Grid item container sx={{ justifyContent: "center", mt:15,mb:-5 }}>
                 <ButtonReservar />
             </Grid>
         </Grid>

@@ -50,10 +50,7 @@ const ContentNosotros = () => {
                                     <Grid item lg={12}>
                                         <img src={valija} width='26px' />
                                     </Grid>
-                                    <Typography sx={{ fontFamily: 'Cormorant', fontSize: 34, fontWeight: 'bold' }}>{nos.titulo}</Typography>
-                                    <Typography sx={{ fontSize: 20, fontWeight: 'light' }}>
-                                        {nos.desc}
-                                    </Typography>
+                                    <Typography sx={{ fontFamily: 'Cormorant', fontSize: 26, fontWeight: 'bold' }}>{nos.titulo}</Typography>
                                 </AnimApareceIsquierda>
 
                             </Grid>

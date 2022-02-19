@@ -41,7 +41,7 @@ const Camas = () => {
 
 
 
-            <Grid item container sx={{ my: 20, justifyContent: "center" }}>
+            <Grid item container sx={{mt:15,mb:-5 , justifyContent: "center" }}>
                 <ButtonReservar />
             </Grid>
 

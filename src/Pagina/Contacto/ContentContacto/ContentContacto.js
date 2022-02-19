@@ -21,11 +21,11 @@ const ContentContacto = () => {
                 direction="row"
                 justifyContent="flex-start"
                 alignItems="flex-start"
-                sx={{zIndex: 300}}
+                sx={{ zIndex: 300 }}
             >
                 <AnimApareceAbajo delay={1}>
-                                    <img src='https://firebasestorage.googleapis.com/v0/b/xantico-990ea.appspot.com/o/contacto%2FFACHADA%20(1).png?alt=media&token=eecc8f50-8e1d-4dd0-a7b1-3ada85a90943'
-                    style={{ maxWidth: '100%', marginLeft: '8%'}} />
+                    <img src='https://firebasestorage.googleapis.com/v0/b/xantico-990ea.appspot.com/o/contacto%2FFACHADA%20(1).png?alt=media&token=eecc8f50-8e1d-4dd0-a7b1-3ada85a90943'
+                        style={{ maxWidth: '100%', marginLeft: '8%' }} />
 
                 </AnimApareceAbajo>
 
@@ -50,11 +50,11 @@ const ContentContacto = () => {
                                     item
                                     container
                                     lg={6}
-                                    sx={{ p: '3%' }}
+                                    sx={{ p: '6%' }}
                                 >
                                     <AnimApareceDerecha  >
-                                        <Typography sx={{ fontFamily: 'Cormorant', fontSize: 34, fontWeight: 'bold' }}>{nos.titulo}</Typography>
-                                        <Typography sx={{ fontSize: 20, fontWeight: 'light' }}>
+                                        <Typography sx={{ fontFamily: 'Cormorant', fontSize: 28, fontWeight: 'bold' }}>{nos.titulo}</Typography>
+                                        <Typography sx={{ fontSize: 15, fontWeight: 'light' }}>
                                             {nos.desc}
                                         </Typography>
                                     </AnimApareceDerecha>
