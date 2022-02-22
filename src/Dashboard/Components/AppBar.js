@@ -35,7 +35,6 @@ export const AppBar = () => {
         fetch(kay)
             .then((res) => res.json())
             .then((data) => {
-                console.log(data)
                 setTemp(parseInt(data.main.temp - 273.15))
             });
     }, []);
@@ -300,13 +299,13 @@ export const AppBar = () => {
 
                         <Grid item container sx={{justifyContent: "center", marginTop: 4}}>
                             <ButtonBase sx={{width: "100%"}} onClick={() => cerrar()}>
-                                <Link to={"/contactos"} style={{textDecoration: "none"}}>
+                                <Link to={"/contacto"} style={{textDecoration: "none"}}>
                                     <Typography sx={{
                                         fontSize: 22,
                                         width: "100%",
                                         color: PRIMARIO,
                                         fontWeight: 600
-                                    }}>Contactos </Typography>
+                                    }}>Contacto </Typography>
                                 </Link>
                             </ButtonBase>
                         </Grid>

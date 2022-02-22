@@ -34,13 +34,13 @@ export const Footer = () => {
                 direction="column"
                 lg={3}
                 xs={6}
-                sx={{px: 5}}
+                sx={{px: masSM ? 5 : 1}}
             >
-                <Typography sx={{fontSize: 28, mt: 1, fontFamily: "Cormorant"}}>
+                <Typography sx={{fontSize: masSM ? 28 : 22, mt: 1, fontFamily: "Cormorant"}}>
                     Nosotros
                 </Typography>
 
-                <Typography sx={{marginTop: 2, fontWeight: 300, fontSize: 14}}>
+                <Typography sx={{marginTop: 2, fontWeight: 300, fontSize: masSM ? 14 : 11}}>
                     Lorem Ipsum es un texto de marcador de posición comúnmente utilizado en las industrias gráficas,
                 </Typography>
 
@@ -53,14 +53,14 @@ export const Footer = () => {
                 direction="column"
                 lg={3}
                 xs={6}
-                sx={{px: 5, mt: masSM ? 0 : 2}}
+                sx={{px: masSM ? 5 : 1}}
             >
-                <Typography sx={{fontSize: 28, mt: 1, fontFamily: "Cormorant"}}>
+                <Typography sx={{fontSize: masSM ? 28 : 22, mt: 1, fontFamily: "Cormorant"}}>
                     Contacto
                 </Typography>
 
 
-                <Typography sx={{marginTop: 2, fontWeight: 300, fontSize: 14}}>
+                <Typography sx={{marginTop: 2, fontWeight: 300, fontSize: masSM ? 14 : 11}}>
                     Direccion : Cra 6 # 10-59 <br/>
                     Telefono : 60 2 7753461 <br/>
                     Correo: Xantico@gmail.com
@@ -76,12 +76,12 @@ export const Footer = () => {
                     >
 
                         <Grid item>
-                            <Map color={PRIMARIO} size={"1.5rem"} stroke={1}/>
+                            <Map color={PRIMARIO} size={masSM ? "2rem" : "1.5rem"} stroke={1}/>
                         </Grid>
 
 
                         <Grid item>
-                            <Typography sx={{ml: 1, color: PRIMARIO,}}>
+                            <Typography sx={{ml: 1,  color: PRIMARIO, fontSize: masSM ? 14 : 11}}>
                                 Vernos en el mapa
                             </Typography>
                         </Grid>
@@ -98,15 +98,15 @@ export const Footer = () => {
                 direction="column"
                 lg={3}
                 sm={6}
-                xs={12}
-                sx={{px: 5, mt: masSM ? 0 : 3}}
+                xs={6}
+                sx={{px: masSM ? 5 : 1, mt: masSM ? 0 : 3}}
             >
-                <Typography sx={{fontSize: 28, mt: 1, fontFamily: "Cormorant"}}>
+                <Typography sx={{fontSize: masSM ? 28 : 22, mt: 1, fontFamily: "Cormorant"}}>
                     Metodo de Pago
                 </Typography>
 
 
-                <Typography sx={{marginTop: 2, fontWeight: 300, fontSize: 14}}>
+                <Typography sx={{marginTop: 2, fontWeight: 300, fontSize: masSM ? 14 : 11}}>
                     Lorem Ipsum es un texto de marcador de posición comúnmente utilizado en las industrias gráficas,
                 </Typography>
 
@@ -120,13 +120,13 @@ export const Footer = () => {
                 alignItems="flex-start"
                 lg={3}
                 xs={6}
-                sx={{px: 5, mt: masSM ? 0 : 3}}
+                sx={{px: masSM ? 5 : 1, mt: masSM ? 0 : 3}}
             >
-                <Typography sx={{fontSize: 28, mt: 1, fontFamily: "Cormorant"}}>
+                <Typography sx={{fontSize: masSM ? 28 : 22, mt: 1, fontFamily: "Cormorant"}}>
                     Nuestras Redes
                 </Typography>
 
-                <Typography sx={{marginTop: 2, fontWeight: 300, fontSize: 14}}>
+                <Typography sx={{marginTop: 2, fontWeight: 300, fontSize: masSM ? 14 : 11}}>
                     Lorem Ipsum es un texto de marcador de posición comúnmente utilizado en las industrias gráficas,
                 </Typography>
 
@@ -139,19 +139,19 @@ export const Footer = () => {
                 >
                     <Grid item sx={{marginRight: 1}}>
                         <ButtonBase sx={{p: 0.5}} onClick={() => irURL("https://")}>
-                            <Whatsapp color={PRIMARIO} size={"2rem"} stroke={0.5} variant={"Bulk"}/>
+                            <Whatsapp color={PRIMARIO} size={masSM ? "2rem" : "1.5rem"} stroke={0.5} variant={"Bulk"}/>
                         </ButtonBase>
                     </Grid>
 
                     <Grid item sx={{marginRight: 1}}>
                         <ButtonBase sx={{p: 0.5}} onClick={() => irURL("https://")}>
-                            <Instagram color={PRIMARIO} size={"2rem"} stroke={0.5} variant={"Bulk"}/>
+                            <Instagram color={PRIMARIO} size={masSM ? "2rem" : "1.5rem"} stroke={0.5} variant={"Bulk"}/>
                         </ButtonBase>
                     </Grid>
 
                     <Grid item sx={{marginRight: 1}}>
                         <ButtonBase sx={{p: 0.5}} onClick={() => irURL("https://")}>
-                            <Facebook color={PRIMARIO} size={"2rem"} stroke={0.5} variant={"Bulk"}/>
+                            <Facebook color={PRIMARIO} size={masSM ? "2rem" : "1.5rem"} stroke={0.5} variant={"Bulk"}/>
                         </ButtonBase>
                     </Grid>
 

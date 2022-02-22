@@ -7,16 +7,18 @@
  * Tiempo :        10 min
  ********************************************************/
 
-import { Grid, Typography } from '@mui/material'
+import { Grid, Typography,useMediaQuery } from '@mui/material'
 import React from 'react'
 import { AnimApareceAbajo } from '../../../../Animadores/Animadores'
 import { PRIMARIO, ACENTO } from '../../../../Colores'
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import ButtonReservar from './ButtonReservar';
+import { theme } from "../../../../Tema";
 
 export const Habitacion = (props) => {
     const { inverse } = props
+    const masSM = useMediaQuery(theme.breakpoints.up("md"));
 
 
     return (
@@ -26,7 +28,7 @@ export const Habitacion = (props) => {
             justifyContent='flex-start'
             alignItems='flex-start'
             lg={6}
-            sx={{ my: 4 }}
+            sx={{ my: 4 , px: masSM ? 0 : 2}}
         >
 
             <AnimApareceAbajo>

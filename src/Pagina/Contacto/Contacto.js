@@ -7,14 +7,16 @@
  * tiempo:       10 min
  *************************************************/
 
-import { Grid } from "@mui/material";
+import { Grid, useMediaQuery } from "@mui/material";
 import React from 'react';
 import ContentContacto from "./ContentContacto/ContentContacto";
 import Encabezado from '../Home/Encabezado/Encabezado'
 import ListadoServicios  from "./ListadoServicios/ListadoServicios";
 import ButtonReservar  from "./ButtonReservar/ButtonReservar";
+import { theme } from "../../Tema";
 
 const Contacto = () => {
+    const masSM = useMediaQuery(theme.breakpoints.up("md"));
     return (
         <Grid
             container
@@ -22,7 +24,7 @@ const Contacto = () => {
             justifyContent="center"
             alignItems="center"
         >
-            <Grid item container sx={{ mt: 20 }}>
+            <Grid item container sx={{ mt: masSM ? 20  : 0}}>
                 <ContentContacto />
             </Grid>
 

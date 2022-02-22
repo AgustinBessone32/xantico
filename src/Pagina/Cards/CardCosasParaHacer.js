@@ -7,10 +7,11 @@
  * Tiempo :        10 min
  ********************************************************/
 
-import { ButtonBase, Dialog, Grid, Typography } from '@mui/material'
+import { ButtonBase, Dialog, Grid, Typography, useMediaQuery } from '@mui/material'
 import { useState } from 'react'
 import { AnimApareceAbajo, AnimApareceDerecha } from '../../Animadores/Animadores';
 import { ACENTO } from "../../Colores";
+import { theme } from '../../Tema';
 import DetalleRuta from "../QueHacer/DetalleRuta/DetalleRuta";
 
 
@@ -18,6 +19,7 @@ import DetalleRuta from "../QueHacer/DetalleRuta/DetalleRuta";
 export const CardCosasParaHacer = (props) => {
     const { item } = props;
     const [open, setOpen] = useState(false)
+    const masSM = useMediaQuery(theme.breakpoints.up("md"));
 
     const abrir = () => {
         setOpen(true)

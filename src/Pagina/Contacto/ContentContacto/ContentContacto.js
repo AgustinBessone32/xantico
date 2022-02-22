@@ -6,13 +6,15 @@
  * props:
  * tiempo:       10 min
  *************************************************/
-import { Grid, Typography } from '@mui/material';
+import { Grid, Typography, useMediaQuery } from '@mui/material';
 import React from 'react';
 import { AnimApareceAbajo, AnimApareceDerecha, AnimApareceIsquierda } from '../../../Animadores/Animadores';
 import { ACENTO } from '../../../Colores';
 import valija from '../../../Recursos/valija.svg'
+import { theme } from '../../../Tema';
 
 const ContentContacto = () => {
+    const masSM = useMediaQuery(theme.breakpoints.up("md"));
     return (
 
         <>
@@ -21,11 +23,11 @@ const ContentContacto = () => {
                 direction="row"
                 justifyContent="flex-start"
                 alignItems="flex-start"
-                sx={{ zIndex: 300 }}
+                sx={{ zIndex: 300}}
             >
                 <AnimApareceAbajo delay={1}>
                     <img src='https://firebasestorage.googleapis.com/v0/b/xantico-990ea.appspot.com/o/contacto%2FFACHADA%20(1).png?alt=media&token=eecc8f50-8e1d-4dd0-a7b1-3ada85a90943'
-                        style={{ maxWidth: '100%', marginLeft: '8%' }} />
+                        style={{ maxWidth: '100%', marginLeft: masSM ? '8%': 0 }} />
 
                 </AnimApareceAbajo>
 
@@ -38,8 +40,10 @@ const ContentContacto = () => {
                     direction="row"
                     justifyContent="flex-end"
                     alignItems="flex-start"
-                    sx={{ backgroundColor: ACENTO, mx: '15%', mt: '-46%', ml: '28%', pl: '5%' }}
+                    sx={{ backgroundColor: ACENTO, mx: '15%', mt: masSM ? '-46%' : 0, ml: masSM ? '28%' : 0, pl: '5%' }}
                     lg={7}
+                    xs={12}
+                    sm={12}
                 >
 
 

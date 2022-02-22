@@ -7,13 +7,15 @@
  * tiempo:       10 min
  *************************************************/
 
-import { Grid, Typography } from '@mui/material';
+import { Grid, Typography, useMediaQuery } from '@mui/material';
 import React from 'react';
 import { AnimApareceDerecha } from '../../../Animadores/Animadores';
 import { ACENTO } from '../../../Colores'
+import { theme } from '../../../Tema';
 
 
 const ContentReglas = () => {
+    const masSM = useMediaQuery(theme.breakpoints.up("md"));
     return (
 
         <Grid
@@ -35,7 +37,7 @@ const ContentReglas = () => {
                             lg={4}
                         >
                             <AnimApareceDerecha>
-                                <Typography sx={{ fontFamily: 'Cormorant', fontSize: 20, fontWeight: 'bold' }}>{regla.titulo}</Typography>
+                                <Typography sx={{ fontFamily: 'Cormorant', fontSize: masSM ? 20 : 17, fontWeight: 'bold' }}>{regla.titulo}</Typography>
                             </AnimApareceDerecha>
                         </Grid>
                     )

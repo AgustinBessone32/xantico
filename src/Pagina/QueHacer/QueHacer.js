@@ -7,7 +7,7 @@
  * tiempo:       10 min
  *************************************************/
 
-import { Grid, Typography } from '@mui/material';
+import { Grid, Typography, useMediaQuery } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import { FONDO } from '../../Colores';
 import Encabezado from '../Home/Encabezado/Encabezado';
@@ -19,10 +19,12 @@ import { collection, getDocs, getFirestore, query } from '@firebase/firestore';
 import { app } from '../../fire';
 import { RUTAS } from '../../Constantes';
 import { RutaDoc } from '../../Entidades/Rutas';
+import {theme} from '../../Tema'
 
 
 const QueHacer = () => {
     const [rutas,setRutas] = useState([])
+    const masSM = useMediaQuery(theme.breakpoints.up("md"));
 
     useEffect(() => {
 
@@ -49,7 +51,7 @@ const QueHacer = () => {
                 justifyContent="center"
                 alignItems="center"
                 sx={{
-                    width: '100%', height: 671, backgroundSize: 'cover',
+                    width: '100%', height: masSM ? 671 : 450, backgroundSize: 'cover',
                     backgroundImage: 'url("https://firebasestorage.googleapis.com/v0/b/xantico-990ea.appspot.com/o/quehacer%2Fdetalles%20(9).png?alt=media&token=20b5baff-bd58-4644-8acf-b69efab77657")'
                 }}
             >
@@ -59,7 +61,7 @@ const QueHacer = () => {
                     sx={{ width: '100%' }}
                 >
                     <AnimApareceAbajo>
-                        <Typography sx={{ textAlign: 'center', fontSize: 75, color: FONDO, fontWeight: 'bold' }}>
+                        <Typography sx={{ textAlign: 'center', fontSize: masSM ? 75 : 40, color: FONDO, fontWeight: 'bold' }}>
                             QUE HACER EN IPIALES
                         </Typography>
                     </AnimApareceAbajo>
@@ -83,7 +85,7 @@ const QueHacer = () => {
                     {
                         rutas.map(item => {
                             return (
-                                <Grid item lg={4} sm={12} xs={12}>
+                                <Grid item lg={4} sm={12} xs={12} sx={{mx: !masSM && 6}}>
                                     <CardCosasParaHacer item={item} />
                                 </Grid>
                             )
