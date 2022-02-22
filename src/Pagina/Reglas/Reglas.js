@@ -24,7 +24,7 @@ const Reglas = () => {
             justifyContent="flex-start"
             alignItems="flex-start"
         >
-               <Grid item container sx={{mt: 8, justifyContent: "center" }} >
+               <Grid item container sx={{mt: 4, justifyContent: "center" }} >
                 <CardReglas />
             </Grid>
 

@@ -8,7 +8,7 @@
  ********************************************************/
 
 import { Grid, Typography,useMediaQuery } from '@mui/material'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { AnimApareceAbajo } from '../../../../Animadores/Animadores'
 import { PRIMARIO, ACENTO } from '../../../../Colores'
 import { LazyLoadImage } from 'react-lazy-load-image-component';
@@ -17,8 +17,11 @@ import ButtonReservar from './ButtonReservar';
 import { theme } from "../../../../Tema";
 
 export const Habitacion = (props) => {
-    const { inverse } = props
+    const { inverse , image } = props
     const masSM = useMediaQuery(theme.breakpoints.up("md"));
+
+
+    console.log('img', image, inverse)
 
 
     return (
@@ -27,8 +30,8 @@ export const Habitacion = (props) => {
             container
             justifyContent='flex-start'
             alignItems='flex-start'
-            lg={6}
-            sx={{ my: 4 , px: masSM ? 0 : 2}}
+            lg={7}
+            sx={{ my: 7 , px: masSM ? 0 : 2}}
         >
 
             <AnimApareceAbajo>
@@ -40,7 +43,7 @@ export const Habitacion = (props) => {
                 >
 
                     <Grid item lg={11} sm={11} xs={11} sx={{ zIndex: 300, boxShadow: 8 }}>
-                        <LazyLoadImage src='https://firebasestorage.googleapis.com/v0/b/xantico-990ea.appspot.com/o/camas%2Fh1-room-img-04.png?alt=media&token=f29efa80-bc6f-4427-87ca-90899960bd70'
+                        <LazyLoadImage src={image}
                             width='100%'
                             style={{ marginBottom: -10 }} effect="blur" />
 

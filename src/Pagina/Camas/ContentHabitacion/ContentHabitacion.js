@@ -6,7 +6,7 @@ import { AnimApareceAbajo } from '../../../Animadores/Animadores'
 import { theme } from "../../../Tema";
 
 const ContentHabitacion = (props) => {
-    const { inverse } = props
+    const { inverse , image } = props
     const masSM = useMediaQuery(theme.breakpoints.up("md"));
 
     return (
@@ -30,11 +30,11 @@ const ContentHabitacion = (props) => {
                             {
                                 inverse
                                     ?
-                                    <Habitacion inverse={inverse} />
+                                    <Habitacion image={image} inverse={inverse}  />
                                     :
                                     <AnimApareceAbajo>
                                         <Typography sx={{ fontSize: masSM ? 40 : 30, fontWeight: 'medium', textAlign: 'center', mt: 6 }}>Urban Spirit of Helsinki</Typography>
-                                        <Typography sx={{ fontSize: masSM ? 20 : 17, mt: 2, px: masSM ? 30 : 10, textAlign: 'center', mb: 10, fontWeight: 'light' }}>
+                                        <Typography sx={{ fontSize: masSM ? 20 : 17, mt: 2, px: masSM ? 10 : 10, textAlign: 'center', mb: 10, fontWeight: 'light' }}>
                                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                                             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                                         </Typography>
@@ -61,7 +61,7 @@ const ContentHabitacion = (props) => {
                                     ?
                                     <AnimApareceAbajo>
                                         <Typography sx={{ fontSize: masSM ? 40 : 30, fontWeight: 'medium', textAlign: 'center', mt: 6 }}>Urban Spirit of Helsinki</Typography>
-                                        <Typography sx={{ fontSize: masSM ? 20 : 17, mt: 2, px: masSM ? 30 : 10, textAlign: 'center', mb: 10, fontWeight: 'light' }}>
+                                        <Typography sx={{ fontSize: masSM ? 20 : 17, mt: 2, px: masSM ? 10 : 10, textAlign: 'center', mb: 10, fontWeight: 'light' }}>
                                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                                             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                                         </Typography>
@@ -69,7 +69,7 @@ const ContentHabitacion = (props) => {
                                         <ButtonReservar />
                                     </AnimApareceAbajo>
                                     :
-                                    <Habitacion inverse={inverse} />
+                                    <Habitacion inverse={inverse} image={image} />
 
 
 
@@ -87,7 +87,7 @@ const ContentHabitacion = (props) => {
                         lg={6}
                     >
 
-                        <Habitacion inverse={inverse} />
+                        <Habitacion inverse={inverse} image={image} />
                         
                         <AnimApareceAbajo>
                             <Typography sx={{ fontSize: masSM ? 40 : 30, fontWeight: 'medium', textAlign: 'center', mt: 6 }}>Urban Spirit of Helsinki</Typography>

@@ -95,7 +95,7 @@ export const AppBar = () => {
 
                             <Link to="/"
                                   style={{textDecoration: 'none'}}>
-                                <Typography sx={{fontSize: 14, color: PRIMARIO, fontWeight: 500}}
+                                <Typography sx={{fontSize: 13, color: PRIMARIO, fontWeight: 600}}
                                 > HOME
                                 </Typography>
 
@@ -105,9 +105,9 @@ export const AppBar = () => {
 
                         <Grid container item lg={1} sx={{justifyContent: "center"}}>
 
-                            <Link to="/camas"
+                            <Link to="/acomodaciones"
                                   style={{color: PRIMARIO, cursor: 'pointer', textDecoration: 'none'}}> <Typography
-                                sx={{fontSize: 14, color: PRIMARIO, fontWeight: 500}}> CAMAS
+                                sx={{fontSize: 13, color: PRIMARIO, fontWeight: 600}}> ACOMODACIONES
                             </Typography></Link>
 
                         </Grid>
@@ -116,7 +116,7 @@ export const AppBar = () => {
                         <Grid container item lg={1} sx={{justifyContent: "flex-end"}}>
                             <Link to="/quehacer"
                                   style={{color: PRIMARIO, cursor: 'pointer', textDecoration: 'none'}}> <Typography
-                                sx={{fontSize: 14, color: PRIMARIO, fontWeight: 500}}> QUE HACER
+                                sx={{fontSize: 13, color: PRIMARIO, fontWeight: 600}}> QUE HACER
                             </Typography>
                             </Link>
                         </Grid>
@@ -137,7 +137,7 @@ export const AppBar = () => {
                         <Grid container item lg={1} sx={{justifyContent: "flex-start"}}>
                             <Link to="/reglas"
                                   style={{color: PRIMARIO, cursor: 'pointer', textDecoration: 'none'}}> <Typography
-                                sx={{fontSize: 14, color: PRIMARIO, fontWeight: 500}}> REGLAS
+                                sx={{fontSize: 13, color: PRIMARIO, fontWeight: 600}}> REGLAS
                             </Typography></Link>
                         </Grid>
 
@@ -146,7 +146,7 @@ export const AppBar = () => {
 
                             <Link to="/nosotros"
                                   style={{color: PRIMARIO, cursor: 'pointer', textDecoration: 'none'}}> <Typography
-                                sx={{fontSize: 14, color: PRIMARIO, fontWeight: 500}}> NOSOTROS
+                                sx={{fontSize: 13, color: PRIMARIO, fontWeight: 600}}> NOSOTROS
                             </Typography></Link>
 
                         </Grid>
@@ -155,7 +155,7 @@ export const AppBar = () => {
                         <Grid container item lg={1} sx={{justifyContent: "flex-start"}}>
                             <Link to="/contacto"
                                   style={{color: PRIMARIO, cursor: 'pointer', textDecoration: 'none'}}> <Typography
-                                sx={{fontSize: 14, color: PRIMARIO, fontWeight: 500}}> CONTACTO
+                                sx={{fontSize: 13, color: PRIMARIO, fontWeight: 600}}> CONTACTO
                             </Typography></Link>
                         </Grid>
 
@@ -179,14 +179,14 @@ export const AppBar = () => {
                             </Grid>
 
                             <Grid item sx={{marginRight: 1, opacity: 0.7}}
-                                  onClick={() => irURL("https://api.whatsapp.com/send?phone=573004627579&text=Hola%20Xantico")}>
+                                  onClick={() => irURL("https://instagram.com/xanticohostal?utm_medium=copy_link")}>
                                 <ButtonBase sx={{p: masSM ? 1 : 0, borderRadius: 2}}>
                                     <Instagram color={PRIMARIO} size={"1.7rem"} stroke={1} variant={"Bold"}/>
                                 </ButtonBase>
                             </Grid>
 
                             <Grid item sx={{marginRight: 0, opacity: 0.7}}
-                                  onClick={() => irURL("https://api.whatsapp.com/send?phone=573004627579&text=Hola%20Xantico")}>
+                                  onClick={() => irURL("https://www.facebook.com/Xantico-Hostal-101580132306440/")}>
                                 <ButtonBase sx={{p: masSM ? 1 : 0, borderRadius: 2}}>
                                     <Facebook color={PRIMARIO} size={"1.7rem"} stroke={1} variant={"Bold"}/>
                                 </ButtonBase>
@@ -258,13 +258,13 @@ export const AppBar = () => {
 
                         <Grid item container sx={{justifyContent: "center", marginTop: 4}}>
                             <ButtonBase sx={{width: "100%"}} onClick={() => cerrar()}>
-                                <Link to={"/camas"} style={{textDecoration: "none"}}>
+                                <Link to={"/acomodaciones"} style={{textDecoration: "none"}}>
                                     <Typography sx={{
                                         fontSize: 22,
                                         width: "100%",
                                         color: PRIMARIO,
                                         fontWeight: 600
-                                    }}>Camas </Typography>
+                                    }}>Acomodaciones </Typography>
                                 </Link>
                             </ButtonBase>
                         </Grid>
@@ -293,6 +293,19 @@ export const AppBar = () => {
                                         color: PRIMARIO,
                                         fontWeight: 600
                                     }}>Reglas </Typography>
+                                </Link>
+                            </ButtonBase>
+                        </Grid>
+
+                        <Grid item container sx={{justifyContent: "center", marginTop: 4}}>
+                            <ButtonBase sx={{width: "100%"}} onClick={() => cerrar()}>
+                                <Link to={"/nosotros"} style={{textDecoration: "none"}}>
+                                    <Typography sx={{
+                                        fontSize: 22,
+                                        width: "100%",
+                                        color: PRIMARIO,
+                                        fontWeight: 600
+                                    }}>Nosotros </Typography>
                                 </Link>
                             </ButtonBase>
                         </Grid>

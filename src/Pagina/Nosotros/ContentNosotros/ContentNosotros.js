@@ -6,13 +6,15 @@
  * props:
  * tiempo:       10 min
  *************************************************/
-import { Grid, Typography } from '@mui/material';
+import { Grid, Typography, useMediaQuery } from '@mui/material';
 import React from 'react';
 import { ACENTO } from '../../../Colores';
 import valija from '../../../Recursos/valija.svg'
 import { AnimApareceIsquierda } from '../../../Animadores/Animadores'
+import { theme } from '../../../Tema';
 
 const ContentNosotros = () => {
+    const masSM = useMediaQuery(theme.breakpoints.up("md"));
     return (
 
         <>
@@ -34,7 +36,7 @@ const ContentNosotros = () => {
                 direction="row"
                 justifyContent="flex-start"
                 alignItems="flex-start"
-                sx={{ backgroundColor: ACENTO, mx: 20, pt: 50, mt: -50 }}
+                sx={{ backgroundColor: ACENTO, mx:masSM ? 20 : 0, pt: 50, mt: -50 }}
             >
                 {
                     cNosotros.map(nos => {
@@ -43,14 +45,15 @@ const ContentNosotros = () => {
                                 item
                                 container
                                 lg={4}
-                                sx={{ p: 6 }}
+                                xs={6}
+                                sx={{ p: masSM ?  5 : 3 }}
                             >
                                 <AnimApareceIsquierda>
 
                                     <Grid item lg={12}>
                                         <img src={valija} width='26px' />
                                     </Grid>
-                                    <Typography sx={{ fontFamily: 'Cormorant', fontSize: 26, fontWeight: 'bold' }}>{nos.titulo}</Typography>
+                                    <Typography sx={{ fontFamily: 'Cormorant', fontSize: masSM ?  21 : 18, fontWeight: 'bold' }}>{nos.titulo}</Typography>
                                 </AnimApareceIsquierda>
 
                             </Grid>

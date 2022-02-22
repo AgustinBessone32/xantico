@@ -55,7 +55,7 @@ const Home = () => {
         >
 
 
-            <CarruselServicios />
+            {/* <CarruselServicios /> */}
 
 
             <Grid item container sx={{ marginTop: masSM ? 16 : 8, justifyContent: "center" }}>
@@ -96,7 +96,7 @@ const Home = () => {
             </Grid>
 
 
-            <Grid item container sx={{ mt: masSM ? 16 : 8, justifyContent: "center" }}>
+            {/* <Grid item container sx={{ mt: masSM ? 16 : 8, justifyContent: "center" }}>
                 <Encabezado titulo='Cosas Para Hacer'
                     descripcion={'Nuestro hostal está ubicado en Ipiales, dentro del departamento de Nariño, un lugar con paisajes de postal, tenemos uno de los santuarios más bellos del mundo y una experiencia gastronómica que de seguro te atrapará.'}
 
@@ -117,9 +117,9 @@ const Home = () => {
                     }}>{"¡Encuentra esto y mucho más en tu visita al sur, no querrás irte de aquí! "}</Typography>
 
                 </Grid>
-            </Grid>
+            </Grid> */}
 
-
+{/* 
             <Grid item container sx={{ marginTop: 16, px: masSM ? 0 : 6 }}>
                 <ParaHacerCard rutas={rutas} />
             </Grid>
@@ -127,7 +127,7 @@ const Home = () => {
 
             <Grid item container sx={{ marginTop: 14 }}>
                 <CarruselReseñas />
-            </Grid>
+            </Grid> */}
 
 
         </Grid>

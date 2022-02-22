@@ -19,28 +19,29 @@ const ContentContacto = () => {
 
         <>
             <Grid
+                item
                 container
                 direction="row"
-                justifyContent="flex-start"
-                alignItems="flex-start"
-                sx={{ zIndex: 300}}
+                justifyContent="flex-end"
+                sx={{ zIndex: 300,marginLeft: masSM ? 13: 0 }}
+                lg={4}
             >
-                <AnimApareceAbajo delay={1}>
                     <img src='https://firebasestorage.googleapis.com/v0/b/xantico-990ea.appspot.com/o/contacto%2FFACHADA%20(1).png?alt=media&token=eecc8f50-8e1d-4dd0-a7b1-3ada85a90943'
-                        style={{ maxWidth: '100%', marginLeft: masSM ? '8%': 0 }} />
+                        style={{ maxWidth: '100%'}} />
 
-                </AnimApareceAbajo>
+
 
             </Grid>
 
 
-            <AnimApareceAbajo >
+
                 <Grid
+                    item
                     container
                     direction="row"
-                    justifyContent="flex-end"
+                    justifyContent="flex-start"
                     alignItems="flex-start"
-                    sx={{ backgroundColor: ACENTO, mx: '15%', mt: masSM ? '-46%' : 0, ml: masSM ? '28%' : 0, pl: '5%' }}
+                    sx={{ backgroundColor: ACENTO, mt: masSM ? 0 : 0, ml: masSM ? -5: 0 , pl: masSM ? 7: 0 }}
                     lg={7}
                     xs={12}
                     sm={12}
@@ -54,11 +55,11 @@ const ContentContacto = () => {
                                     item
                                     container
                                     lg={6}
-                                    sx={{ p: '6%' }}
+                                    sx={{ p: 2 }}
                                 >
                                     <AnimApareceDerecha  >
-                                        <Typography sx={{ fontFamily: 'Cormorant', fontSize: 28, fontWeight: 'bold' }}>{nos.titulo}</Typography>
-                                        <Typography sx={{ fontSize: 15, fontWeight: 'light' }}>
+                                        <Typography sx={{ fontFamily: 'Cormorant', fontSize: 30, fontWeight: 'bold' }}>{nos.titulo}</Typography>
+                                        <Typography sx={{ fontSize: 17, fontWeight: 'light' }}>
                                             {nos.desc}
                                         </Typography>
                                     </AnimApareceDerecha>
@@ -70,7 +71,6 @@ const ContentContacto = () => {
 
 
                 </Grid>
-            </AnimApareceAbajo>
 
 
 

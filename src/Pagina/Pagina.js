@@ -57,7 +57,7 @@ const Pagina = () => {
 
                     <Route exact path="/nosotros" element={<Nosotros/>}></Route>
 
-                    <Route exact path="/camas" element={<Camas/>}></Route>
+                    <Route exact path="/acomodaciones" element={<Camas/>}></Route>
 
                     <Route exact path="/quehacer" element={<QueHacer/>}></Route>
 

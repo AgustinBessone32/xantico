@@ -18,6 +18,10 @@ import {irURL} from "../../FuncionesGlobales";
 
 export const Footer = () => {
     const masSM = useMediaQuery(theme.breakpoints.up("md"));
+    const ir = () => {
+
+        window.open("https://www.google.com/maps/dir/?api=1&destination=0.8240956320744778,-77.63667467558821,20&dir_action=navigate")
+    }
 
     return (
         <Grid
@@ -66,7 +70,7 @@ export const Footer = () => {
                     Correo: Xantico@gmail.com
                 </Typography>
 
-                <ButtonBase sx={{marginTop: 2, borderRadius: 2}} onClick={() => irURL("https://")}>
+                <ButtonBase sx={{marginTop: 2, borderRadius: 2}} onClick={() => ir()}>
                     <Grid
                         container
                         direction="row"

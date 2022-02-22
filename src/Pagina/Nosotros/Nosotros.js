@@ -7,7 +7,7 @@
  * tiempo:       10 min
  *************************************************/
 
-import { Grid, Typography } from '@mui/material'
+import { Grid, Typography, useMediaQuery } from '@mui/material'
 import React from 'react'
 import { FONDO } from '../../Colores'
 import Encabezado from '../Home/Encabezado/Encabezado'
@@ -15,9 +15,12 @@ import CardReseñas from './Reseñas/CardReseñas'
 import ButtonReservar from './ButtonReservar/ButtonReservar'
 import ContentNosotros from './ContentNosotros/ContentNosotros'
 import CarruselZonasComunes from '../Nosotros/ZonasComunes/CarruselZonasComunes'
+import { AnimApareceAbajo } from '../../Animadores/Animadores'
+import { theme } from '../../Tema'
 
 
 const Nosotros = () => {
+    const masSM = useMediaQuery(theme.breakpoints.up("md"));
     return (
         <>
             <Grid
@@ -26,7 +29,7 @@ const Nosotros = () => {
                 justifyContent="center"
                 alignItems="center"
                 sx={{
-                    width: '100%', height: 671, backgroundSize: 'cover',
+                    width: '100%', height: masSM ? 600 : 450, backgroundSize: 'cover',
                     backgroundImage: 'url("https://firebasestorage.googleapis.com/v0/b/xantico-990ea.appspot.com/o/nosotros%2Fdetalles%20(3).png?alt=media&token=19dd486c-1a22-474f-b784-3ced4b808932")'
                 }}
             >
@@ -35,9 +38,11 @@ const Nosotros = () => {
                     lg={12}
                     sx={{ width: '100%' }}
                 >
-                    <Typography sx={{ textAlign: 'center', fontSize: 75, color: FONDO, fontWeight: 'bold' }}>
-                        ACERCA DE NOSOTROS
-                    </Typography>
+                    <AnimApareceAbajo>
+                        <Typography sx={{ textAlign: 'center', fontSize: masSM ? 75 : 40, color: FONDO, fontWeight: 'bold' }}>
+                            ACERCA DE NOSOTROS
+                        </Typography>
+                    </AnimApareceAbajo>
                 </Grid>
 
             </Grid>
@@ -64,13 +69,13 @@ const Nosotros = () => {
                 />
             </Grid>
 
-            
+
 
             <Grid item container sx={{ marginTop: 12, justifyContent: "center" }}>
                 <CardReseñas />
             </Grid>
 
-            <Grid item container sx={{ mt:15,mb:-5 , justifyContent: "center" }}>
+            <Grid item container sx={{ mt: 15, mb: -5, justifyContent: "center" }}>
                 <ButtonReservar />
             </Grid>
 

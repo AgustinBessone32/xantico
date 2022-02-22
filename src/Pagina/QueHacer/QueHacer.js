@@ -51,7 +51,7 @@ const QueHacer = () => {
                 justifyContent="center"
                 alignItems="center"
                 sx={{
-                    width: '100%', height: masSM ? 671 : 450, backgroundSize: 'cover',
+                    width: '100%', height: masSM ? 600 : 450, backgroundSize: 'cover',
                     backgroundImage: 'url("https://firebasestorage.googleapis.com/v0/b/xantico-990ea.appspot.com/o/quehacer%2Fdetalles%20(9).png?alt=media&token=20b5baff-bd58-4644-8acf-b69efab77657")'
                 }}
             >
