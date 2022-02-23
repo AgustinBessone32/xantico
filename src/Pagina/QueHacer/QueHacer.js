@@ -51,8 +51,8 @@ const QueHacer = () => {
                 justifyContent="center"
                 alignItems="center"
                 sx={{
-                    width: '100%', height: masSM ? 600 : 450, backgroundSize: 'cover',
-                    backgroundImage: 'url("https://firebasestorage.googleapis.com/v0/b/xantico-990ea.appspot.com/o/quehacer%2Fdetalles%20(9).png?alt=media&token=20b5baff-bd58-4644-8acf-b69efab77657")'
+                    width: '100%', height: masSM ? 440 : 400, backgroundSize: 'cover',
+                    backgroundImage: 'url("https://firebasestorage.googleapis.com/v0/b/xanticohostal-a9d46.appspot.com/o/anuncios%2Fdetalles%20(9).png?alt=media&token=e13f2b6a-c0dd-43b0-9a7e-963703ebd0fd")'
                 }}
             >
                 <Grid
@@ -61,7 +61,7 @@ const QueHacer = () => {
                     sx={{ width: '100%' }}
                 >
                     <AnimApareceAbajo>
-                        <Typography sx={{ textAlign: 'center', fontSize: masSM ? 75 : 40, color: FONDO, fontWeight: 'bold' }}>
+                        <Typography sx={{ textAlign: 'center', fontSize: masSM ? 65 : 40, color: FONDO, fontWeight: 'bold' }}>
                             QUE HACER EN IPIALES
                         </Typography>
                     </AnimApareceAbajo>

@@ -41,11 +41,11 @@ export const Footer = () => {
                 sx={{px: masSM ? 5 : 1}}
             >
                 <Typography sx={{fontSize: masSM ? 28 : 22, mt: 1, fontFamily: "Cormorant"}}>
-                    Nosotros
+                    Xantico
                 </Typography>
 
                 <Typography sx={{marginTop: 2, fontWeight: 300, fontSize: masSM ? 14 : 11}}>
-                    Lorem Ipsum es un texto de marcador de posición comúnmente utilizado en las industrias gráficas,
+                    Viaja sin barreras Viaja con libertad Hospedate en Xantico
                 </Typography>
 
 
@@ -85,7 +85,7 @@ export const Footer = () => {
 
 
                         <Grid item>
-                            <Typography sx={{ml: 1,  color: PRIMARIO, fontSize: masSM ? 14 : 11}}>
+                            <Typography sx={{ml: 1, color: PRIMARIO, fontSize: masSM ? 14 : 11}}>
                                 Vernos en el mapa
                             </Typography>
                         </Grid>
@@ -109,10 +109,24 @@ export const Footer = () => {
                     Metodo de Pago
                 </Typography>
 
+                <Grid item container>
+                    <Typography sx={{marginTop: 2, fontWeight: 300, fontSize: masSM ? 14 : 11}}>
+                        Efectivo
+                    </Typography>
+                </Grid>
 
-                <Typography sx={{marginTop: 2, fontWeight: 300, fontSize: masSM ? 14 : 11}}>
-                    Lorem Ipsum es un texto de marcador de posición comúnmente utilizado en las industrias gráficas,
-                </Typography>
+                <Grid item container>
+                    <Typography sx={{marginTop: 0, fontWeight: 300, fontSize: masSM ? 14 : 11}}>
+                        Targeta
+                    </Typography>
+                </Grid>
+
+                <Grid item container>
+                    <Typography sx={{marginTop: 0, fontWeight: 300, fontSize: masSM ? 14 : 11}}>
+                        Deposito Bancario
+                    </Typography>
+                </Grid>
+
 
             </Grid>
 
@@ -130,9 +144,9 @@ export const Footer = () => {
                     Nuestras Redes
                 </Typography>
 
-                <Typography sx={{marginTop: 2, fontWeight: 300, fontSize: masSM ? 14 : 11}}>
+                {/*} <Typography sx={{marginTop: 2, fontWeight: 300, fontSize: masSM ? 14 : 11}}>
                     Lorem Ipsum es un texto de marcador de posición comúnmente utilizado en las industrias gráficas,
-                </Typography>
+                </Typography>*/}
 
                 <Grid
                     container

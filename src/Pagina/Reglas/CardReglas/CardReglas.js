@@ -38,7 +38,7 @@ const CardReglas = () => {
                 <AnimApareceAbajo delay={masSM ? 1: 0} >
 
                     <Grid item lg={12} sm={11} xs={11} sx={{ zIndex: 200 }} sx={{ml: !masSM && 2, mb: !masSM && -4}}>
-                        <LazyLoadImage src='https://firebasestorage.googleapis.com/v0/b/xantico-990ea.appspot.com/o/reglas%2FDETALLES%20(4).png?alt=media&token=4a710989-d167-4777-90f8-276ceb5a1317'
+                        <LazyLoadImage src='https://firebasestorage.googleapis.com/v0/b/xanticohostal-a9d46.appspot.com/o/anuncios%2FDETALLES%20(4)%20(1).png?alt=media&token=98e05347-5f30-425b-8e30-d563e194da6e'
                             width='100%'
                             effect="blur" />
 

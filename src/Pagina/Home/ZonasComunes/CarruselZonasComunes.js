@@ -150,42 +150,41 @@ const CarruselZonasComunes = () => {
 
                         {!masSM &&
 
-                            <>
+                        <>
 
-                                <Grid
-                                  container
-                                  direction="row"
-                                  justifyContent="space-between"
-                                  alignItems="flex-start"
-                                >
+                            <Grid
+                                container
+                                direction="row"
+                                justifyContent="space-between"
+                                alignItems="flex-start"
+                            >
 
-                                    <Grid item lg={2} sm={6} xs={6}>
-                                        <ButtonBase
-                                            sx={{padding: 1, borderRadius: 8}}
-                                            onClick={() => atras()}
-                                        >
-                                            <IconChevronLeft size={'3rem'} stroke={1}/>
-                                        </ButtonBase>
-                                    </Grid>
-
-                                    <Grid item container lg={2} sm={6} xs={6} sx={{justifyContent: "flex-end"}}>
-
-                                        <ButtonBase
-                                            sx={{padding: 1, borderRadius: 8}}
-                                            onClick={() => siguiente()}
-                                        >
-                                            <IconChevronRight
-                                                size={'3rem'}
-                                                stroke={1}
-                                            />
-                                        </ButtonBase>
-                                    </Grid>
-
+                                <Grid item lg={2} sm={6} xs={6}>
+                                    <ButtonBase
+                                        sx={{padding: 1, borderRadius: 8}}
+                                        onClick={() => atras()}
+                                    >
+                                        <IconChevronLeft size={'3rem'} stroke={1}/>
+                                    </ButtonBase>
                                 </Grid>
 
+                                <Grid item container lg={2} sm={6} xs={6} sx={{justifyContent: "flex-end"}}>
+
+                                    <ButtonBase
+                                        sx={{padding: 1, borderRadius: 8}}
+                                        onClick={() => siguiente()}
+                                    >
+                                        <IconChevronRight
+                                            size={'3rem'}
+                                            stroke={1}
+                                        />
+                                    </ButtonBase>
+                                </Grid>
+
+                            </Grid>
 
 
-                            </>
+                        </>
 
                         }
 
@@ -203,32 +202,32 @@ export default CarruselZonasComunes;
 const rese = [
     {
 
-        img: "https://firebasestorage.googleapis.com/v0/b/xantico-990ea.appspot.com/o/habitaciones%2FESPACIOS%20(2).png?alt=media&token=aacd8b7a-8cb9-4dd7-9f24-c43ef1be1560"
+        img: "https://firebasestorage.googleapis.com/v0/b/xanticohostal-a9d46.appspot.com/o/espacios%2FESPACIOS%20(2).png?alt=media&token=cb7aba48-5557-4b39-ae39-79a98b4023f1"
     },
     {
 
-        img: "https://firebasestorage.googleapis.com/v0/b/xantico-990ea.appspot.com/o/habitaciones%2FESPACIOS%20(9).png?alt=media&token=f7cfe1f6-e1bf-4c95-a93a-5fd952766f9c"
-    },
-
-    {
-
-        img: "https://firebasestorage.googleapis.com/v0/b/xantico-990ea.appspot.com/o/habitaciones%2Fespacios%20(7).png?alt=media&token=b55b57af-b00a-4df9-9011-2ae093088da6"
+        img: "https://firebasestorage.googleapis.com/v0/b/xanticohostal-a9d46.appspot.com/o/espacios%2FESPACIOS%20(9).png?alt=media&token=cd16787e-e58b-4cc7-877b-81c74246c78b"
     },
 
     {
 
-        img: "https://firebasestorage.googleapis.com/v0/b/xantico-990ea.appspot.com/o/habitaciones%2Fespacios%20ban%CC%83os%20(4).png?alt=media&token=cec9029f-36f5-4d28-949d-97da031b76bb"
+        img: "https://firebasestorage.googleapis.com/v0/b/xanticohostal-a9d46.appspot.com/o/espacios%2Fespacios%20(7).png?alt=media&token=bbbe36c4-29ee-4ec6-b9cb-460d3245c2f1"
     },
 
     {
 
-        img: "https://firebasestorage.googleapis.com/v0/b/xantico-990ea.appspot.com/o/habitaciones%2Fdetalles%20(1).png?alt=media&token=c90935b4-dd7f-4f77-bc5f-69a2830e5f88"
+        img: "https://firebasestorage.googleapis.com/v0/b/xanticohostal-a9d46.appspot.com/o/espacios%2Fespacios%20ban%CC%83os%20(4).png?alt=media&token=05abeb71-54ea-441e-a765-2f330d6d4a37"
+    },
+
+    {
+
+        img: "https://firebasestorage.googleapis.com/v0/b/xanticohostal-a9d46.appspot.com/o/espacios%2Fdetalles%20(1).png?alt=media&token=bb867eaf-65eb-4afe-a3dd-d98011af3a93"
     },
 
 
     {
 
-        img: "https://firebasestorage.googleapis.com/v0/b/xantico-990ea.appspot.com/o/habitaciones%2FESPACIOS%20(6).png?alt=media&token=498192ae-2d47-48f0-b007-8a32f78d3061"
+        img: "https://firebasestorage.googleapis.com/v0/b/xanticohostal-a9d46.appspot.com/o/espacios%2FESPACIOS%20(6).png?alt=media&token=763cb97c-21d9-423e-9e97-4b9822b549d2"
     },
 
 

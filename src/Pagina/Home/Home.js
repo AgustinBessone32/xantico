@@ -55,7 +55,7 @@ const Home = () => {
         >
 
 
-            {/* <CarruselServicios /> */}
+         <CarruselServicios />
 
 
             <Grid item container sx={{ marginTop: masSM ? 16 : 8, justifyContent: "center" }}>
@@ -65,7 +65,8 @@ const Home = () => {
             </Grid>
 
 
-            <Grid item container sx={{ marginTop: masSM ? 12 : 4 }}>
+
+            <Grid item container sx={{ marginTop: masSM ? 12 : 4, justifyContent: "center"}}>
                 <CardHabitaciones />
             </Grid>
 
@@ -91,9 +92,9 @@ const Home = () => {
                 <CarruselZonasComunes />
             </Grid>
 
-            <Grid item container sx={{ marginTop: masSM ? 16 : 4, px: masSM ? 0 : 2 }}>
+            {/*}  <Grid item container sx={{ marginTop: masSM ? 16 : 4, px: masSM ? 0 : 2 }}>
                 <CardReseñas />
-            </Grid>
+            </Grid>*/}
 
 
             {/* <Grid item container sx={{ mt: masSM ? 16 : 8, justifyContent: "center" }}>

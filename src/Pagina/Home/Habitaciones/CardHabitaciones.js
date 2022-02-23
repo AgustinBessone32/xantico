@@ -20,6 +20,7 @@ const CardHabitaciones = () => {
             direction="row"
             justifyContent="flex-start"
             alignItems="flex-start"
+            sx={{maxWidth: "1300px"}}
         >
             {
                 habit.map((item) => {
@@ -43,18 +44,18 @@ export default CardHabitaciones
 
 const habit = [
     {
-        nombre: 'Habitación Privada,',
+        nombre: 'Habitación Privada ',
         contenido:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et',
         precio: 22,
-        img: 'https://firebasestorage.googleapis.com/v0/b/xantico-990ea.appspot.com/o/habitaciones%2Fprivada.png?alt=media&token=86b1b6b2-ac59-45be-ace8-f700f7566ccb'
+        img: 'https://firebasestorage.googleapis.com/v0/b/xanticohostal-a9d46.appspot.com/o/habitaciones%2Fprivada.png?alt=media&token=6fa45e63-2c4e-4027-97c9-589181cf224f'
     },
     {
         nombre: 'Habitación Con Acomodación Multiple',
         contenido:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et',
         precio: 57,
-        img: 'https://firebasestorage.googleapis.com/v0/b/xantico-990ea.appspot.com/o/habitaciones%2Fmultiple.png?alt=media&token=b1d0f49d-3a54-4888-84e5-816bec5662c0'
+        img: 'https://firebasestorage.googleapis.com/v0/b/xanticohostal-a9d46.appspot.com/o/habitaciones%2Fmultiple.png?alt=media&token=2ac32d5b-872b-4386-a743-eb4ff7212f75'
     },
 
 ];

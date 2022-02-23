@@ -27,7 +27,7 @@ export const ReglasCasa = () => {
                 lg={12}
                 sx={{
                     width: '100%', height: 671, backgroundSize: 'cover',
-                    backgroundImage: 'url("https://firebasestorage.googleapis.com/v0/b/xantico-990ea.appspot.com/o/habitaciones%2Freglas.png?alt=media&token=6cce6bfd-60ee-44e1-a73a-6dc9d162c0cc")'
+                    backgroundImage: 'url("https://firebasestorage.googleapis.com/v0/b/xanticohostal-a9d46.appspot.com/o/anuncios%2Freglas.png?alt=media&token=35297552-74cc-42d9-873a-35a676e562ee")'
                 }}
             >
 

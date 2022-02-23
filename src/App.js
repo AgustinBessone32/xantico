@@ -84,7 +84,7 @@ function App() {
 
           <CRoot.Provider value={{ usuario: usuario, setUsuario: setUsuario }}>
             {/* <Dashboard /> */}
-            <h1>Hola</h1>
+
           </CRoot.Provider>}
 
 

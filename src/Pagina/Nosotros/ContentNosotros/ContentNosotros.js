@@ -36,7 +36,7 @@ const ContentNosotros = () => {
                 direction="row"
                 justifyContent="flex-start"
                 alignItems="flex-start"
-                sx={{ backgroundColor: ACENTO, mx:masSM ? 20 : 0, pt: 50, mt: -50 }}
+                sx={{ backgroundColor: ACENTO, mx:masSM ? 30 : 0, pt: 55, mt: -50, pl: 4, pr: 4,pb: 4 }}
             >
                 {
                     cNosotros.map(nos => {
@@ -46,14 +46,30 @@ const ContentNosotros = () => {
                                 container
                                 lg={4}
                                 xs={6}
-                                sx={{ p: masSM ?  5 : 3 }}
+                                sx={{ p: masSM ?  2 : 3 }}
                             >
                                 <AnimApareceIsquierda>
 
-                                    <Grid item lg={12}>
-                                        <img src={valija} width='26px' />
+
+                                    <Grid
+                                      container
+                                      direction="row"
+                                      justifyContent="flex-start"
+                                      alignItems="flex-start"
+                                    >
+
+                                        <Grid item lg={1} sm={12} xs={12} >
+                                            <img src={valija} width='18px' />
+                                        </Grid>
+
+                                        <Grid item lg={11} sm={12} xs={12} >
+                                            <Typography sx={{ fontSize: masSM ?  16 : 18, fontWeight: 500 }}>{nos.titulo}</Typography>
+                                        </Grid>
+
                                     </Grid>
-                                    <Typography sx={{ fontFamily: 'Cormorant', fontSize: masSM ?  21 : 18, fontWeight: 'bold' }}>{nos.titulo}</Typography>
+
+
+
                                 </AnimApareceIsquierda>
 
                             </Grid>

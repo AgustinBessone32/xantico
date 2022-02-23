@@ -63,12 +63,12 @@ export const Habitacion = (props) => {
                           sx={{backgroundColor: ACENTO, p: 4, marginTop: "-40%", zIndex: 100, boxShadow: 4}}>
 
                         <Grid item container lg={12} sm={12} xs={12}
-                              sx={{justifyContent: "flex-start", marginTop: "50%"}}>
+                              sx={{justifyContent: "flex-start", marginTop: "50%", minHeight: 100}}>
                             <Typography sx={{fontSize: 26, mt: 4, fontFamily: "Cormorant"}}>{item.nombre}</Typography>
                         </Grid>
 
 
-                        <Grid item container lg={12} sm={12} xs={12} sx={{justifyContent: "flex-end", marginTop: 1}}>
+                        {/*}  <Grid item container lg={12} sm={12} xs={12} sx={{justifyContent: "flex-end", marginTop: 1}}>
 
                             <Typography sx={{fontSize: 14, fontWeight: 400, textAlign: 'right'}}>
                                 <span style={{color: PRIMARIO}}>Noche:  </span>
@@ -80,7 +80,7 @@ export const Habitacion = (props) => {
                             <Typography sx={{fontSize: 16, fontWeight: 300, textAlign: "left"}}>
                                 {item.contenido}
                             </Typography>
-                        </Grid>
+                        </Grid>*/}
 
                         <Grid item lg={12} sm={12} xs={12}>
 
