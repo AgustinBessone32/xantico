@@ -23,13 +23,13 @@ const Encabezado = (props) => {
             sx={{maxWidth: "800px", px: masSM ? 0 : 2}}
         >
 
-            <AnimApareceAbajo>
+            <AnimApareceAbajo delay={0}>
                 <Grid item container sx={{justifyContent: "center"}}>
                     <Typography sx={{textAlign: 'center', fontSize: masSM ? 38 : 28, fontWeight: 500}}>{titulo}</Typography>
                 </Grid>
             </AnimApareceAbajo>
 
-            <AnimApareceAbajo delay={1}>
+            <AnimApareceAbajo >
                 <Grid item container>
                     <Typography sx={{
                         textAlign: 'center',

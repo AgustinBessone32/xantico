@@ -29,7 +29,7 @@ export const Habitacion = (props) => {
         >
 
 
-            <AnimApareceAbajo>
+            <AnimApareceAbajo delay={0}>
                 <Grid
                     container
                     direction="row"
@@ -49,7 +49,7 @@ export const Habitacion = (props) => {
 
             </AnimApareceAbajo>
 
-            <AnimApareceAbajo delay={1}>
+            <AnimApareceAbajo>
 
                 <Grid
                     container

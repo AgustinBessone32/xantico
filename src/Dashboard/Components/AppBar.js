@@ -177,7 +177,7 @@ export const AppBar = () => {
                         >
                             <Grid item sx={{marginRight: 1, opacity: 0.7}}>
                                 <ButtonBase sx={{p: masSM ? 1 : 0, borderRadius: 2}}
-                                            onClick={() => irURL("https://api.whatsapp.com/send?phone=573004627579&text=Hola%20Xantico")}>
+                                            onClick={() => irURL("https://api.whatsapp.com/send?phone=573169225653&text=Hola%20Xantico")}>
                                     <Whatsapp color={PRIMARIO} size={"1.7rem"} stroke={1} variant={"Bold"}/>
                                 </ButtonBase>
                             </Grid>

@@ -14,6 +14,11 @@ export const noEspacios = (nom) =>{
 export const irURL = (url) =>{
     window.open(url)
 }
+
+
+export const llevarArriba = () =>{
+    window.scrollTo(0, 0)
+}
  
  export const obtenerID = (email) => {
      let sinpunto = email.replaceAll(".", "-");
